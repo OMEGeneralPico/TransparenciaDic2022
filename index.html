@@ -22,7 +22,10 @@
     rel="stylesheet">
   <link rel="icon" type="image/gif" sizes="96x96" href="https://www.generalpico.gov.ar/Arbol-favico.gif">
   <title>Web Transparencia</title>
-
+  <!-- viene del modal -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--  -->
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
@@ -33,6 +36,7 @@
   <link rel="stylesheet" href="assets/css/templatemo-seo-dream.css">
   <link rel="stylesheet" href="assets/css/animated.css">
   <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-side-modals.css">
   <!--
 TemplateMo 563 SEO Dream
 
@@ -43,7 +47,6 @@ https://templatemo.com/tm-563-seo-dream
 </head>
 
 <body>
-
   <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
@@ -56,7 +59,9 @@ https://templatemo.com/tm-563-seo-dream
     </div>
   </div>
   <!-- ***** Preloader End ***** -->
-  <button onclick="topFunction()" id="myBtn" title="Go to top">inicio</button>
+  <!--  <button onclick="topFunction()" id="myBtn" title="ir a inicio">
+    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+  </button> -->
   <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
     <div class="container">
@@ -68,14 +73,15 @@ https://templatemo.com/tm-563-seo-dream
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li class="scroll-to-section"><a href="#about" class="active">Intendencia</a></li>
-              <li class="scroll-to-section"><a href="#economia">Economia</a></li>
+              <li class="scroll-to-section"><a href="#about">Intendencia</a></li>
               <li class="scroll-to-section"><a href="#coordinacion">Coordinacion</a></li>
+              <li class="scroll-to-section"><a href="#Gobierno">Gobierno</a></li>
+              <li class="scroll-to-section"><a href="#economia">Economia</a></li>
               <li class="scroll-to-section"><a href="#DesarrolloSocial">Desarrollo social</a></li>
-              <li class="scroll-to-section"><a href="#portfolio">Planificacion Urbana</a></li>
-              <li class="scroll-to-section"><a href="#contact">Servicios Publicos</a></li>
-              <li class="scroll-to-section"><a href="#contact">Gobierno</a></li>
-              <!-- <li class="scroll-to-section"><div class="main-blue-button"><a href="#contact">Get Your Quote</a></div></li> -->
+              <li class="scroll-to-section"><a href="#PlanificacionUrbana">Planificación Urbana</a></li>
+              <li class="scroll-to-section"><a href="#ServiciosPublicos">Servicios Publicos</a></li>
+
+              <li class="scroll-to-section" hidden><a href="#">algo</a></li>
             </ul>
             <a class='menu-trigger'>
               <span>Menu</span>
@@ -112,7 +118,7 @@ https://templatemo.com/tm-563-seo-dream
                     </div>
                   </div>
                   <div class="col-lg-12">
-                    <h2>Informe de Transparencia</h2>
+                    <h2 id="idt">Informe de Transparencia</h2>
                   </div>
 
                 </div>
@@ -133,49 +139,29 @@ https://templatemo.com/tm-563-seo-dream
       <div class="row">
         <div class="col-lg-6">
           <div class="left-image wow fadeInLeft grid-fotos" data-wow-duration="1s" data-wow-delay="0.5s">
-
-            <div class="intendenta"><a data="Fernanda Alonso" class="tip"><img
-                  src="assets/images\intendenta_recortada.jpg" class="foto_intendenta" title="Fernanda Alonso"></a>
+            <div class="intendenta"><a data="Fernanda Alonso" class="tip"><img src="assets/images/intro.jpg"
+                  class="foto_intendenta" title="Fernanda Alonso"></a>
             </div>
-            <div class="resto"><a data="Edgardo Privitera" href="#features" class="tip"><img
-                  src="assets/images\privitera.jpg" class="foto_resto" title="Edgardo Privitera"></a>
-            </div>
-            <div class="resto"><a data="Daniela Cabrino" href="#features" class="tip"><img
-                  src="assets/images\cabrino.jpg" class="foto_resto" title="Daniela Cabrino"></a>
-            </div>
-            <div class="resto"><a data="Jorge Gabba" href="#features" class="tip"><img src="assets/images\gabba.jpg"
-                  class="foto_resto" title="Jorge Gabba"></a>
-            </div>
-            <div class="resto"><a data="Luis Anconetani" href="#features" class="tip"><img
-                  src="assets/images\anconetani.jpg" class="foto_resto" title="Luis Anconetani"></a>
-            </div>
-            <div class="resto"><a data="Alberto Campo" href="#features" class="tip"><img src="assets/images\campo.jpg"
-                  class="foto_resto" title="Alberto Campo"></a>
-            </div>
-            <div class="resto"><a data="Pablo Pildain" href="#features" class="tip"><img src="assets/images\pildain.jpg"
-                  class="foto_resto" title="Pablo Pildain"></a>
-            </div>
-
           </div>
         </div>
+
         <div class="col-lg-6 align-self-center wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
           <div class="section-heading">
             <h2> <em>INTRO</em> </h2>
           </div>
           <p style="text-align: justify;"> <span class="first-letter"
-              style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">D</span>esde
-            su candidatura, la actual intendenta de General Pico, Fernanda Alonso, estableció ejes
-            de trabajo para llevar a cabo en su futura gestión.</p>
-          <p>Uno de ellos es el concepto de <b style="font-weight: 700;">Gobierno Abierto</b>, un nuevo
-            paradigma de gestión pública que
-            centra a la ciudadanía en el diseño y toma de decisiones de políticas públicas, aprovechando
-            las tecnologías digitales disponibles y promoviendo la participación y transparencia de las
-            acciones llevadas adelante.</p>
-          <p>Enmarcado en este eje de trabajo, se presenta a continuación el Informe de Transparencia
-            correspondiente al primer semestre de 2021, el cual refleja el recorrido de planes,
-            programas y proyectos ejecutados mediante la utilización de los fondos públicos asignados a
-            esta gestión municipal.
-          </p>
+              style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">C</span>ontinuando con los
+            ejes de trabajo, presentados durante la candidatura de
+            la intendenta municipal Fernanda Alonso, se presenta un nuevo relevamiento y evaluación de la información
+            pública como
+            correlato y continuidad de anteriores informes divulgados por el municipio, el cual hace posible una
+            comunicación entre las distintas áreas del gobierno local y la ciudadanía.
+          </p> <br>
+          <p>El denominado Informe de Transparencia correspondiente al primer semestre
+            de 2022 pone a disposición, de los ciudadanos, los presupuestos, y la
+            ejecución de los mismos, entendiendo que el fácil acceso web de los habitantes a dicha información,
+            constituye no sólo una política de transparencia, sino un insumo fundamental para la toma de decisiones de
+            sus habitantes en el marco de la democracia representativa.</p>
         </div>
       </div>
     </div>
@@ -193,9 +179,9 @@ https://templatemo.com/tm-563-seo-dream
           <div style="text-align: justify;">
             <p class="align-self-center wow fadeInRight pb-4" data-wow-duration="1s" data-wow-delay="0.2s"> <span
                 class="citas">Ejecución | </span> La
-              ejecución durante el segundo
-              semestre fue de $1.395.579.429, lo que representó un 49,9% sobre el total presupuestado anual.<br>
-              <span class="citas">Empleados | </span>La Municipalidad cuenta actualmente con un plantel de 874
+              ejecución durante el Primer
+              semestre fue de $ 2.103.862.256 , lo que representó un 56,34% sobre el total presupuestado anual.<br>
+              <span class="citas">Empleados | </span>La Municipalidad cuenta actualmente con un plantel de 845
               empleados, correspondientes a planta permanente, contratos con aportes y personal del servicio de
               emergencias.
             </p>
@@ -204,7 +190,7 @@ https://templatemo.com/tm-563-seo-dream
       </div>
       <hr>
     </div>
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="col-lg-4">
           <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
@@ -245,18 +231,22 @@ https://templatemo.com/tm-563-seo-dream
       </div>
     </div>
   </div>
-  <!-- Seccion economia -->
-  <div id="economia" class="features section">
+  <!--Seccion Coordinacion-->
+  <div id="coordinacion" class="our-services section">
     <div class="container">
       <hr>
-      <div class="row">
+      <div class="row  pb-2 mb-4">
         <div class="col-lg-6">
-          <div class="left-image wow fadeInLeft grid-fotos" data-wow-duration="1s" data-wow-delay="0.5s">
+          <div class="left-image wow fadeInLeft grid-fotos pt-2" data-wow-duration="1s" data-wow-delay="0.5s">
             <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-              <div class="section-heading">
-                <h1> <em>Economia</em> </h1>
+              <img id="tarjeta" src="assets/images/coordinacion.png"
+                alt="Edgardo Privitera - Secretario de coordinación"
+                title="Edgardo Privitera - Secretario de coordinación">
+              <div class="section-heading pt-2">
+                <div class="main-green-button scroll-to-section pt-2">
+                  <a href="" data-toggle="modal" data-target="#modal_coordinacion" id="listado">Ver más</a>
+                </div>
               </div>
-              <img style="width:300px" src="assets/images/anconetani.jpg" alt="">
             </div>
           </div>
         </div>
@@ -264,542 +254,116 @@ https://templatemo.com/tm-563-seo-dream
           <div class="section-heading">
             <h3> <em>Presupuesto</em> </h3>
           </div>
-          <p style="text-align: justify;">La Secretaría de Economía contó para el 2021 con un presupuesto de
-            $229.195.305, el cual
-            representó un 9% del presupuesto municipal. Hubo un gasto total de $109.968.428, lo cual significa completar
-            el semestre con una ejecución del 49%.</p>
-
+          <p style="text-align: justify;"> La Secretaría de Coordinación contó para el 2022 con un presupuesto de
+            $ 324.659.879,11
+            , el cual representó un 4,87% del presupuesto municipal. Para el primer semestre, dicha
+            secretaría, teniendo en cuenta los ejes de gestión planteados, tuvo un gasto de $ 117.751.533 lo cual
+            significa completar el semestre con una ejecución presupuestaria del 58,75%.
+          </p>
         </div>
-        <div class="col-lg-6" style="text-align: center;">
-          <p class="pt-2 mt-1">El gasto discriminado por rubro se estructura de la siguiente forma:</p>
-          <div class="left-image wow fadeInLeft grid-fotos pt-4 mt-4" data-wow-duration="1s" data-wow-delay="0.5s">
-            <table class='table table-striped pr-2' style="width: 450px">
-              <tr>
-                <th>
-                  CONCEPTO
-                </th>
-                <th>
-                  PORCENTAJE
-                </th>
-              </tr>
-              <tr>
-                <td>Bienes de capital</td>
-                <td>1.49%</td>
-              </tr>
-              <tr>
-                <td>Bienes de consumo</td>
-                <td>9.44%</td>
-              </tr>
-              <tr>
-                <td>Gastos personales</td>
-                <td>68.35%</td>
-              </tr>
-              <tr>
-                <td>Serv. No personales</td>
-                <td>20.72%</td>
-              </tr>
-              <tr>
-
-            </table>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="service-item wow bounceInUp">
-                <canvas id="PresupuestoB6" width="250" height="220">
-                </canvas>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="service-item wow bounceInUp">
-                <canvas id="Presupuesto6" width="250" height="220">
-                </canvas>
-              </div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="row">
-                  <div class="col-lg-6 align-self-center">
-                    <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
-                      <div class="row">
-                        <div class="col-lg-4 col-sm-4">
-                          <div class="info-stat">
-                          </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-4">
-                          <div class="info-stat">
-                          </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-4">
-                          <div class="info-stat">
-                          </div>
-                        </div>
-                        <div class="section-heading">
-                          <h3> <em>Programas y gestión</em> </h3>
-                        </div>
-                        <p style="text-align: justify;" class="pb-3">
-                          <span class="citas">Financiamiento Productivo: | </span>
-                          Durante el Semestre se otorgaron 61 créditos por un monto total de $16.524.533, destinado el
-                          57% a líneas de producción y servicios de apoyo a la producción, 27% a línea comercial y 16% a
-                          Servicios Generales. Esto incluye 30 créditos de la Línea Municipal por $ 5.420.000, 26
-                          créditos Ley Provincial 2461 por $ 7.554.533 y 5 Créditos de La Ley 2870 de Promoción
-                          Económica por $ 3.550.000,00. Se completo el año con 98 créditos por un total de $ 22.314.533
-
-                        </p>
-                        <p class="pt-3">
-                          <span class="citas">Capacitación | </span>
-                          Se lanzó el Programa de Oficios Tecnológicos conjuntamente con la Facultad de Ingeniería y el
-                          Programa de Economía del Conocimiento de la Dirección Nacional de Desarrollo Productivo se
-                          formaron a 45 personas como Desarrolladores Full Stack y a través de Punto Digital 16 personas
-                          se capacitaron en el curso de Introducción a la Programación Web. En conjunto con Cámara de
-                          Comercio y Afines se realizó una Capacitación en Herramientas Digitales para 40 comerciantes.
-                        </p>
-                      </div>
-                    </div>
-        </div>
-            </div>
-      </div>    
-  </div>
-    <!-- Seccion economia -->
-    <div id="economia" class="features section">
-      <div class="container">
-        <hr>
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="left-image wow fadeInLeft grid-fotos" data-wow-duration="1s" data-wow-delay="0.5s">
-              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <div class="section-heading">
-                  <h1> <em>Economia</em> </h1>
-                </div>
-                <img style="width:300px" src="assets/images/anconetani.jpg" alt="">                
-              </div>              
-            </div>            
-          </div>          
-            <div class="col-lg-6 align-self-center wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <div class="section-heading">
-                  <h3> <em>Presupuesto</em> </h3>
-                </div>                
-                  <p style="text-align: justify;">La Secretaría de Economía contó para el 2021 con un presupuesto de $229.195.305, el cual 
-                    representó un 9% del presupuesto municipal. Hubo un gasto total de $109.968.428, lo cual significa completar 
-                    el semestre con una ejecución del 49%.</p>
-                      
-            </div>
-            <div class="row">
-              <div class="col-lg-12">          
-                <div class="row">
-                  <div>
-                    <em>
-                      <b>
-                        <p style="font-size: 1.3em;" class="pb-4 pt-4 mb-3">El gasto discriminado por rubro se estructura de la siguiente forma:</p>
-                      </b>
-                    </em>              
-                  </div>
-                  <div class="col-lg-2">
-                    <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
-                      <div class="progress" data-percentage="70">
-                        <span class="progress-left">
-                          <span class="progress-bar"></span>
-                        </span>
-                        <span class="progress-right">
-                          <span class="progress-bar"></span>
-                        </span>
-                        <div class="progress-value">
-                          <div>
-                            71,60%
-                            <span><p>Gastos</p>en personal</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2">
-                    <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                      <div class="progress" data-percentage="20">
-                        <span class="progress-left">
-                          <span class="progress-bar"></span>
-                        </span>
-                        <span class="progress-right">
-                          <span class="progress-bar"></span>
-                        </span>
-                        <div class="progress-value">
-                          <div>
-                            13,44%
-                            <span> <p>Prestamos</p></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2">
-                    <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
-                      <div class="progress" data-percentage="10">
-                        <span class="progress-left">
-                          <span class="progress-bar"></span>
-                        </span>
-                        <span class="progress-right">
-                          <span class="progress-bar"></span>
-                        </span>
-                        <div class="progress-value">
-                          <div>
-                            10,66% 
-                            <span><p>Servicios</p>no personales</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2">
-                    <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
-                      <div class="progress" data-percentage="5">
-                        <span class="progress-left">
-                          <span class="progress-bar"></span>
-                        </span>
-                        <span class="progress-right">
-                          <span class="progress-bar"></span>
-                        </span>
-                        <div class="progress-value">
-                          <div>
-                            3,34% 
-                            <span><p>Bienes</p>de consumo</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2">
-                    <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
-                      <div class="progress" data-percentage="3">
-                        <span class="progress-left">
-                          <span class="progress-bar"></span>
-                        </span>
-                        <span class="progress-right">
-                          <span class="progress-bar"></span>
-                        </span>
-                        <div class="progress-value">
-                          <div>
-                            0,54% 
-                            <span><p>Bienes</p>de capital</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2">
-                    <div class="skill-item last-skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
-                      <div class="progress" data-percentage="3">
-                        <span class="progress-left">
-                          <span class="progress-bar"></span>
-                        </span>
-                        <span class="progress-right">
-                          <span class="progress-bar"></span>
-                        </span>
-                        <div class="progress-value">
-                          <div>
-                            0,42%
-                            <span><p>Transf.</p>sociales</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="service-item wow bounceInUp">
-                    <canvas id="PresupuestoB6"  width="250" height="220">
-                    </canvas> 
-
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="row">
-                  <div class="col-lg-6 align-self-center">
-                    <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
-                      <div class="row">
-                        <div class="col-lg-4 col-sm-4">
-                          <div class="info-stat">
-                          </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-4">
-                          <div class="info-stat">
-                          </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-4">
-                          <div class="info-stat">
-                          </div>
-                        </div>
-                        <div class="section-heading">
-                          <h3> <em>Programas y gestión</em> </h3>
-                        </div>
-                        <p style="text-align: justify;" class="pb-3">
-                          <span class="citas">Financiamiento Productivo: | </span>
-                          Durante el Semestre se otorgaron 61 créditos por un monto total de $16.524.533, destinado el
-                          57% a líneas de producción y servicios de apoyo a la producción, 27% a línea comercial y 16% a
-                          Servicios Generales. Esto incluye 30 créditos de la Línea Municipal por $ 5.420.000, 26
-                          créditos Ley Provincial 2461 por $ 7.554.533 y 5 Créditos de La Ley 2870 de Promoción
-                          Económica por $ 3.550.000,00. Se completo el año con 98 créditos por un total de $ 22.314.533
-
-                        </p>
-                        <p class="pt-3">
-                          <span class="citas">Capacitación | </span>
-                          Se lanzó el Programa de Oficios Tecnológicos conjuntamente con la Facultad de Ingeniería y el
-                          Programa de Economía del Conocimiento de la Dirección Nacional de Desarrollo Productivo se
-                          formaron a 45 personas como Desarrolladores Full Stack y a través de Punto Digital 16 personas
-                          se capacitaron en el curso de Introducción a la Programación Web. En conjunto con Cámara de
-                          Comercio y Afines se realizó una Capacitación en Herramientas Digitales para 40 comerciantes.
-                        </p>
-                      </div>
-                    </div>
-
-                  </div>
-                  <div class="col-lg-6">
-                    <br><br><br><br>
-
-                    <div class="service-item wow bounceInUp right-image wow fadeInRight" data-wow-duration="1s"
-                      data-wow-delay="0.5s">
-                      <b style="font-weight: 700; text-align: center;">Recaudación por servicios </b>
-                      <div class="grid-mapa">
-                        <div id="mapitadiv"></div>
-                        <div id="info" class="info">
-                          <br><br>
-                          Porcentaje de pago en término, por barrio, al 31/12/2021 <br> <br>
-                          Clickear para <br>+ detalles
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="container pt-3">
-                    <div class="row">
-                      <div class="col-lg-6">
-                        <div class="service-item wow bounceInUp">
-                          <canvas id="economiacreditos" width="250" height="220">
-                          </canvas>
-                        </div>
-                      </div>
-                      <div class="col-lg-6">
-                        <div class="service-item wow bounceInUp">
-                          <canvas id="CreditosSector" width="250" height="220">
-                          </canvas>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="container">
-                    <p style="text-align: justify;" class="pb-3">
-                      <span class="citas">Desarrollo Local | </span>
-                      La Dirección de Desarrollo Económico y Productivo participó de la Red de Innovación Local con
-                      referentes de Producción de localidades
-                      como América, Trenque Lauquen, Ameghino, Carlos Casares, Pelegrini y General Villegas con
-                      reuniones virtuales
-                      y/o encuentros presenciales de forma quincenal/mensual en las distintas ciudades, a efectos de
-                      intercambiar
-                      conocimiento y experiencias para el desarrollo local, promoviendo el asesoramiento entre pares
-                      ante la
-                      presentación de problemáticas locales. Por otra parte, representantes del Municipio cursaron el
-                      Programa
-                      Federal de Formación y Gestión para el Desarrollo organizado por el Consejo Federal de Inversiones
-                      junto a
-                      las Provincias de Chaco, La Pampa, La Rioja, Jujuy y San Juan con el objetivo de desarrollar un
-                      proceso de
-                      aprendizaje para la implementación de proyectos y políticas de innovación federal.
-                    </p>
-                    <p class="pt-3">
-                      Durante el mes de Diciembre se desarrolló el programa “Compro en Pico” y “Vidrieras en Red” a fin
-                      de promover
-                      el desarrollo comercial durante las fiestas navideñas. Este año se adhirieron 102 comercios donde
-                      280
-                      ciudadanos y ciudadanas participaron de los premios otorgados. Estudiantes de Bellas Artes
-                      realizaron el
-                      análisis del Concurso de Vidrieras otorgando el 1º premio por un monto de $50.000 y el segundo
-                      $25.000.
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <div class="row">
-                        <div class="col-lg-6 align-self-center">
-                          <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s"
-                            data-wow-delay="1s">
-                            <div class="row">
-
-                              <p style="text-align: justify;">
-                                <span class="citas">Dirección de comercio | </span>
-                                Desde la Dirección de Comercio en el segundo semestre del 2021 se continuó con la
-                                realización de los diversos trámites a realizar
-                                para obtener la licencia comercial, la habilitación del establecimiento elaborador y de
-                                los productos elaborados y así como la libreta
-                                sanitaria del personal involucrado en la manipulación de los alimentos. Además de las
-                                habilitaciones se concretaron gestiones para bajas comerciales, renovaciones y otros
-                                trámites inherentes a la Dirección.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-6">
-
-                          <div class=" service-item wow bounceInUp right-image wow fadeInRight" data-wow-duration="1s"
-                            data-wow-delay="0.5s">
-                            <canvas id="actcomercio" width="250" height="220">
-                            </canvas>
-                          </div>
-                        </div>
-                        <center>
-                          <div class="main-green-button scroll-to-section pt-2">
-                            <a class="pb-2 mt-2"
-                              href="https://drive.google.com/file/d/1OOjR4g4XjyNiE3nFV6d6v6hZqLb0aZH1/view">Más info</a>
-                          </div>
-                        </center>
-                      </div>
-                    </div>
-                  </div>
-                  <!--  -->
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-
       </div>
     </div>
-
-    <!--Seccion Coordinacion-->
-    <div id="coordinacion" class="about-us section">
-      <div class="container">
-        <hr>
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="left-image wow fadeInLeft grid-fotos" data-wow-duration="1s" data-wow-delay="0.5s">
-              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <div class="section-heading">
-                  <h1> <em>Coordinacion</em> </h1>
-                </div>
-                <img style="width:300px" src="assets/images/privitera.jpg" alt="">
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 align-self-center wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-            <div class="section-heading">
-              <h3> <em>Presupuesto</em> </h3>
-            </div>
-            <p style="text-align: justify;"> La Secretaría de Coordinación contó para el 2021 con un presupuesto de
-              $174.723.135, el cual representó un 4.53% del presupuesto municipal. Para el segundo semestre, dicha
-              secretaría, teniendo en cuenta los ejes de gestión planteados, tuvo un gasto de $82.539.821 lo cual
-              significa completar el semestre con una ejecución presupuestaria del 47%.
-            </p>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="service-item wow bounceInUp">
+            <canvas id="PresupuestoB1" width="250" height="220">
+            </canvas>
           </div>
         </div>
-        <hr>
+        <div class="col-lg-6">
+          <div class="service-item wow bounceInUp">
+            <canvas id="Presupuesto1" width="250" height="220">
+            </canvas>
+          </div>
+        </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="service-item wow bounceInUp">
-              <canvas id="PresupuestoB1" width="250" height="220">
-              </canvas>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div>
+              <em>
+                <b>
+                  <p style="font-size: 1.3em;" class="pb-4 mb-3">El gasto discriminado por rubro se estructura de la
+                    siguiente forma:</p>
+                </b>
+              </em>
             </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="service-item wow bounceInUp">
-              <canvas id="Presupuesto1" width="250" height="220">
-              </canvas>
+            <div class="col-lg-3">
+              <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
+                <div class="progress" data-percentage="70">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">
+                    <div>
+                      67,10%
+                      <span>
+                        <p>Gasto</p>en personal
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="row">
-              <div>
-                <em>
-                  <b>
-                    <p style="font-size: 1.3em;" class="pb-4 mb-3">El gasto discriminado por rubro se estructura de la
-                      siguiente forma:</p>
-                  </b>
-                </em>
-              </div>
-              <div class="col-lg-3">
-                <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
-                  <div class="progress" data-percentage="65">
-                    <span class="progress-left">
-                      <span class="progress-bar"></span>
-                    </span>
-                    <span class="progress-right">
-                      <span class="progress-bar"></span>
-                    </span>
-                    <div class="progress-value">
-                      <div>
-                        65,58%
-                        <span>
-                          <p>Gasto en personal</p>
-                        </span>
-                      </div>
+            <div class="col-lg-3">
+              <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                <div class="progress" data-percentage="30">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">
+                    <div>
+                      28,65%
+                      <span>
+                        <p>Servicios</p>no personales
+                      </span>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3">
-                <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                  <div class="progress" data-percentage="26">
-                    <span class="progress-left">
-                      <span class="progress-bar"></span>
-                    </span>
-                    <span class="progress-right">
-                      <span class="progress-bar"></span>
-                    </span>
-                    <div class="progress-value">
-                      <div>
-                        26.67%
-                        <span>
-                          <p>Servicios</p>no personales
-                        </span>
-                      </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="progress" data-percentage="1">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">
+                    <div>
+                      1,06%
+                      <span>
+                        <p>Bienes</p>de capital
+                      </span>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-3">
-                <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
-                  <div class="progress" data-percentage="5">
-                    <span class="progress-left">
-                      <span class="progress-bar"></span>
-                    </span>
-                    <span class="progress-right">
-                      <span class="progress-bar"></span>
-                    </span>
-                    <div class="progress-value">
-                      <div>
-                        4,65%
-                        <span>
-                          <p>Bienes</p>de capital
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3">
-                <div class="skill-item last-skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
-                  <div class="progress" data-percentage="3">
-                    <span class="progress-left">
-                      <span class="progress-bar"></span>
-                    </span>
-                    <span class="progress-right">
-                      <span class="progress-bar"></span>
-                    </span>
-                    <div class="progress-value">
-                      <div>
-                        3,10%
-                        <span>
-                          <p>Bienes</p>de consumo
-                        </span>
-                      </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="skill-item last-skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+                <div class="progress" data-percentage="3">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">
+                    <div>
+                      3,20%
+                      <span>
+                        <p>Bienes</p>de consumo
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -808,72 +372,72 @@ https://templatemo.com/tm-563-seo-dream
           </div>
         </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="row">
-              <div class="col-lg-6 align-self-center">
-                <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
-                  <div class="row">
-                    <div class="col-lg-4 col-sm-4">
-                      <div class="info-stat">
-                      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="row">
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="info-stat">
                     </div>
-                    <div class="col-lg-4 col-sm-4">
-                      <div class="info-stat">
-                      </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-4">
-                      <div class="info-stat">
-                      </div>
-                    </div>
-                    <div class="section-heading">
-                      <h3> <em>Programas y gestión</em> </h3>
-                    </div>
-                    <p style="text-align: justify;" class="pb-3">
-                      <span class="citas">Asesoramiento Legal: | </span>
-                      Durante este semestre se crearon un total de 3573 dictámenes escritos, uno por cada Resolución,
-                      Disposición y
-                      Proyectos de Ordenanzas. También, se emitieron 3375.resoluciones, 67 Disposiciones y 54 Proyectos
-                      de
-                      Ordenanzas elevados al Concejo Deliberante
-                    </p>
-                    <p class="pt-3">
-                      <span class="citas">Tribunal de Faltas | </span>
-                      Se conformaron y notificaron 6665 cédulas de notificaciones y emplazamientos. Durante este
-                      semestre el Tribunal de Faltas dio atención en forma
-                      personal y/o telefónica a 11.256 personas.
-                    </p>
                   </div>
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="info-stat">
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="info-stat">
+                    </div>
+                  </div>
+                  <div class="section-heading">
+                    <h3> <em>Programas y gestión</em> </h3>
+                  </div>
+                  <p style="text-align: justify;" class="pb-3">
+                    <span class="citas">Asesoramiento Legal: | </span>
+                    Durante este semestre se crearon un total de 3.209 dictámenes escritos, uno por cada Resolución,
+                    Disposición y
+                    Proyectos de Ordenanzas. También, se emitieron 3.035.resoluciones, 122 Disposiciones, 52 Proyectos
+                    de
+                    Ordenanzas y 57 Ordenanzas Promulgadas, elevados al Concejo Deliberante
+                  </p>
+                  <p class="pt-3">
+                    <span class="citas">Tribunal de Faltas | </span>
+                    Durante este Semestre el Tribunal de Faltaz juzgo 9.289 actas, 11 de obras, 402 de saneamiento
+                    ambiental y servicios públicos, 443 de comercio y 8.835 de tránsito.
+                  </p>
                 </div>
               </div>
-              <div class="col-lg-6">
-                <br><br><br><br>
-                <div class=" service-item wow bounceInUp right-image wow fadeInRight" data-wow-duration="1s"
-                  data-wow-delay="0.5s">
-                  <canvas id="legalesIntendencia" width="250" height="220">
-                  </canvas>
-                </div>
+            </div>
+            <div class="col-lg-6">
+              <br><br><br><br>
+              <div class=" service-item wow bounceInUp right-image wow fadeInRight" data-wow-duration="1s"
+                data-wow-delay="0.5s">
+                <canvas id="legalesIntendencia" width="250" height="220">
+                </canvas>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="pb-4 mb-4">
-            <p>
-              <span class="citas">Comunicación | </span>
-              Se crearon 212 piezas gráficas para difusión, 58 publicaciones en diarios, 1113 actividades en redes
-              sociales (transmisiones, publicaciones, videos).
-            </p>
-          </div>
-          <div class="col-lg-6">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="pb-4 mb-4">
+          <p>
+            <span class="citas">Comunicación | </span>
+            Se crearon 408 piezas gráficas para difusión, 189 publicaciones en diarios, 2173 actividades en redes
+            sociales (transmisiones, publicaciones, videos).
+          </p>
+        </div>
+        <!--<div class="col-lg-6">
             <div class="left-image wow fadeInLeft grid-fotos pt-4 mt-4" data-wow-duration="1s" data-wow-delay="0.5s">
-              <table class='table table-striped pr-2 pt-4 mt-4' style="width: 550px">
+              <table class='table table-striped pr-2 pt-4 mt-4' id="tablas" >
                 <tr>
                   <th colspan="2">
-                    INVERSION TECNOLÓGICA 2021
+                    INVERSION TECNOLÓGICA 2022
                   </th>
                 </tr>
                 <tr>
@@ -899,7 +463,7 @@ https://templatemo.com/tm-563-seo-dream
             </div>
           </div>
           <div class="col-lg-6 align-self-center wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-            <table class='table table-striped'>
+            <table class='table table-striped' id="tablas">
               <tr>
                 <th colspan="2">Distribución Tareas Departamento de Servicio Técnico y Comunicaciones
                 </th>
@@ -945,59 +509,507 @@ https://templatemo.com/tm-563-seo-dream
                 <td>2% </td>
               </tr>
             </table>
+          </div>-->
+        <br>
+        <center>
+          <div class="main-green-button scroll-to-section pt-2">
+            <a class="pb-2 mt-2"
+              href="https://drive.google.com/file/d/1SRN5vKwL88NbhIgMgcmDLZ94Lj3wBBtd/view?usp=sharing"
+              target="_blank">Más
+              info</a>
           </div>
-          <br>
+        </center>
+      </div>
+    </div>
+  </div>
+  <!-- Modal coordinacion -->
+  <div class="modal fade" id="modal_coordinacion" tabindex="-1" role="dialog" aria-labelledby="modal_coordinacion">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title">Lista de funcionarios</h6>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- <h6 class="modal-title" style="text-align: center; font-size: 1.8em;">Lista de funcionarios</h6> -->
+          <div class="container pt-3">
+            <div class="row pb-3">
+              <div class="col">
+                <h6>DIRECCIÓN GENERAL DE ASUNTOS LEGALES:</h6>
+                <p>Dra. María Valeria MALVICINO</p>
+              </div>
+              <div class="col">
+                <h6>DIRECCIÓN DE GESTIÓN Y ARTICULACIÓN:</h6>
+                <p>Sra. Gabriela Anahí LUNA ECHEGARAY</p>
+              </div>
+            </div>
+            <div class="row pb-3">
+              <div class="col">
+                <h6>DIRECCIÓN DE COMUNICACIONES:</h6>
+                <p>Tec. Rocío Belén GONZÁLEZ</p>
+              </div>
+              <div class="col">
+                <h6>COORDINACIÓN DE DISEÑO COMUNICACIONAL:</h6>
+                <p>D.C.V. Guillermo BONESSI</p>
+              </div>
+            </div>
+            <div class="row pb-3">
+              <div class="col">
+                <h6>JUZGADO DE FALTAS:</h6>
+                <p>Dr. Eduardo LETTIERI</p>
+              </div>
+              <div class="col">
+                <h6>SECRETARIO DE TRÁNSITO DEL TRIBUNAL DE FALTAS:</h6>
+                <p>Dr. Juan José Antonio GOMEZ HUINCHINAO</p>
+              </div>
+            </div>
+            <div class="row pb-3">
+              <div class="col">
+                <h6>SECRETARIA DE COMERCIO DEL TRIBUNAL DE FALTAS:</h6>
+                <p>Dra. Laura Soledad MORALES</p>
+              </div>
+              <div class="col">
+                <h6>COORDINACIÓN DE DISEÑO COMUNICACIONAL:</h6>
+                <p>D.C.V. Guillermo BONESSI</p>
+              </div>
+            </div>
+            <div class="row pb-3">
+              <div class="col">
+                <h6>ORGANISMO DESCENTRALIZADO DE PLANTA DE ASFALTO:</h6>
+                <p>Ing. Diego Nicolas GARRO</p>
+              </div>
+              <div class="col">
+                <h6>ORGANISMO DESCENTRALIZADO CAMINOS VECINALES:</h6>
+                <p>Sr. Darío Germán BALBIDARE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- seccion gobierno -->
+  <div id="Gobierno" class="our-services section">
+    <div class="container">
+      <hr>
+      <div class="row  pb-2 mb-4">
+        <div class="col-lg-6">
+          <div class="left-image wow fadeInLeft grid-fotos pt-2" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+              <img id="tarjeta" src="assets/images/gobierno.png"
+                alt="Nicolas Mendoza - Secretario de Gobierno, seguridad, educación y cultura"
+                title="Nicolas Mendoza - Secretario de Gobierno, seguridad, educación y cultura">
+              <div class="section-heading pt-2">
+                <div class="main-green-button scroll-to-section pt-2">
+                  <a href="" id="listado" data-toggle="modal" data-target="#modal_gobierno">Ver más</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 align-self-center wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+          <div class="section-heading">
+            <h3> <em>Presupuesto</em> </h3>
+          </div>
+          <p style="text-align: justify;">
+            La Secretaría de Gobierno, Seguridad, Educación y Cultura contó para el 2022 con un presupuesto de $
+            668.765.178 , el cual representó un 14,73% del presupuesto municipal. Para el primer semestre, dicha
+            secretaría, teniendo en cuenta los ejes de gestión planteados, tuvo un gasto de $ 324.659.879
+            lo cual significa completar el semestre con una ejecución presupuestaria del 59,38%.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="service-item wow bounceInUp">
+            <canvas id="PresupuestoB2" width="250" height="220">
+            </canvas>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="service-item wow bounceInUp">
+            <canvas id="Presupuesto2" width="250" height="220">
+            </canvas>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div>
+              <em>
+                <b>
+                  <p style="font-size: 1.3em;" class="pb-4 mb-3">El gasto discriminado por rubro se estructura de la
+                    siguiente forma:</p>
+                </b>
+              </em>
+            </div>
+            <div class="col-lg-3">
+              <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="progress" data-percentage="65">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">
+                    <div>
+                      64,43%
+                      <span>
+                        <p>Gasto</p> en personal
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="progress" data-percentage="15">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">
+                    <div>
+                      15,71%
+                      <span>
+                        <p>Servicios no personales</p>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="progress" data-percentage="1">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">
+                    <div>
+                      0,44%
+                      <span>
+                        <p>Bienes</p>de capital
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="progress" data-percentage="1">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">
+                    <div>
+                      2,58%
+                      <span>
+                        <p>Bienes</p>de consumo
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="progress" data-percentage="10">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">
+                    <div>
+                      11,94%
+                      <span>
+                        <p>Transf</p>Sociales
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="progress" data-percentage="5">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">
+                    <div>
+                      4,91%
+                      <span>
+                        <p>Trabajos</p> Publicos
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="row">
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="info-stat">
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="info-stat">
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="info-stat">
+                    </div>
+                  </div>
+                  <div class="section-heading">
+                    <h3> <em>Programas y gestión</em> </h3>
+                  </div>
+                  <p style="text-align: justify;" class="pb-3">
+                    <span class="citas">Prevención Ciudadana | </span>
+                    El departamento tiene a cargo la Sala De Exámenes Teóricos, donde rinden aquellas personas que
+                    tienen su licencia de conducir vencida o la sacan por primera vez.
+                  </p>
+                  <p>
+                    En cuanto al uso del simulador, luego de invitar al público a hacer uso de él, se han programados
+                    turnos para quienes están en la última etapa del aprendizaje en la conducción. <b>Hasta el momento
+                      65 personas lo han usado realizando dos turnos cada uno.</b>
+                  </p>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class=" service-item wow bounceInUp right-image wow fadeInRight" data-wow-duration="1s"
+                data-wow-delay="0.5s">
+                <canvas id="inspeccionesGobierno" width="250" height="220">
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="pb-2 mb-2">
+          <p>
+            <span class="citas">Cultura y Educación | </span>
+            Comenzamos el año, armando el parque de educación vial en el SOEM, donde participaron niños y niñas de las
+            <b>colonias de vacaciones municipal, a través del proyecto formando conductores del mañana</b> se participó
+            del cierre de estas actividades de verano.
+          </p>
+          <p>
+            Durante los primeros meses del año, el depto. preparo el material de educación vial que se les entrega a
+            cada niño y niña de nivel inicial de las escuelas públicas y
+            A través de notas entregadas a las Coordinaciones De Nivel Inicial, Primario, Secundario Y De Adultos, donde
+            el depto. De Educación se pone disposición para poder brindarles charlas sobre esta temática, es que
+            <b>fuimos convocadas por la dirección de adultos y se les dictaron talleres a la sede del barrio federal,
+              sede campito centenario,
+              y escuela 57.</b>
+          </p>
+          <p>
+            A través de Cabildo XXI, se organizaron y dictaron clases para <b>los cuatro primeros años de la EPET Nº
+              2.</b>
+            Los objetivos principales de las charlas siempre apuntan a reflexionar y aprender sobre las causas y
+            consecuencias de los siniestros viales, como
+            también desarrollar actitudes de apertura, respecto y sentido de responsabilidad ciudadana.
+          </p>
+          <p>
+            El depto. De Educación participó de una reunión conjuntamente con el <b>Concejo De Adultos Y De
+              Discapacidad</b>, donde se plantearon diferentes situaciones que los adultos mayores y personas con
+            discapacidad viven en la vía pública (circulación de bicicletas en la veredas, rampas para discapacitados
+            etc. Se tomó el compromiso de analizar y mejorar lo expuesto.
+          </p>
+          <p>
+            Por otra parte fuimos <b>convocadas la Coordinadora del Rectorado de UNLPam, para dictar mediante la
+              plataforma zoom un curso de educación vial</b>, a los alumnos universitarios que recibieron bicicletas,
+            entregadas por la UNLPam, que los ayudaran en su traslado por la ciudad.
+          </p>
+          <p>
+            Es importante mencionar que el depto. siempre está <b>proveyendo de material didáctico</b> a docentes de
+            escuelas primarias y secundarias que trabajan en sus espacios la educación vial. Como también colaborando
+            con distintas áreas municipales que lo requieran.
+          </p>
+          <p class="pt-3">
+            <span class="citas">Participación ciudadana e institucional | </span>
+            El día 10 de junio <b>día Nacional De La Seguridad Vial</b>, se realizó el armado del <b>parque de educación
+              vial</b> en la explanada municipal, al mismo concurrió público en general y también fueron invitados los
+            niños y niñas de los jines aledaños, entre ellos la escuela 57, escuela 26 y escuela Santa Inés,
+            aproximadamente unos 80 niños transitaron el parque.
+          </p>
+          <p class="pt-3">
+            <span class="citas">Otras actividades | </span>
+            Se realiza en el mes de abril, la tercera <b>entrega de cascos en esta oportunidad fueron 23</b>, la
+            iniciativa busca concientizar y fomentar el uso del casco. En esta de transporte a sus lugares de trabajo.
+            Es importante mencionar que el curso obligatorio que acompaña esta actividad, es realizado por personal del
+            depto. de educación para la prevención.
+          </p>
+          <p>
+            Se participó activamente de la <b>Expo Fierro 2022</b>, realizada en la ciudad de general pico. En esta
+            oportunidad nos hicimos <b>Presente Con El Simulador De Manejo</b> que está a cargo de este departamento,
+            allí gran cantidad de personas estuvieron interesadas en su uso.
+          </p>
+          <p>
+            El simulador consta de un programa que simula a través de pantallas led, la conducción como si estuviera al
+            mando de un vehículo real, gracias a sus entornos y situaciones realistas, los escenarios incluyen tráfico
+            real y peatones, teniendo la posibilidad de realizar diversos recorridos con cualquier configuración
+            climatológica, horaria etc.
+          </p>
+          <table class=' align-left-center table table-striped table-sm pt-4 mt-4' id="tablas">
+            <h7 class="pt-2 font-weight-bold">DEPARTAMENTO EDUCACION PARA LA PREVENCION EXAMENES TEORICOS EVALUADOS</h7>
+            <tr>
+              <th colspan="1">
+                Mes
+              </th>
+              <th colspan="1">
+                2022
+              </th>
+            </tr>
+
+            <tr>
+              <td>ENERO</td>
+              <td>243</td>
+            </tr>
+            <tr>
+              <td>FEBRERO</td>
+              <td>201</td>
+            </tr>
+            <tr>
+              <td>MARZO</td>
+              <td>286</td>
+            </tr>
+            <tr>
+              <td>ABRIL</td>
+              <td>198</td>
+            </tr>
+            <tr>
+              <td>MAYO</td>
+              <td>206</td>
+            </tr>
+            <tr>
+              <td>JUNIO (hasta el 24 de junio)</td>
+              <td>235</td>
+            </tr>
+            <tr>
+              <td>TOTAL</td>
+              <td class="text-danger"> <b> 1369</b></td>
+            </tr>
+            <tr>
+          </table>
           <center>
             <div class="main-green-button scroll-to-section pt-2">
-              <a class="pb-2 mt-2" href="https://drive.google.com/file/d/1Q6w3VzhtVjOh6PQrArzgjqAyA_VoeXyb/preview">Más
-                info</a>
+              <a class="pb-2 mt-2"
+                href="https://drive.google.com/file/d/1Ibtv182q6ZXyAjnYSmu6ObXLPKWJsiKh/view?usp=sharing"
+                target="_blank">
+                Más info
+              </a>
             </div>
           </center>
         </div>
       </div>
     </div>
-    <!--Seccion Desarrollo Social-->
-    <div id="DesarrolloSocial" class="about-us section">
-      <div class="container">
-        <hr>
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="left-image wow fadeInLeft grid-fotos" data-wow-duration="1s" data-wow-delay="0.5s">
-              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <div class="section-heading">
-                  <h1> <em>Desarrollo Social</em> </h1>
-                </div>
-                <img style="width:300px" src="assets/images/cabrino.jpg" alt="">
+  </div>
+  <!-- Modal gobierno -->
+  <div class="modal fade" id="modal_gobierno" tabindex="-1" role="dialog" aria-labelledby="modal_gobierno">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Lista de funcionarios</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container pt-3">
+            <div class="row pb-3">
+              <div class="col">
+                <h6>DIRECCIÓN DE PREVENCIÓN Y CONVIVENCIA CIUDADANA:</h6>
+                <p>Crio. Gral. (Retirado) Pablo Gustavo GANDINO</p>
+              </div>
+              <div class="col">
+                <h6>DIRECCIÓN DE RECURSOS HUMANOS:</h6>
+                <p>Lic. Andrea BUSTOS</p>
+              </div>
+            </div>
+            <div class="row pb-3">
+              <div class="col">
+                <h6>SUB DIRECCIÓN DE TRANSITO:</h6>
+                <p>Rubén IGLESIAS</p>
+              </div>
+              <div class="col">
+                <h6>SUBDIRECCIÓN DE DESARROLLO CULTURA:</h6>
+                <p>Sr. Matías RACH</p>
+              </div>
+            </div>
+            <div class="row pb-3">
+              <div class="col">
+                <h6>COORDINACIÓN DE CABILDO XXI:</h6>
+                <p>Prof. Gabriela Alejandra RAMIREZ</p>
               </div>
             </div>
           </div>
-          <div class="col-lg-6 align-self-center wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-            <div class="section-heading">
-              <h3> <em>Presupuesto</em> </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Seccion economia -->
+  <div id="economia" class="our-services section">
+    <div class="container">
+      <hr>
+      <div class="row">
+        <div class="col-lg-6  pb-2 mb-4">
+          <div class="left-image wow fadeInLeft grid-fotos pt-2" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+              <img id="tarjeta" src="assets/images/economia.png" alt="Luis Anconetani - Secretario de economía"
+                title="Luis Anconetani - Secretario de economía">
+              <div class="section-heading pt-2">
+                <div class="main-green-button scroll-to-section pt-2">
+                  <a href="" id="listado" data-toggle="modal" data-target="#modal_economia">Ver más</a>
+                </div>
+              </div>
             </div>
-            <p style="text-align: justify;"> La Secretaría de Desarrollo Social contó para el 2021 con un presupuesto de
-              $ 436.333.151, el cual representó un 12.97% del presupuesto municipal. Para el segundo semestre, dicha
-              secretaría, teniendo en cuenta los ejes de gestión planteados, tuvo un gasto de $ 236.594.464 lo cual
-              significa completar el semestre con una ejecución presupuestaria del 54%.
-            </p>
           </div>
         </div>
-        <hr>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="service-item wow bounceInUp">
-              <canvas id="PresupuestoB5" width="250" height="220">
-              </canvas>
-            </div>
+        <div class="col-lg-6 align-self-center wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+          <div class="section-heading">
+            <h3> <em>Presupuesto</em> </h3>
           </div>
-          <div class="col-lg-6">
-            <div class="service-item wow bounceInUp">
-              <canvas id="Presupuesto5" width="250" height="220">
-              </canvas>
-            </div>
-          </div>
+          <p style="text-align: justify;">La Secretaría de Economía contó para el 2022 con un presupuesto de
+            $ 342.849.379, el cual
+            representó un 7.55% del presupuesto municipal. Hubo un gasto total de $ 166.870.276 , lo cual significa
+            completar
+            el semestre con una ejecución del 58%.</p>
+
         </div>
         <div class="row">
           <div class="col-lg-12">
@@ -1005,50 +1017,10 @@ https://templatemo.com/tm-563-seo-dream
               <div>
                 <em>
                   <b>
-                    <p style="font-size: 1.3em;" class="pb-4 mb-3">El gasto discriminado por rubro se estructura de la
-                      siguiente forma:</p>
+                    <p style="font-size: 1.3em;" class="pb-4 pt-4 mb-3">El gasto discriminado por rubro se estructura de
+                      la siguiente forma:</p>
                   </b>
                 </em>
-              </div>
-              <div class="col-lg-3">
-                <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
-                  <div class="progress" data-percentage="54.68">
-                    <span class="progress-left">
-                      <span class="progress-bar"></span>
-                    </span>
-                    <span class="progress-right">
-                      <span class="progress-bar"></span>
-                    </span>
-                    <div class="progress-value">
-                      <div>
-                        54,68%
-                        <span>
-                          <p>Gasto en personal</p>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3">
-                <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                  <div class="progress" data-percentage="18.45">
-                    <span class="progress-left">
-                      <span class="progress-bar"></span>
-                    </span>
-                    <span class="progress-right">
-                      <span class="progress-bar"></span>
-                    </span>
-                    <div class="progress-value">
-                      <div>
-                        18,45%
-                        <span>
-                          <p>Servicios</p>no personales
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
               <div class="col-lg-3">
                 <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
@@ -1061,7 +1033,7 @@ https://templatemo.com/tm-563-seo-dream
                     </span>
                     <div class="progress-value">
                       <div>
-                        0,46%
+                        1,13%
                         <span>
                           <p>Bienes</p>de capital
                         </span>
@@ -1072,7 +1044,7 @@ https://templatemo.com/tm-563-seo-dream
               </div>
               <div class="col-lg-3">
                 <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
-                  <div class="progress" data-percentage="1">
+                  <div class="progress" data-percentage="3">
                     <span class="progress-left">
                       <span class="progress-bar"></span>
                     </span>
@@ -1081,47 +1053,7 @@ https://templatemo.com/tm-563-seo-dream
                     </span>
                     <div class="progress-value">
                       <div>
-                        0,27%
-                        <span>
-                          Prestamos
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
-                  <div class="progress" data-percentage="18.14">
-                    <span class="progress-left">
-                      <span class="progress-bar"></span>
-                    </span>
-                    <span class="progress-right">
-                      <span class="progress-bar"></span>
-                    </span>
-                    <div class="progress-value">
-                      <div>
-                        18,14%
-                        <span>
-                          Transf. Sociales
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="skill-item last-skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
-                  <div class="progress" data-percentage="8">
-                    <span class="progress-left">
-                      <span class="progress-bar"></span>
-                    </span>
-                    <span class="progress-right">
-                      <span class="progress-bar"></span>
-                    </span>
-                    <div class="progress-value">
-                      <div>
-                        8,01%
+                        3,48%
                         <span>
                           <p>Bienes</p>de consumo
                         </span>
@@ -1130,149 +1062,103 @@ https://templatemo.com/tm-563-seo-dream
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="row">
-              <div class="col-lg-6 align-self-center">
-                <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
-                  <div class="row">
-                    <div class="col-lg-4 col-sm-4">
-                      <div class="info-stat">
+              <div class="col-lg-3">
+                <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                  <div class="progress" data-percentage="70">
+                    <span class="progress-left">
+                      <span class="progress-bar"></span>
+                    </span>
+                    <span class="progress-right">
+                      <span class="progress-bar"></span>
+                    </span>
+                    <div class="progress-value">
+                      <div>
+                        73,37%
+                        <span>
+                          <p>Gasto</p>en personal
+                        </span>
                       </div>
                     </div>
-                    <div class="col-lg-4 col-sm-4">
-                      <div class="info-stat">
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                  <div class="progress" data-percentage="10">
+                    <span class="progress-left">
+                      <span class="progress-bar"></span>
+                    </span>
+                    <span class="progress-right">
+                      <span class="progress-bar"></span>
+                    </span>
+                    <div class="progress-value">
+                      <div>
+                        9,21%
+                        <span>
+                          <p>Prestamos</p>
+                        </span>
                       </div>
                     </div>
-                    <div class="col-lg-4 col-sm-4">
-                      <div class="info-stat">
-                      </div>
-                    </div>
-                    <div class="section-heading">
-                      <h3> <em>Programas y gestión</em> </h3>
-                    </div>
-                    <p style="text-align: justify;" class="pb-3">
-                      <span class="citas">Aportes Económicos y Asistencia Social | </span>
-                      Durante el segundo semestre del año 2021, se entregaron alrededor de 18.000 módulos alimentarios
-                      que incrementaron la cantidad y calidad de sus productos teniendo como horizonte una alimentación
-                      equilibrada y saludable. Se realizaron 2.011 gestiones de ayudas económicas ascendiendo al importe
-                      de $11.559.545, comprendiendo tres categorías: alquiler, hogar y enfermedad. A través del Programa
-                      de Banco Descentralizado de Ayudas Técnicas, bajo la ejecución de fondo de la ley de cheques, se
-                      concretó la adquisición de las ayudas técnicas para personas con discapacidad por un monto de
-                      $1.116.000
-                    </p>
-                    
                   </div>
                 </div>
               </div>
               <div class="col-lg-6">
-                
-                <div class=" service-item wow bounceInUp right-image wow fadeInRight" data-wow-duration="1s"
-                  data-wow-delay="0.5s">
-                  <canvas id="ayudaseconomicas" width="250" height="220">
-                  </canvas>
+                <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                  <div class="progress" data-percentage="13">
+                    <span class="progress-left">
+                      <span class="progress-bar"></span>
+                    </span>
+                    <span class="progress-right">
+                      <span class="progress-bar"></span>
+                    </span>
+                    <div class="progress-value">
+                      <div>
+                        12,81%
+                        <span>
+                          <p>Serv. no </p>Personales
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                  <div class="progress" data-percentage="0">
+                    <span class="progress-left">
+                      <span class="progress-bar"></span>
+                    </span>
+                    <span class="progress-right">
+                      <span class="progress-bar"></span>
+                    </span>
+                    <div class="progress-value">
+                      <div>
+                        0,0%
+                        <span>
+                          <p>Transf.</p>Sociales
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="pb-4 mb-4">
-            <p>
-              <span class="citas">Oficina de Empleo | </span>
-              Se realizó la atención de un total de 563 personas y 96 entrevistas laborales de vinculación. Asimismo participamos de 39 búsquedas y selección de empleo, logrando la inserción laboral de 17 personas.
-            </p>
-            <p>Personas que se acercaron a la Oficina de Empleo</p>
-          </div>
-          <div class="col-lg-6">
-            <div class="left-image wow fadeInLeft grid-fotos pt-4 mt-4" data-wow-duration="1s" data-wow-delay="0.5s">
-              <table class='table table-striped pr-2 pt-4 mt-4' style="width: 550px">
-                <tr>
-                  <th colspan="2" style="text-align: center;">
-                    Género
-                  </th>
-                </tr>
-                <tr>
-                  <td>Hombres</td>
-                  <td>215</td>
-                </tr>
-                <tr>
-                  <td>Mujeres</td>
-                  <td>348</td>
-                </tr>
-                <tr>
-                  <th colspan="2" style="text-align: center;">
-                    Cupo
-                  </th>
-                </tr>
-                <tr>
-                  <td>Trans</td>
-                  <td>14</td>
-                </tr>
-                <tr>
-                  <td>Discapacidad</td>
-                  <td>30</td>
-                </tr>
-                <tr>
-                  <th colspan="2" style="text-align: center;">
-                    Edad
-                  </th>
-                </tr>
-                <tr>
-                  <td>Hasta 35</td>
-                  <td>399</td>
-                </tr>
-                <tr>
-                  <td>35 o más</td>
-                  <td>164</td>
-                </tr>
-              </table>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="service-item wow bounceInUp">
+                <canvas id="PresupuestoB6" width="250" height="220">
+                </canvas>
+              </div>
             </div>
-          </div>
-          <div class="col-lg-6 align-self-center wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-            <table class='table table-striped'>
-              <tr>
-                <th colspan="2" style="text-align: center;">
-                  Nivel educativo
-                </th>
-              </tr>
-              <tr>
-                <td>Secundario incompleto</td>
-                <td>292/td>
-              </tr>
-              <tr>
-                <td>Secundario completo </td>
-                <td>239</td>
-              </tr>
-              <tr>
-                <td>Terciario o universitario completo </td>
-                <td>32</td>
-              </tr>
-              <tr>
-                <th colspan="2" style="text-align: center;">
-                  Situación laboral
-                </th>
-              </tr>
-              <tr>
-                <td>Trabaja (changa)</td>
-                <td>242</td>
-              </tr>
-              <tr>
-                <td>No trabaja (c/exp)</td>
-                <td>309</td>
-              </tr>
-              <tr>
-                <td>Sin experiencia </td>
-                <td>12</td>
-              </tr>
-            </table>
+            <div class="col-lg-6">
+              <div class="service-item wow bounceInUp">
+                <canvas id="Presupuesto6" width="250" height="220">
+                </canvas>
+              </div>
+            </div>
           </div>
           <div class="container">
             <div class="row">
@@ -1294,310 +1180,1573 @@ https://templatemo.com/tm-563-seo-dream
                           </div>
                         </div>
                         <div class="section-heading">
-
+                          <h3> <em>Programas y gestión</em> </h3>
                         </div>
                         <p style="text-align: justify;" class="pb-3">
-                          <span class="citas">Servicio de Apoyo al Micro Emprendedor | </span>Se realizaron 360 entrevistas, otorgando 43
-                          créditos por un total de $3.075.000 por la Ley de Descentralización, que comprende proyectos
-                          individuales y asociativos para rubros variados como bijouterie, vivero, artesanías, estética
-                          y otros.
-                          A través del Círculo de Emprendedores se organizaron 4 Ferias con una participación de
-                          aproximadamente 90 feriantes y se confeccionó un registro actualizado del Círculo de
-                          Emprendedores, que cuenta actualmente con cerca de 200 participantes.
-                        </p>
-                        <p class="pt-3">
-                          <span class="citas">Programa Provincial Pro Vida Invierno |</span>
-                          Se desarrolló en 6 Centros contratando más de 25 personas (entre directores de centro, profesores y monitores) manteniendo una asistencia diaria de 30 a 40 niños/as por centro.
-                        </p>
-                        <p class="pt-3">
-                          <span class="citas">Programa Provincial Pro Vida Verano |</span>
-                          Durante los últimos meses del 2021 más de 700 familias inscribieron a sus niños/as para
-                          comenzar la colonia de verano el día 3 de enero. Además de actividades recreativas, deportivas
-                          y principalmente natación.
-                        </p>
+                          <span class="citas">Financiamiento Productivo: | </span>
+                          Durante el Semestre se otorgaron 129 créditos por un monto total de
+                          2.990.370.00, destinado el 15% a líneas de producción y servicios de apoyo a la producción,
+                          56% a línea comercial y 29% a Servicios Generales. Esto incluye 40 créditos de la Línea
+                          Municipal por $2.988.770 y 3 Créditos de La Ley 2870 de promoción Económica por $1.600.000.
+                          Del total de créditos otorgados el 56 % fueron destinado a Mujeres.
 
+                        </p>
+                        <p class="pt-3">
+                          <span class="citas">Capacitación | </span>
+                          En conjunto con Cámara de Comercio y Afines se realizó una Capacitación en Circuito Cerrado de
+                          TV el cual tuvo 28 inscriptos.
+                          También se desarrollaron los cursos de Marketing digital, Excel Básico, Robótica y diagnóstico
+                          del emprendimiento, con 186, 114, 47 y 44 inscriptos respectivamente
+
+                        </p>
                       </div>
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <br><br><br><br>
-                    <div class=" service-item wow bounceInUp right-image wow fadeInRight" data-wow-duration="1s"
+
+                    <div class="service-item wow bounceInUp right-image wow fadeInRight" data-wow-duration="1s"
                       data-wow-delay="0.5s">
-                      <canvas id="desarrollomicro" width="250" height="220">
-                      </canvas>
+                      <b style="font-weight: 700; text-align: center;">Recaudación por servicios </b>
+                      <div class="grid-mapa">
+                        <div id="mapitadiv"></div>
+                        <div id="info" class="info">
+                          <br><br>
+                          Porcentaje de pago en término, por barrio, al 31/06/2022 <br> <br>
+                          Clickear para <br>+ detalles
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <br>
-          <center>
-            <div class="main-green-button scroll-to-section pt-2">
-              <a class="pb-2 mt-2" href="https://drive.google.com/file/d/1Q6w3VzhtVjOh6PQrArzgjqAyA_VoeXyb/preview">Más
-                info</a>
-            </div>
-          </center>
-        </div>
-      </div>
-    </div>
-    <!-- otra seccion -->
+                  <div class="container pt-3">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="service-item wow bounceInUp">
+                          <canvas id="economiacreditos" width="250" height="220">
+                          </canvas>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="service-item wow bounceInUp">
+                          <canvas id="CreditosSector" width="250" height="220">
+                          </canvas>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container">
+                    <p style="text-align: justify;" class="pb-3">
+                      <span class="citas">Direccion De Rentas | </span>
+                      En el marco de la pandemia se reglamentó la Ordenanza 454/21 “Eximición del pago de la Tasa por
+                      Inspección de Seguridad, Salubridad e Higiene, por el periodo comprendido entre los meses de enero
+                      a junio de 2022, a toda persona física o jurídica que desarrolle una actividad comercial,
+                      industrial o de servicios
 
-    <div id="portfolio" class="our-portfolio section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5">
-            <div class="section-heading wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
-              <h6>Our Portofolio</h6>
-              <h2>Discover Our Recent <em>Projects</em> And <span>Showcases</span></h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container-fluid wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="loop owl-carousel">
-              <div class="item">
-                <div class="portfolio-item">
-                  <div class="thumb">
-                    <img src="assets/images/portfolio-01.jpg" alt="">
-                    <div class="hover-content">
-                      <div class="inner-content">
-                        <a href="#">
-                          <h4>Awesome Project 101</h4>
-                        </a>
-                        <span>Marketing</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="portfolio-item">
-                  <div class="thumb">
-                    <img src="assets/images/portfolio-04.jpg" alt="">
-                    <div class="hover-content">
-                      <div class="inner-content">
-                        <a href="#">
-                          <h4>Awesome Project 102</h4>
-                        </a>
-                        <span>Branding</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="portfolio-item">
-                  <div class="thumb">
-                    <img src="assets/images/portfolio-02.jpg" alt="">
-                    <div class="hover-content">
-                      <div class="inner-content">
-                        <a href="#">
-                          <h4>Awesome Project 103</h4>
-                        </a>
-                        <span>Consulting</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="portfolio-item">
-                  <div class="thumb">
-                    <img src="assets/images/portfolio-05.jpg" alt="">
-                    <div class="hover-content">
-                      <div class="inner-content">
-                        <a href="#">
-                          <h4>Awesome Project 104</h4>
-                        </a>
-                        <span>Artwork</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="portfolio-item">
-                  <div class="thumb">
-                    <img src="assets/images/portfolio-03.jpg" alt="">
-                    <div class="hover-content">
-                      <div class="inner-content">
-                        <a href="#">
-                          <h4>Awesome Project 105</h4>
-                        </a>
-                        <span>Branding</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="portfolio-item">
-                  <div class="thumb">
-                    <img src="assets/images/portfolio-06.jpg" alt="">
-                    <div class="hover-content">
-                      <div class="inner-content">
-                        <a href="#">
-                          <h4>Awesome Project 106</h4>
-                        </a>
-                        <span>Artwork</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="portfolio-item">
-                  <div class="thumb">
-                    <img src="assets/images/portfolio-04.jpg" alt="">
-                    <div class="hover-content">
-                      <div class="inner-content">
-                        <a href="#">
-                          <h4>Awesome Project 107</h4>
-                        </a>
-                        <span>Creative</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="portfolio-item">
-                  <div class="thumb">
-                    <img src="assets/images/portfolio-01.jpg" alt="">
-                    <div class="hover-content">
-                      <div class="inner-content">
-                        <a href="#">
-                          <h4>Awesome Project 108</h4>
-                        </a>
-                        <span>Consulting</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+                    </p>
+                    <p class="pt-3">
+                      En el primer semestre del año 2022 la oficina de Apremios de esta dirección realizó 6.275
+                      notificaciones.
+                      Se recuperaron 60.675.393 millones de deuda de servicios municipales
+                      Y 14.388.298 de la deuda con estudios jurídicos.
+                      Desde apremio se realizaron juicios que significaron el ingreso de 2.066.814 millones para el
+                      primer semestre del año. También se realizaron arreglos extra judiciales que significaron un
+                      ingreso de 1.5011.258 para el semestre
 
-    <div id="contact" class="contact-us section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
-            <form id="contact" action="" method="post">
-              <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                  <div class="section-heading">
-                    <h6>Contact Us</h6>
-                    <h2>Fill Out The Form Below To <span>Get</span> In <em>Touch</em> With Us</h2>
                   </div>
-                </div>
-                <div class="col-lg-9">
                   <div class="row">
-                    <div class="col-lg-6">
-                      <fieldset>
-                        <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
-                      </fieldset>
-                    </div>
-                    <div class="col-lg-6">
-                      <fieldset>
-                        <input type="surname" name="surname" id="surname" placeholder="Surname" autocomplete="on"
-                          required>
-                      </fieldset>
-                    </div>
-                    <div class="col-lg-6">
-                      <fieldset>
-                        <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email"
-                          required="">
-                      </fieldset>
-                    </div>
-                    <div class="col-lg-6">
-                      <fieldset>
-                        <input type="subject" name="subject" id="subject" placeholder="Subject" autocomplete="on">
-                      </fieldset>
-                    </div>
                     <div class="col-lg-12">
-                      <fieldset>
-                        <textarea name="message" type="text" class="form-control" id="message" placeholder="Message"
-                          required=""></textarea>
-                      </fieldset>
-                    </div>
-                    <div class="col-lg-12">
-                      <fieldset>
-                        <button type="submit" id="form-submit" class="main-button ">Send Message Now</button>
-                      </fieldset>
+                      <div class="row">
+                        <div class="col-lg-6 align-self-center">
+                          <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s"
+                            data-wow-delay="1s">
+                            <div class="row">
+
+                              <p style="text-align: justify;">
+                                <span class="citas">Dirección de comercio | </span>
+                                Desde la Dirección de Comercio en el primer semestre del 2022 se continuó con la
+                                realización de los diversos trámites a realizar para obtener la licencia comercial, la
+                                habilitación del establecimiento elaborador y de los productos elaborados y así como la
+                                libreta sanitaria del personal involucrado en la manipulación de los alimentos.
+                                Además de las habilitaciones se concretaron gestiones para bajas comerciales,
+                                renovaciones y otros trámites inherentes a la Dirección.
+
+
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+
+                          <div class=" service-item wow bounceInUp right-image wow fadeInRight" data-wow-duration="1s"
+                            data-wow-delay="0.5s">
+                            <canvas id="actcomercio" width="250" height="220">
+                            </canvas>
+                          </div>
+                        </div>
+                        <center>
+                          <div class="main-green-button scroll-to-section pt-2">
+                            <a class="pb-2 mt-2"
+                              href="https://drive.google.com/file/d/13hy660US7P62fPiZdY_anywzBRUo3_Xc/view?usp=sharing"
+                              target="_blank">Más info</a>
+                          </div>
+                        </center>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="contact-info">
-                    <ul>
-                      <li>
-                        <div class="icon">
-                          <img src="assets/images/contact-icon-01.png" alt="email icon">
-                        </div>
-                        <a href="#">info@company.com</a>
-                      </li>
-                      <li>
-                        <div class="icon">
-                          <img src="assets/images/contact-icon-02.png" alt="phone">
-                        </div>
-                        <a href="#">+001-002-0034</a>
-                      </li>
-                      <li>
-                        <div class="icon">
-                          <img src="assets/images/contact-icon-03.png" alt="location">
-                        </div>
-                        <a href="#">26th Street, Digital Villa</a>
-                      </li>
-                    </ul>
-                  </div>
+                  <!--  -->
                 </div>
               </div>
-            </form>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal economia -->
+  <div class="modal fade" id="modal_economia" tabindex="-1" role="dialog" aria-labelledby="modal_economia">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title">Lista de funcionarios</h6>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container pt-3">
+            <div class="row pb-3">
+              <div class="col">
+                <h6>CONTADURÍA GENERAL:</h6>
+                <p>CPN. Martín MEDINA/p>
+              </div>
+              <div class="col">
+                <h6>DIRECCIÓN DE CONTROL INTERNO Y AUDITORIA:</h6>
+                <p>CPN. Eduardo Luis FERRARO</p>
+              </div>
+            </div>
+            <div class="row pb-3">
+              <div class="col">
+                <h6>TESORERÍA:</h6>
+                <p>Tec. Hernán ARAGONA </p>
+              </div>
+              <div class="col">
+                <h6>DIRECCIÓN DE RENTAS:</h6>
+                <p>CPN. Florentina HUALA</p>
+              </div>
+            </div>
+            <div class="row pb-3">
+              <div class="col">
+                <h6>DIRECCIÓN DE DESARROLLO ECONÓMICO Y PRODUCTIVO:</h6>
+                <p>Lic. Lisandro PATEK</p>
+              </div>
+              <div class="col">
+                <h6>DIRECCIÓN DE COMERCIO:</h6>
+                <p>Sr. Gabriel Federico MARTIN</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-
+  <!--Seccion Desarrollo Social-->
+  <div id="DesarrolloSocial" class="our-services section">
+    <div class="container">
+      <hr>
+      <div class="row pb-2 mb-4">
+        <div class="col-lg-6">
+          <div class="left-image wow fadeInLeft grid-fotos pt-2" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+              <div class="col-md-auto">
+                <img id="tarjeta" src="assets/images/desarrollo.png"
+                  alt="María Cabrino - Secretaria de desarrollo social"
+                  title="María Cabrino - Secretaria de desarrollo social">
+                <div class="section-heading pt-2">
+                  <div class="main-green-button scroll-to-section pt-2">
+                    <a href="" id="listado" data-toggle="modal" data-target="#modal_desarrollo">Ver más</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 align-self-center wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+          <div class="section-heading">
+            <h3> <em>Presupuesto</em> </h3>
+          </div>
+          <p style="text-align: justify;"> La Secretaría de Desarrollo Social contó para el 2022 con un presupuesto de
+            $ 648.738.089, el cual representó un 14.29% del presupuesto municipal. Para el primer semestre, dicha
+            secretaría, teniendo en cuenta los ejes de gestión planteados, tuvo un gasto de $ 325.821.923 lo cual
+            significa completar el semestre con una ejecución presupuestaria del 60,65%.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="service-item wow bounceInUp">
+            <canvas id="PresupuestoB5" width="250" height="220">
+            </canvas>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="service-item wow bounceInUp">
+            <canvas id="Presupuesto5" width="250" height="220">
+            </canvas>
           </div>
         </div>
       </div>
-      <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-          class="bi bi-arrow-up-short"></i></a>
-    </footer>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div>
+              <em>
+                <b>
+                  <p style="font-size: 1.3em;" class="pb-4 mb-3">El gasto discriminado por rubro se estructura de la
+                    siguiente forma:</p>
+                </b>
+              </em>
+            </div>
+            <div class="col-lg-3">
+              <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="progress" data-percentage="50">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">
+                    <div>
+                      51,06%
+                      <span>
+                        <p>Gasto</p>en personal
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="progress" data-percentage="8">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">
+                    <div>
+                      21,47%
+                      <span>
+                        <p>Servicios no personales</p>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="progress" data-percentage="8">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">
+                    <div>
+                      7,66%
+                      <span>
+                        <p>Bienes</p>de consumo
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="progress" data-percentage="1">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">
+                    <div>
+                      0.54%
+                      <span>
+                        <p>Bienes</p>de capital
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="progress" data-percentage="1">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">
+                    <div>
+                      0.25%
+                      <span>
+                        <p>Prestamos</p>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="progress" data-percentage="20">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">
+                    <div>
+                      19,02%
+                      <span>
+                        <p>Transf</p> Sociales
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="row">
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="info-stat">
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="info-stat">
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="info-stat">
+                    </div>
+                  </div>
+                  <div class="section-heading">
+                    <h3> <em>Programas y gestión</em> </h3>
+                  </div>
+                  <p style="text-align: justify;">
+                    <span class="citas">Aportes Económicos y Asistencia Social | </span>
+                    Durante el primer semestre 2022 se entregaron alrededor de 19.000 módulos alimentarios que
+                    incrementaron la cantidad y calidad de sus productos teniendo como horizonte una alimentación
+                    equilibrada y saludable.
+                  <p>
+                    El modulo está compuesto por 8 productos, los cuales van variando mes a mes para que las personas
+                    beneficiarias tengan la variedad de alimentos necesarios. Se está trabajando con un proyecto para
+                    valuar la posibilidad de incorporar módulos para personas con celiaquía.
+                  </p>
+                  <p>
+                    Se contabilizan los solicitados por los servicios sociales de base más los que se entregan en el
+                    comedor de manera semanal reemplazando al viejo sistema de viandas.
+                  </p>
 
-    <!-- Scripts -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/owl-carousel.js"></script>
-    <script src="assets/js/animation.js"></script>
-    <script src="assets/js/imagesloaded.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/boton.js"></script>
+                  <!-- Durante el segundo semestre del año 2022, se entregaron alrededor de 18.000 módulos alimentarios
+                      que incrementaron la cantidad y calidad de sus productos teniendo como horizonte una alimentación
+                      equilibrada y saludable. Se realizaron 2.011 gestiones de ayudas económicas ascendiendo al importe
+                      de $11.559.545, comprendiendo tres categorías: alquiler, hogar y enfermedad. A través del Programa
+                      de Banco Descentralizado de Ayudas Técnicas, bajo la ejecución de fondo de la ley de cheques, se
+                      concretó la adquisición de las ayudas técnicas para personas con discapacidad por un monto de
+                      $1.116.000 -->
+                  </p>
 
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
 
+              <div class=" service-item wow bounceInUp right-image wow fadeInRight" data-wow-duration="1s"
+                data-wow-delay="0.5s">
+                <canvas id="ayudaseconomicas" width="250" height="220">
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <!-- <div class="section-heading" style="text-align: left;">
+          <h3> <em>Dirección de Familia</em> </h3>
+        </div> -->
+      <div class="row">
+        <div class="pb-2 mb-2">
+          <p class="pb-2">
+            <span class="citas">Consejo Municipal de Políticas Públicas para Personas con Discapacidad | </span>
+            Durante el primer semestre del año 2022 se realizaron dos reuniones del Consejo de Políticas Públicas para
+            personas con discapacidad. También se desarrollaron las siguientes propuestas:
+          </p>
+          <ul class="pl-3 ml-3">
+            <li>
+              - Coordinación con usuarias y usuarios para el recorrido de instituciones de salud para poder trabajar en
+              conjunto y modificar algunas barreras existentes en espacios públicos.
+            </li>
+            <li>
+              - Reuniones para acordar acciones a seguir con diferentes dependencias como la Dirección de Tránsito, la
+              Dirección de Ambiente y Servicios Públicos.
+            </li>
+            <li>
+              - Socialización de respuesta sobre estado de trámite de unidad adaptada del servicio transporte urbano de
+              pasajeros con participantes del consejo.
+            </li>
+            <li>
+              - Reunión Madres y Padres Tea/Fundación “La Rosa” para articular acciones sobre la implementación de
+              ordenanza 549/21. Se incorporaron programas en las salas de los centros de desarrollo infantil.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="pb-1">
+          <p>
+            <span class="citas">Infancia Y Adolescencia | </span>
+            Se continuó con la actividad presencial en los Centros de Desarrollo Infantil, contando con un registro de
+            una matrícula de 410 niñas y niños, quienes reciben desayuno, almuerzo y merienda según el turno al que
+            concurren.
+          </p>
+          <p>
+            Este semestre se concretó la apertura de turno tarde en un centro para incrementar la recepción de niñas y
+            niños en espacios seguros y continentes con un abordaje integral en un barrio de la ciudad donde la demanda
+            es importante.
+          </p>
+          <p>
+            Además, se continuó con el trabajo de los diferentes programas planificados para la infancia y adolescencia:
+            Ayelen durante el verano; Ayenhue implementándose en dos puntos de la ciudad: en el barrio Bicentenario, en
+            las instalaciones del Jardín Nº 34, y en el barrio El Molino, en las instalaciones del CDI Mi Infancia, y
+            también en Inaun. Éste último contando con un promedio entre 50 y 60 niños niñas y adolescentes
+            concurrentes.
+          </p>
+          <p class="pb-3 mb-3">
+            Las tres propuestas tienen como objetivo brindar alternativas recreativas seguras para niñas, niños y
+            adolescentes, priorizando su bienestar psicofísico y social, resistiendo los embates provocados por largos
+            periodos de aislamiento y suspensión de actividades de espacios comunes. </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <!-- <div class="section-heading" style="text-align: left;">
+          <h3> <em>Dirección General de Nuevas Economías </em> </h3>
+        </div> -->
+      <div class="row">
+        <div class="pb-1">
+          <p>
+            <span class="citas">Oficina de Empleo | </span>
+            Se realizó la atención de un total de 563 personas y 96 entrevistas laborales de vinculación. Asimismo
+            participamos de 39 búsquedas y selección de empleo, logrando la inserción laboral de 17 personas.
+          </p>
+          <!-- <p>Personas que se acercaron a la Oficina de Empleo</p> -->
+        </div>
+        <div class=" col-lg-6 left-image wow fadeInLeft grid-fotos pt-2 mt-2" data-wow-duration="1s"
+          data-wow-delay="0.5s">
+          <table class='table table-striped pr-2 pt-4 mt-4' id="tablas">
+            <tr>
+              <th colspan="2" style="text-align: center;">
+                Género
+              </th>
+            </tr>
+            <tr>
+              <td>Hombres</td>
+              <td>215</td>
+            </tr>
+            <tr>
+              <td>Mujeres</td>
+              <td>348</td>
+            </tr>
+            <tr>
+              <th colspan="2" style="text-align: center;">
+                Cupo
+              </th>
+            </tr>
+            <tr>
+              <td>Trans</td>
+              <td>14</td>
+            </tr>
+            <tr>
+              <td>Discapacidad</td>
+              <td>30</td>
+            </tr>
+            <tr>
+              <th colspan="2" style="text-align: center;">
+                Edad
+              </th>
+            </tr>
+            <tr>
+              <td>Hasta 35</td>
+              <td>399</td>
+            </tr>
+            <tr>
+              <td>35 o más</td>
+              <td>164</td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-lg-6 align-self-center wow fadeInRight pt-4 mt-2" data-wow-duration="1s" data-wow-delay="0.5s">
+          <table class='table table-striped' id="tablas">
+            <tr>
+              <th colspan="2" style="text-align: center;">
+                Nivel educativo
+              </th>
+            </tr>
+            <tr>
+              <td>Secundario incompleto</td>
+              <td>292</td>
+            </tr>
+            <tr>
+              <td>Secundario completo </td>
+              <td>239</td>
+            </tr>
+            <tr>
+              <td>Terciario o universitario completo </td>
+              <td>32</td>
+            </tr>
+            <tr>
+              <th colspan="2" style="text-align: center;">
+                Situación laboral
+              </th>
+            </tr>
+            <tr>
+              <td>Trabaja (changa)</td>
+              <td>242</td>
+            </tr>
+            <tr>
+              <td>No trabaja (c/exp)</td>
+              <td>309</td>
+            </tr>
+            <tr>
+              <td>Sin experiencia </td>
+              <td>12</td>
+            </tr>
+          </table>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="row">
+                <div class="col-lg-6 align-self-center">
+                  <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                    <div class="row">
+                      <div class="col-lg-4 col-sm-4">
+                        <div class="info-stat">
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-sm-4">
+                        <div class="info-stat">
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-sm-4">
+                        <div class="info-stat">
+                        </div>
+                      </div>
+                      <p class="pt-2 pb-2">
+                        <span class="citas">Gestión |</span>
+                        La Oficina de Empleo trabaja en conjunto con la Secretaria de Trabajo y Promoción del Empleo
+                        dependiente del Gobierno de La Pampa difundiendo las diferentes herramientas que la misma pone a
+                        disposición para las Empresas, como el Programa de Fortalecimiento al trabajo Pampeano y el
+                        Programa Federal de Fortalecimiento a la Reactivación Productiva para lo cual se realizaron
+                        visitas en conjunto.
+                      </p>
 
-    <!-- chart js -->
-    <script src="assets/js\jquery-2.1.1.js"></script>
-    <script src="js/main.js"></script> <!-- Resource jQuery -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+                      <p style="text-align: justify;" class="pb-3">
+                        <span class="citas">Servicio de Apoyo al Micro Emprendedor | </span>
+                        Se otorgaron créditos de recupero con fecha 11 de marzo y 23 de junio, beneficiando a 12 mujeres
+                        emprendedoras. En los créditos de Recupero se utilizan fondos que se obtienen a través del pago
+                        de cuotas de los microcréditos otorgados por la Ley de Descentralización.
+                      </p>
+                      <table class="table" style="width: 80%;">
+                        <thead style="text-align: center;">
+                          <tr>
+                            <th>Microcreditos</th>
+                            <th>Cantidad de beneficiarios</th>
+                            <th>Monto</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr style="text-align: center;">
+                            <td>Recupero</td>
+                            <td>12</td>
+                            <td>$810.000</td>
+                          </tr>
+                        </tbody>
+                      </table>
 
-    <script src="assets/js/nuevos_charts.js"></script>
-    <script src="assets/js/graficosPresupuestoBarras.js"></script>
-    <script src="assets/js/graficosPresupuestoTorta.js"></script>
-    <script src="assets/js/charts.js"></script>
-    <script src="assets/js/mapa/mapa1.js"></script>
+                      <!-- <p class="pt-3">
+                          <span class="citas">Programa Provincial Pro Vida Verano |</span>
+                          Durante los últimos meses del 2021 más de 700 familias inscribieron a sus niños/as para
+                          comenzar la colonia de verano el día 3 de enero. Además de actividades recreativas, deportivas
+                          y principalmente natación.
+                        </p> -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"></script>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <br><br><br><br>
+                  <div class=" service-item wow bounceInUp right-image wow fadeInRight" data-wow-duration="1s"
+                    data-wow-delay="0.5s">
+                    <canvas id="desarrollomicro" width="250" height="220">
+                    </canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <center>
+          <div class="main-green-button scroll-to-section pt-2">
+            <a class="pb-2 mt-2"
+              href="https://drive.google.com/file/d/1P3fcSzvAJaHHTj4yFk1TM68AG4WP35Xm/view?usp=sharing"
+              target="_blank">Más
+              info</a>
+          </div>
+        </center>
+      </div>
+    </div>
+  </div>
+  <!-- Modal desarrollo -->
+  <div class="modal fade" id="modal_desarrollo" tabindex="-1" role="dialog" aria-labelledby="modal_desarrollo">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title">Lista de funcionarios</h6>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container pt-3">
+            <div class="row pb-3">
+              <div class="col">
+                <h6>DIRECCIÓN GENERAL DE NUEVAS ECONOMÍAS:</h6>
+                <p>Prof. María Del Carmen GARCIA SUAREZ</p>
+              </div>
+              <div class="col">
+                <h6>DIRECCIÓN DE ECONOMÍA POPULAR:</h6>
+                <p>Sr. Norberto Manuel LAZARTE</p>
+              </div>
+            </div>
+            <div class="row pb-3">
+              <div class="col">
+                <h6>DIRECCIÓN DE FAMILIA:</h6>
+                <p>Lic. Ivana Jésica PÉREZ SANTILLÁN</p>
+              </div>
+              <div class="col">
+                <h6>COORDINACIÓN Y PLANIFICACIÓN DE PROGRAMAS SOCIALES:</h6>
+                <p>A.S. Patricia VARGAS</p>
+              </div>
+            </div>
+            <div class="row pb-3">
+              <div class="col">
+                <h6>DIRECCIÓN DE POLÍTICAS DE GENERO:</h6>
+                <p>Dra. Carina GARRIDO </p>
+              </div>
+              <div class="col">
+                <h6>UNIDAD LOCAL:</h6>
+                <p>Dra. Gabriela Inés HUBERT</p>
+              </div>
+            </div>
+            <div class="row pb-3">
+              <div class="col">
+                <h6>DIRECCIÓN DE JUVENTUD:</h6>
+                <p>A.S. Matías ALANÍS</p>
+              </div>
+              <div class="col">
+                <h6>DIRECCIÓN DE DEPORTES Y ACTIVIDADES FÍSICAS:</h6>
+                <p> Prof. Mariela Elizabet LERA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Planificacion urbana -->
+  <div id="PlanificacionUrbana" class="our-services section">
+    <div class="container">
+      <hr>
+      <div class="row  pb-2 mb-4">
+        <div class="col-lg-6">
+          <div class="left-image wow fadeInLeft grid-fotos pt-2" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+              <img id="tarjeta" src="assets/images/planificacion.png"
+                alt="Jorge Gabba - Secretario de Planificación y gestión urbana"
+                title="Jorge Gabba - Secretario de Planificación y gestión urbana">
+              <div class="section-heading pt-2">
+                <div class="main-green-button scroll-to-section pt-2">
+                  <a href="" id="listado" data-toggle="modal" data-target="#modal_planificacion">Ver más</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 align-self-center wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+          <div class="section-heading">
+            <h3> <em>Presupuesto</em> </h3>
+          </div>
+          <p style="text-align: justify;">
+            La Secretaría de Planificación y Gestión Urbana contó para el 2022 con un presupuesto de $ 442.981.711
+            , el cual representó un 9.75% del presupuesto municipal. Para el primer semestre, dicha secretaría,
+            teniendo en cuenta los ejes de gestión planteados, tuvo un gasto de $ 220.292.294 lo cual significa
+            completar el semestre con una ejecución presupuestaria del 58,89%.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="service-item wow bounceInUp">
+            <canvas id="PresupuestoB3" width="250" height="220">
+            </canvas>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="service-item wow bounceInUp">
+            <canvas id="Presupuesto3" width="250" height="220">
+            </canvas>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div>
+              <em>
+                <b>
+                  <p style="font-size: 1.3em;" class="pb-4 mb-3">El gasto discriminado por rubro se estructura de la
+                    siguiente forma:</p>
+                </b>
+              </em>
+            </div>
+            <div class="col-lg-3">
+              <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="progress" data-percentage="30">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">
+                    <div>
+                      29,79%
+                      <span>
+                        <p>Gasto</p> en personal
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="progress" data-percentage="10">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">
+                    <div>
+                      9,49%
+                      <span>
+                        <p>Servicios no personales</p>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="progress" data-percentage="3">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">
+                    <div>
+                      2,18%
+                      <span>
+                        <p>Bienes</p>de capital
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="progress" data-percentage="3">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">
+                    <div>
+                      2.24%
+                      <span>
+                        <p>Bienes</p>de consumo
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="progress" data-percentage="1">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">
+                    <div>
+                      0,03%
+                      <span>
+                        <p>Prestamos</p>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="progress" data-percentage="60">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">
+                    <div>
+                      56,28%
+                      <span>
+                        <p> Trabajos</p> Publicos
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="row">
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="info-stat">
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="info-stat">
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="info-stat">
+                    </div>
+                  </div>
+                  <div class="section-heading">
+                    <h3> <em>Programas y gestión</em> </h3>
+                  </div>
+                  <p style="text-align: justify;">
+                    <span class="citas">Alumbrado Público | </span>
+                    La Municipalidad de General Pico continúa ejecutando el <b style="color: rgb(68, 66, 66);">Plan
+                      Integral De Mejoras del Sistema de Alumbrado Público</b>, cuyo propósito final es la mejora de la
+                    calidad del servicio y el aumento de
+                    la eficiencia energética.
+                  </p>
+                  <p style="text-align: justify;">
+                    En función a ello, se trabajó sobre los pliegos para dos licitaciones públicas, que contemplan:
+                  </p>
+                  <ul style="text-align: justify;">
+                    <li class="pb-1"><b>•</b> Adquisición de 1000 luminarias viales de 90 W y 120 W con tecnología LED
+                      para continuar
+                      mejorando el sistema de alumbrado público</li>
+                    <li><b>•</b> Adquisición de 105 luminarias viales de 120 W con tecnología LED a fines de ser
+                      emplazadas en Parque Industrial.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
 
+              <div class=" service-item wow bounceInUp right-image wow fadeInRight" data-wow-duration="1s"
+                data-wow-delay="0.5s">
+                <canvas id="cordones" width="250" height="220">
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div>
+          <p class="pb-2">
+            Para finalizar, la municipalidad continúa gestionando los medios para el aprovisionamiento a
+            través la Administración Provincial de Energía (APE) de 2054 nuevas columnas y luminarias tecnología
+            LED para la ciudad, como así también la entrega de 2430 luminarias viales a través del plan de Eficiencia
+            Energética de la Subsecretaría de Energía de la Provincia de La Pampa.
+          </p>
+          <p class="pt-2">
+            <span class="citas">Conservación y mantenimiento edilicio | </span>
+            Durante la primera mitad del año se llevaron a cabo tareas de mantenimiento en diferentes
+            edificios de la planta del municipio, dentro de los cuales se contemplan acciones para la refacción de
+            instalaciones (eléctricas, gas, sanitarias), mantenimiento de mamposterías y
+            construcción en seco, pintura general (interior y exterior), reparación de aberturas, control y
+            aprovisionamiento de matafuegos, impermeabilización y limpieza de techos, además de refacciones
+            en revestimientos y artefactos sanitarios.
+          </p>
+          <p class="pt-2">
+            <span class="citas">Desagües y canales fluviales | </span>
+            Durante la primera mitad del año se realizaron las gestiones pertinentes ante el APA para la
+            solicitud de fondos para el mantenimiento de canales a través del programa PROMANCA.
+          </p>
+          <p>
+            Se recibieron cerca de $4.000.000 para realizar los trabajos durante 90 días corridos, a partir de la
+            fecha de inicio del 27/06/2022
+          </p>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="row pt-3">
+                <div class="col-lg-6 align-self-center">
+                  <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                    <div class="row">
+                      <p style="text-align: justify;" class="pb-3">
+                        <span class="citas">Reparaciones de veredas por obras de repavimentación | </span>
+                        En la actualidad, la dirección se encuentra atacando tres diferentes frentes de trabajo de
+                        restauración y refacción de veredas, que contemplan:
+                      <ul>
+                        <li class="pb-1"><b>•</b> Obra “Pavimentación y Conservación Urbana” que contempla la ejecución
+                          de 473 cuadras,
+                          llevada adelante por la Dirección Provincial de Vialidad a través de la empresa Omar JUBETE.
+                        </li>
+                        <li class="pb-1"><b>•</b> Obra “Mejoras viales, cordón cuenta y badenes” del programa Argentina
+                          Hace 2 que
+                          contempla casi 8000 metros lineales de cordones y 500 metros lineales de badenes (nuevos y
+                          reparación).</li>
+                        <li class="pb-1"><b>•</b> Bacheo y nuevas cuadras de asfalto ejecutadas por el “Organismo
+                          Descentralizado Planta de
+                          Asfalto”.</li>
+                      </ul>
+                      </p>
+                      <!-- <p class="pt-3 pb-2">
+                      <span class="citas">Agua potable y saneamiento urbano |</span>
+                      Se estuvo trabajando en conjunto con la oficina técnica de APySU de la Cooperativa Local para la
+                      presentación de dos proyectos ante ENOHSA (Ente Nacional de Obras Hídricas de Saneamiento) con el
+                      fin de su aprobación y recepción de fondos para ejecutar las siguientes obras:                      
+                    </p>  -->
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class=" service-item wow bounceInUp right-image wow fadeInRight" data-wow-duration="1s"
+                    data-wow-delay="0.5s">
+                    <canvas id="planifobras" width="250" height="220">
+                    </canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <center>
+          <div class="main-green-button scroll-to-section pt-2">
+            <a class="pb-2 mt-2"
+              href="https://drive.google.com/file/d/17rWD5HXI5lxRo4zMYByUsqH8DdrI1a_7/view?usp=sharing" target="_blank">
+              Más info
+            </a>
+          </div>
+        </center>
+      </div>
+    </div>
+  </div>
+  <!-- Modal planificacion -->
+  <div class="modal fade" id="modal_planificacion" tabindex="-1" role="dialog" aria-labelledby="modal_planificacion">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title">Lista de funcionarios</h6>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container pt-3">
+            <div class="row pb-3">
+              <div class="col">
+                <h6>DIRECCIÓN DE INFRAESTRUCTURA Y OBRAS MUNICIPALES:</h6>
+                <p>Ing. Sebastián Víctor ADAMO</p>
+              </div>
+              <div class="col">
+                <h6>DIRECCIÓN DE DISEÑO Y PLANIFICACIÓN TERRITORIAL:</h6>
+                <p>Ing. Marcos Federico Villa</p>
+              </div>
+            </div>
+            <div class="row pb-3">
+              <div class="col">
+                <h6>ENTE REGULADOR DE SERVICIOS CONCESIONADOS:</h6>
+                <p>Arq. Horacio Alberto VIOLA</p>
+              </div>
+              <div class="col">
+                <h6>DIRECCIÓN DE PLANEAMIENTO Y CATASTRO:</h6>
+                <p>Arq. Virginia Lucero ARGUINZONIZ</p>
+              </div>
+            </div>
+            <div class="row pb-3">
+              <div class="col">
+                <h6>DIRECCIÓN DE OBRAS PARTICULARES:</h6>
+                <p>Arq. Javier Horacio CAREGGIO</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Seccion Servicios publicos-->
+  <div id="ServiciosPublicos" class="our-services section">
+    <div class="container">
+      <hr>
+      <div class="row  pb-2 mb-4">
+        <div class="col-lg-6">
+          <div class="left-image wow fadeInLeft grid-fotos pt-2" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+              <img id="tarjeta" src="assets/images/servicios.png"
+                alt="Alberto Campo - Secretario de Ambiente y servicios públicos"
+                title="Alberto Campo - Secretario de Ambiente y servicios públicos">
+              <div class="section-heading pt-2">
+                <div class="main-green-button scroll-to-section pt-2">
+                  <a href="" id="listado" data-toggle="modal" data-target="#modal_servicios">Ver más</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 align-self-center wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+          <div class="section-heading">
+            <h3> <em>Presupuesto</em> </h3>
+          </div>
+          <p style="text-align: justify;">
+            La Secretaría de Ambiente y Servicios Públicos contó para el 2022 con un presupuesto de $ $ 1.169.702.521,00
+            ,
+            el cual representó un 25,76% del presupuesto municipal. Para el primer semestre, dicha secretaría,
+            teniendo en cuenta los ejes de gestión planteados, tuvo un gasto de $ 600.827.648
+            lo cual significa
+            completar el semestre con una ejecución presupuestaria del 57,96%.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="service-item wow bounceInUp">
+            <canvas id="PresupuestoB4" width="250" height="220">
+            </canvas>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="service-item wow bounceInUp">
+            <canvas id="Presupuesto4" width="250" height="220">
+            </canvas>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div>
+              <em>
+                <b>
+                  <p style="font-size: 1.3em;" class="pb-4 mb-3">El gasto discriminado por rubro se estructura de la
+                    siguiente forma:</p>
+                </b>
+              </em>
+            </div>
+            <div class="col-lg-3">
+              <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="progress" data-percentage="70">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">
+                    <div>
+                      67,27%
+                      <span>
+                        <p>Gasto</p> en personal
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="progress" data-percentage="20">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">
+                    <div>
+                      19,44%
+                      <span>
+                        <p>Servicios no personales</p>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="progress" data-percentage="1">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">
+                    <div>
+                      1,25%
+                      <span>
+                        <p>Bienes</p>de capital
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="progress" data-percentage="13">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">
+                    <div>
+                      12,04%
+                      <span>
+                        <p>Bienes</p>de consumo
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="row">
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="info-stat">
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="info-stat">
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="info-stat">
+                    </div>
+                  </div>
+                  <div class="section-heading">
+                    <h3> <em>Programas y gestión</em> </h3>
+                  </div>
+                  <p style="text-align: justify;" class="pb-3">
+                    <span class="citas">Prestación de servicios | </span>
+                    Se incorporaron los servicios de Mantenimiento de Calles de Tierra y Riego correspondientes al
+                    Barrio Sur y a la colectora de Ruta Prov. 1 y calle 203 bis a partir del 1/7/22.
+                  </p>
+                  <p>
+                    Se brindó servicios de riego en el encuentro de autos en vías del FFCC; el predio de la Sociedad
+                    Rural; Monumento a los Caídos en Guerra de Malvinas Argentinas; sector frente a Rotonda del
+                    Aeroplano (del 6 al 10/6), en el Autónomo y en el establecimiento La Rosa (del 6 al 10/6). Ademas se
+                    prestó colaboración con camiones regadores: al Club Hípico (1 viaje día por medio), al Club Costa
+                    Brava con 2 viajes durante 4 días (durante semana santa), al Club Federal (403 e/ 432 y 434) 2
+                    viajes por semana y al Club Deportivo Unión (434 bis e/ 409 y 415) 2 viajes durante 3 días a la
+                    semana.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
 
+              <div class=" service-item wow bounceInUp right-image wow fadeInRight" data-wow-duration="1s"
+                data-wow-delay="0.5s">
+                <canvas id="materialesAmbiente" width="250" height="220">
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="pb-4 mb-4">
+          <p>
+            Ademas se realizaron intervenciones con camiones regadores en focos de incendios los días 20/05 (regadores 5
+            y 6) y 26/5 (regadores 3, 7, 9 y 10) en el sector comprendido por las calles 500 a 520 y de 501 a 519. El
+            día 11/6 se presta colaboración en incendio de vivienda y negocio de calle 32 e/105 y 107 (regadores 3, 5 y
+            10) y en incendio de vivienda del Barrio Malvinas Argentinas.
+          </p>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="row">
+                <div class="col-lg-6 align-self-center">
+                  <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                    <div class="row">
+                      <p style="text-align: justify;" class="pb-3">
+                        <span class="citas">Gestión Ambiental | </span>
+                        se puso en funcionamiento operativo el Centro de Transferencia Sur y se incorporaron 2 camiones
+                        porta-contenedores marca Iveco Mod. 2022 (vehículos adquiridos a través de Nación para la Planta
+                        del R.R.U.)
+                      </p>
+                      <p>
+                        El Servicio de Recolección Domiciliaria Diaria se brinda de lunes a sábados (Residuos húmedos:
+                        días lunes, miércoles, viernes y sábado – Residuos Secos: días martes y jueves). La Recolección
+                        Especial se presta siguiendo
+                        el cronograma mensual de recorrido de las 7 (siete) zonas en que se divide la Ciudad.
+                      </p>
+                      <p class="pt-3">
+                        <span class="citas">Tareas especiales |</span>
+                        Se utilizan camiones regadores para el traslado de Quirófano móvil a diferentes sectores de la
+                        ciudad. Durante la primera semana de Mayo, se llevó a cabo limpieza (recolección especial) en
+                        Zona Franca anticipando la llegada del Presidente a la ciudad. Se realizaron tareas de limpieza
+                        especial en Autódromo y en Club Hípico. Se intervino con retroexcavadora, camión volcador y
+                        palas cargadoras en Escuela 85 para hacer tareas de limpieza especial. Se continúa con la
+                        limpieza de microbasurales que se forman en caminos vecinales.
 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class=" service-item wow bounceInUp right-image wow fadeInRight" data-wow-duration="1s"
+                    data-wow-delay="0.5s">
+                    <canvas id="ambientezoo" width="250" height="220">
+                    </canvas>
+                  </div>
+                </div>
+              </div>
+              <p class="pt-3">
+                <span class="citas">Tareas de mantenimiento |</span>
+                Durante el mes de Enero, se intervinieron: 187 cuadras correspondiente a los Barrios: La Loma, Federal,
+                Verdes del Pinar, Pago Norte, Malma, El Molino, Los Horneros (parcial); 95 cuadras correspondientes a
+                Barrios: Los Horneros, Carlos Berg y Universitario; 25 cuadras correspondientes a los Barrios: Ranqueles
+                (parcial); Energía y Progreso (parcial); y 65 cuadras correspondientes a los Barrios: Sur, Los Horneros,
+                Norte y La Loma.
+              </p>
+              <p>
+                Durante el mes de Febrero, se intervinieron: 117 cuadras correspondiente a los Barrios: Ranqueles 7
+                (parcial), La Loma, Rucci (parcial), Carlos Berg (parcial) y Verdes del Pinar; 118 cuadras
+                correspondientes a los Barrios: Los Horneros, Rucci (parcial), Carlos Berg, Universitario, Malma
+                (limpieza de calles); 172 cuadras correspondientes a los Barrios: Los Horneros, Sur, Universitario
+                (parcial) y 68 cuadras correspondientes al barrio Rucci (parcial).
+              </p>
+              <p>
+                Durante el mes de Marzo, se intervinieron: 560 cuadras aproximadamente, correspondiente a los siguientes
+                Barrios: Sur, Los Horneros, Norte, La Loma, Carlos Berg (parcial), Verdes del Pinar, Pago Norte.
+              </p>
+              <p>
+                Durante el mes de Mayo, se intervinieron: 352 cuadras correspondientes a los Barrios: Verdes del Pinar,
+                Ranqueles (40 a 36 y 23 a 29), Rucci (115 a 107 y 2 a 300), Norte (Avda. San Martín a 24 y 115 a127),
+                Sur, Los Horneros, Carlos Berg, Universitario y El Molino.
+              </p>
+              <p>
+                Durante el mes de Junio, se intervinieron: 350 cuadras aprox. En Pago Norte, Malma, El Molino, Los
+                Horneros y otros barrios.
+              </p>
+              <p class="pt-2">
+                <span class="citas">Tareas fuera del servicio habitual |</span>
+                Se realizó mantenimiento y limpieza en los siguientes canales pluviales:
+                <li> <b>Marzo:</b> Av. Isidoro Brunengo de calle 333 a 319, calle 107 e/2 y 300; calle 300 de 107 a Av.
+                  Brunengo, Ruta 1 de calle 2 a 40, Paseo Belgrano.</li>
+                <li> <b>Abril:</b> calle 40 de 9 a 107; calle 107 de 40 a 32.</li>
+                <li> <b>Mayo:</b> Avenida Circunvalación entre calles 428 y 476.</li>
+                <li> <b>Junio:</b> calle 21 de 10 a 6; calle 2 de 29 a 31; calle 21 de 2 a 102; calle 29 de 40 a 48; Av.
+                  San Martín de Ruta 1 a calle 201; calle 19 de 2 a 10; canal frente al acceso a Zona Franca; calle 37
+                  de 14 a 10; calle 14 de 37 a Ruta 1; calle 107 de calle 2 a 308; calle 40 de calle 9 a 107; calle 107
+                  de 40 a 32; calle 417 de 452 a 440. </li>
+              </p>
+            </div>
+          </div>
+        </div>
+        <br>
+        <center>
+          <div class="main-green-button scroll-to-section pb-2">
+            <a class="pb-2 mt-2"
+              href="https://drive.google.com/file/d/1C9hroKfKHJ1wdNrWV_KQOgXGQf7WODIX/view?usp=sharing" target="_blank">
+              Más info
+            </a>
+          </div>
+        </center>
+      </div>
+    </div>
+  </div>
+  <!-- Modal servicios -->
+  <div class="modal fade" id="modal_servicios" tabindex="-1" role="dialog" aria-labelledby="modal_servicios">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title">Lista de funcionarios</h6>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container pt-3">
+            <div class="row pb-3">
+              <div class="col">
+                <h6>DIRECCIÓN GENERAL DE AMBIENTE Y DESARROLLO SUSTENTABLE:</h6>
+                <p>Ing. Melina MEDUS</p>
+              </div>
+              <div class="col">
+                <h6>DIRECCIÓN DE GESTIÓN AMBIENTAL:</h6>
+                <p>Ing. Carol Eliana CASTILLO FIGUEROA</p>
+              </div>
+            </div>
+            <div class="row pb-3">
+              <div class="col">
+                <h6>DIRECCIÓN DE ZOONOSIS Y VECTORES:</h6>
+                <p>Med. Vet. Matías Alejandro CALMELS</p>
+              </div>
+              <div class="col">
+                <h6>DIRECCIÓN DE ESPACIOS PÚBLICOS:</h6>
+                <p>Ing. Florencia Lis VIVALDA</p>
+              </div>
+            </div>
+            <div class="row pb-3">
+              <div class="col">
+                <h6>DIRECCIÓN DE SERVICIOS PÚBLICOS:</h6>
+                <p>Sr. Walter QUINTÍN</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- cierre -->
+  <div id="contact" class="contact-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 wow fadeInUp animated" data-wow-duration="0.5s" data-wow-delay="0.25s"
+          style="visibility: visible;-webkit-animation-duration: 0.5s; -moz-animation-duration: 0.5s; animation-duration: 0.5s;-webkit-animation-delay: 0.25s; -moz-animation-delay: 0.25s; animation-delay: 0.25s;">
+          <form id="contact">
+            <div class="row">
+              <div class="col-lg-6 offset-lg-3">
+                <div class="section-heading">
+                  <h1>Cierre</h1>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="row">
+                  <p class="pb-3 text-justify" >
+                    En cuanto a la información presupuestaria y de ejecución relevada, ponemos a disposición el cuarto
+                    informe de transparencia.
+                  </p>
+                  <p class="pb-3 text-justify" >El índice de transparencia y visibilidad del presente informe que
+                    corresponde al primer semestre del año 2022, tiene como objetivo lograr una gobernanza
+                    participativa,a través de la ciudadanía y las instituciones, para lograr un estado descentralizado y
+                    digitalizado.
+                  </p>
+                  <p class="pb-3 text-justify" >
+                    Esperamos que nos acompañen en el desafío de pensar a una General Pico mejor y territorialmente
+                    integrada.
+                  </p>
+                  <div>
+                    <img id="firma" src="assets/images/Firma Fernanda marcador.png">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <div class="mail" id="mail">
+              <a data-toggle="modal" data-target="#modal_contacto" title="Contacto"><img
+                  src="assets/images/icono_mail.png" class="zoom" width="50" height="50"></a>
+            </div>
+          </div>
+          <!-- modal contacto  -->
+          <div class="modal fade" id="modal_contacto" tabindex="-1" role="dialog" aria-labelledby="modal_contacto">
+            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <!-- aca abre -->
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <form name="gform" id="gform" enctype="text/plain"
+                        action="https://docs.google.com/forms/d/e/1FAIpQLSfGew38H6H_vrsqQ_E24kvyngQyhVfdGR3B3Oidi5IEdnU4iQ/formResponse?"
+                        target="hidden_iframe" onsubmit="submitted=true;">
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="section-heading">
+                              <h2> <em>Envianos tus dudas o sugerencias</em></h2>
+                            </div>
+                          </div>
+                          <div class="col-lg-12" style="padding: 10px;">
+                            <div class="row">
+                              <div class="col-lg-6">
+                                <fieldset class="pb-3 pt-2">
+                                  <input class="form-control" type="text" name="entry.603624370" id="entry.603624370"
+                                    placeholder="Ingrese su nombre" autocomplete="on" required>
+                                </fieldset>
+                              </div>
+                              <div class="col-lg-6">
+                                <fieldset class="pb-3 pt-2">
+                                  <input class="form-control" type="text" name="entry.102478759" id="entry.102478759"
+                                    pattern="[^ @]*@[^ @]*" placeholder="Ingrese su correo" required="">
+                                </fieldset>
+                              </div>
+                              <div class="col-lg-12">
+                                <fieldset class="pb-3 pt-2">
+                                  <textarea type="text" name="entry.1767524342" id="entry.1767524342"
+                                    class="form-control" placeholder="Escriba su mensaje" required=""></textarea>
+                                </fieldset>
+                              </div>
+                              <div class="col-lg-12">
+                                <div class="section-heading">
+                                  <button type="submit" id="form-submit" class="boton-verde">Enviar</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </form>
+                      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+                        onload="if(submitted) {window.location='https://omegeneralpico.github.io/WEB-transparencia-2022/';}"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- aca cierra -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
+  </footer>
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/imagesloaded.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/boton.js"></script>
+  <!-- chart js -->
+  <script src="assets/js\jquery-2.1.1.js"></script>
+  <script src="js/main.js"></script>
+  <!-- Resource jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+  <!-- graficos js -->
+  <script src="assets/js/nuevos_charts.js"></script>
+  <script src="assets/js/graficosPresupuestoBarras.js"></script>
+  <script src="assets/js/graficosPresupuestoTorta.js"></script>
+  <script src="assets/js/charts.js"></script>
+  <script src="assets/js/mapa/mapa1.js"></script>
+  <!-- otro scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <!-- viene del modal -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript">var submitted = false;</script>
+  <script type="text/javascript">
+    $('#gform').on('submit', function (e) {
+      $('#gform *').fadeOut(2000);
+    });
+  </script>
 </body>
 
 </html>

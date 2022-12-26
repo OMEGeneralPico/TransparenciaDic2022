@@ -27,7 +27,8 @@ Table of contents
 font & reset css
 --------------------------------------------- 
 */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap');
 /* 
 ---------------------------------------------
 reset
@@ -102,7 +103,7 @@ header, nav, section, article, aside, footer, hgroup {
 }
 
 html, body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   font-weight: 400;
   background-color: #fff;
   -ms-text-size-adjust: 100%;
@@ -124,7 +125,7 @@ ul {
 }
 
 p {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 30px;
   color: #2a2a2a;
 }
@@ -142,7 +143,7 @@ global styles
 html,
 body {
   background: #fff;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 ::selection {
@@ -176,7 +177,7 @@ body {
 }
 
 .section-heading {
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 .section-heading h6 {
@@ -316,7 +317,7 @@ header
   transition: all 0.3s ease 0s;
 }
 
-.header-area .main-nav .logo h4 {
+/* .header-area .main-nav .logo h4 {
     font-size: 30px;
     font-weight: 800;
     text-transform: capitalize;
@@ -327,7 +328,7 @@ header
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
-}
+} */
 
 .header-area .main-nav .logo h4 img {
   max-width: 30px;
@@ -372,12 +373,12 @@ header
   font-weight: 400;
 }
 
+  /* color: #4771cb !important; *//* 
 .header-area .main-nav .nav li:last-child a:hover ,
 .background-header .main-nav .nav li:last-child a:hover {
   color: #BE87B4 !important;
-  /* color: #4771cb !important; */
-}
-
+} */
+/* este es necesario */
 .header-area .main-nav .nav li a {
   display: block;
   font-weight: 500;
@@ -396,12 +397,14 @@ header
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: #fff!important;
+/*   color: #000!important; */
+  color: #fff;
 }
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
-  color: #fff!important;
+  
+  color: #fff;
   opacity: 1;
 }
 
@@ -578,10 +581,10 @@ header
   background-color: #fff;
 }
 
-.background-header .main-nav .menu-trigger.active span:before {
+/* .background-header .main-nav .menu-trigger.active span:before {
   background-color: #fff;
 }
-
+ */
 .header-area .main-nav .menu-trigger.active span:after {
   -moz-transform: translateY(-6px) translateX(1px) rotate(-45deg);
   -ms-transform: translateY(-6px) translateX(1px) rotate(-45deg);
@@ -590,10 +593,10 @@ header
   background-color: #fff;
 }
 
-.background-header .main-nav .menu-trigger.active span:after {
+/* .background-header .main-nav .menu-trigger.active span:after {
   background-color: #fff;
 }
-
+ */
 .header-area.header-sticky {
   min-height: 80px;
 }
@@ -603,9 +606,9 @@ header
 }
 
 .header-area.header-sticky .nav li a.active {
-  color: #00A27F;
+  color: #fff;
 }
-
+/* cambio de aspectos al cambiar la resolucion */
 @media (max-width: 1200px) {
   .header-area .main-nav .nav li {
     padding-left: 12px;
@@ -853,7 +856,7 @@ Banner Style
   padding: 226px 0px 120px 0px;
   position: relative;
   overflow: hidden;
-  background-image: url(../images/1.png);
+  background-image: url(../images/generalpico1.jpg);
   height: 847px;
   
 }
@@ -1159,32 +1162,25 @@ Features Style
 Due to the split circle of progress-left and progress right, we must use the animations on each side. 
 */
 .progress[data-percentage="1"] .progress-right .progress-bar {
-  animation: loading-1 1.5s linear forwards;
+  animation: loading-0-1 1.5s linear forwards;
 }
 .progress[data-percentage="1"] .progress-left .progress-bar {
   animation: 0;
 }
-
 .progress[data-percentage="3"] .progress-right .progress-bar {
-  animation: loading-1 1.5s linear forwards;
+  animation: loading-0-3 1.5s linear forwards;
 }
 .progress[data-percentage="3"] .progress-left .progress-bar {
   animation: 0;
 }
 .progress[data-percentage="5"] .progress-right .progress-bar {
-  animation: loading-1 1.5s linear forwards;
+  animation: loading-0-5 1.5s linear forwards;
 }
 .progress[data-percentage="5"] .progress-left .progress-bar {
   animation: 0;
 }
-.progress[data-percentage="18.14"] .progress-right .progress-bar {
-  animation: loading-1 1.5s linear forwards;
-}
-.progress[data-percentage="18.14"] .progress-left .progress-bar {
-  animation: 0;
-}
 .progress[data-percentage="8"] .progress-right .progress-bar {
-  animation: loading-1 1.5s linear forwards;
+  animation: loading-0-8 1.5s linear forwards;
 }
 .progress[data-percentage="8"] .progress-left .progress-bar {
   animation: 0;
@@ -1195,10 +1191,22 @@ Due to the split circle of progress-left and progress right, we must use the ani
 .progress[data-percentage="10"] .progress-left .progress-bar {
   animation: 0;
 }
-.progress[data-percentage="18.45"] .progress-right .progress-bar {
-  animation: loading-1 1.5s linear forwards;
+.progress[data-percentage="13"] .progress-right .progress-bar {
+  animation: loading-1-3 1.5s linear forwards;
 }
-.progress[data-percentage="18.45"] .progress-left .progress-bar {
+.progress[data-percentage="13"] .progress-left .progress-bar {
+  animation: 0;
+}
+.progress[data-percentage="15"] .progress-right .progress-bar {
+  animation: loading-1-5 1.5s linear forwards;
+}
+.progress[data-percentage="15"] .progress-left .progress-bar {
+  animation: 0;
+}
+.progress[data-percentage="18"] .progress-right .progress-bar {
+  animation: loading-1-8 1.5s linear forwards;
+}
+.progress[data-percentage="18"] .progress-left .progress-bar {
   animation: 0;
 }
 .progress[data-percentage="20"] .progress-right .progress-bar {
@@ -1207,13 +1215,18 @@ Due to the split circle of progress-left and progress right, we must use the ani
 .progress[data-percentage="20"] .progress-left .progress-bar {
   animation: 0;
 }
+.progress[data-percentage="23"] .progress-right .progress-bar {
+  animation: loading-2-3 1.5s linear forwards;
+}
+.progress[data-percentage="23"] .progress-left .progress-bar {
+  animation: 0;
+}
 .progress[data-percentage="26"] .progress-right .progress-bar {
-  animation: loading-2 1.5s linear forwards;
+  animation: loading-2-6 1.5s linear forwards;
 }
 .progress[data-percentage="26"] .progress-left .progress-bar {
   animation: 0;
 }
-
 .progress[data-percentage="30"] .progress-right .progress-bar {
   animation: loading-3 1.5s linear forwards;
 }
@@ -1234,11 +1247,11 @@ Due to the split circle of progress-left and progress right, we must use the ani
 .progress[data-percentage="50"] .progress-left .progress-bar {
   animation: 0;
 }
-.progress[data-percentage="54.68"] .progress-right .progress-bar {
-  animation: loading-1 1.5s linear forwards;
+.progress[data-percentage="54"] .progress-right .progress-bar {
+  animation: loading-5 1.5s linear forwards;
 }
-.progress[data-percentage="54.68"] .progress-left .progress-bar {
-  animation: 0;
+.progress[data-percentage="54"] .progress-left .progress-bar {
+  animation: loading-0-5 1.5s linear forwards 1.5s;
 }
 .progress[data-percentage="60"] .progress-right .progress-bar {
   animation: loading-5 1.5s linear forwards;
@@ -1250,8 +1263,15 @@ Due to the split circle of progress-left and progress right, we must use the ani
   animation: loading-5 1.5s linear forwards;
 }
 .progress[data-percentage="65"] .progress-left .progress-bar {
-  animation: loading-1 1.5s linear forwards 1.5s;
+  animation: loading-1-5 1.5s linear forwards 1.5s;
 }
+.progress[data-percentage="68"] .progress-right .progress-bar {
+  animation: loading-5 1.5s linear forwards;
+}
+.progress[data-percentage="68"] .progress-left .progress-bar {
+  animation: loading-1-8 1.5s linear forwards 1.5s;
+}
+
 .progress[data-percentage="70"] .progress-right .progress-bar {
   animation: loading-5 1.5s linear forwards;
 }
@@ -1280,6 +1300,51 @@ Due to the split circle of progress-left and progress right, we must use the ani
   animation: loading-5 1.5s linear forwards 1.5s;
 }
 
+/* Nuevas animaciones*/
+/* 1% */
+@keyframes loading-0-1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(10);
+    transform: rotate(10deg);
+  }
+}
+/* 3% */
+@keyframes loading-0-3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(15);
+    transform: rotate(15deg);
+  }
+}
+/* 5% */
+@keyframes loading-0-5 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(20);
+    transform: rotate(20deg);
+  }
+}
+/* 8% */
+@keyframes loading-0-8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(28);
+    transform: rotate(28deg);
+  }
+}
 @keyframes loading-1 {
   0% {
     -webkit-transform: rotate(0deg);
@@ -1290,6 +1355,37 @@ Due to the split circle of progress-left and progress right, we must use the ani
     transform: rotate(36deg);
   }
 }
+@keyframes loading-1-3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(46);
+    transform: rotate(46deg);
+  }
+}
+@keyframes loading-1-5 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(55);
+    transform: rotate(55deg);
+  }
+}
+/* 18% */
+@keyframes loading-1-8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(60);
+    transform: rotate(60deg);
+  }
+}
 @keyframes loading-2 {
   0% {
     -webkit-transform: rotate(0deg);
@@ -1298,6 +1394,27 @@ Due to the split circle of progress-left and progress right, we must use the ani
   100% {
     -webkit-transform: rotate(72);
     transform: rotate(72deg);
+  }
+}
+@keyframes loading-2-3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(82);
+    transform: rotate(82deg);
+  }
+}
+/* %26 */
+@keyframes loading-2-6 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(92);
+    transform: rotate(92deg);
   }
 }
 @keyframes loading-3 {
@@ -1379,10 +1496,7 @@ About Us Style
   color: #2a2a2a;
   text-transform: capitalize;
 }
-/* 
-.about-us p {
-  margin: 40px 0px;
-} */
+
 
 /* 
 ---------------------------------------------
@@ -1391,7 +1505,7 @@ Services Style
 */
 
 .our-services {
-  padding-top: 120px;
+  padding-top: 50px;
 }
 
 .our-services .section-heading {
@@ -1557,9 +1671,9 @@ contact
 */
 
 .contact-us {
-  margin-top: 90px;
+  /* margin-top: 90px; */
   padding: 120px 0px;
-  background-image: url(../images/contact-bg.jpg);
+  background-image: url(../images/generalpico2.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1605,8 +1719,9 @@ contact
 
 form#contact {
   position: relative;
-  background-color: #fff;
-  padding: 60px 80px;
+  opacity: 0.7;
+  background-color: #fff;  
+  padding: 30px 50px;  
   border-radius: 50px;
   text-align: center;
 }
@@ -1626,7 +1741,8 @@ form#contact input {
 }
 
 form#contact input::placeholder {
-  color: #aaa;
+  color: #000;
+  opacity: 1;
 }
 
 form#contact textarea {
@@ -1648,7 +1764,7 @@ form#contact textarea {
 }
 
 form#contact textarea::placeholder {
-  color: #aaa;
+  color: #000;
 }
 
 form#contact button {
@@ -1708,7 +1824,7 @@ Grid introduccion
 }
 
 .intendenta{
-  grid-column:1/4;
+  grid-column:1/5;
 }
 
 .resto{
@@ -1720,7 +1836,7 @@ Grid introduccion
 .foto_intendenta, .foto_resto{ filter: grayscale(100%); 
   transition: filter .3s ease-in-out;
   height: auto;
-  
+  width: auto;
   margin: auto;
   display: block;
 }
@@ -1780,7 +1896,7 @@ responsive
   }
   .about-us .left-image {
     margin-right: 30px;
-    margin-left: 30px;
+    /* margin-left: 30px; */
     margin-bottom: 45px;
   }
   .our-portfolio .owl-nav {

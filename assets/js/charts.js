@@ -39,7 +39,7 @@ function animarpresupuestosecre() {
                         {
                             tension: 0.1,
                             fill: false,
-                            data: [3.98, 4.53, 13.08, 10.94, 23.69, 12.97, 7.63, 6.98, 16.21],
+                            data: [2.37, 2.59, 7.15, 4.85, 13.23, 7.17, 3.67, 3.63, 1.65],
                             fill: true,
                             backgroundColor: ['rgba(71, 123, 168, 0.2)',
                                 'rgba(105, 190, 190, 0.2)',
@@ -173,40 +173,25 @@ function animarrecursossecre() {
                     responsive: true,
                     maintainAspectRatio: false,
                     scales: {
-                        x: {
-                            ticks: {
-                                font: { family: 'Raleway' }
-                            },
-                            stacked: true
-                        },
-                        y: {
-                            ticks: {
-                                font: { family: 'Raleway' },
-                                maxTicksLimit: 5,
-                            },
-                            stacked: true,
-                            font: {
-                                family: 'Titillium Web'
-                            },
-                        }
+                        y: { ticks: { font: { family: 'Raleway' } } },
+                        x: { ticks: { font: { family: 'Raleway' } } }
                     },
                     legend: {
-                        display: true,
-                        position: 'right',
-                        align: 'middle',
-                        labels: { font: { family: 'Raleway' } },
+                        display: false
                     },
                     plugins: {
-
                         title: {
                             display: true,
-                            text: 'Ingresos en 2021 (en millones $)',
-                            align: 'center',
+                            text: 'Ingresos en 2022 (en millones $ )',
+                            align: 'start',
                             font: {
                                 family: 'Titillium Web',
                                 size: 20,
                             },
-                        }
+                        },
+                        legend: {
+                            display: false
+                        },
                     }
                 }
             });
@@ -252,7 +237,7 @@ function animarpersonalsecre() {
                         {
                             tension: 0.1,
                             fill: false,
-                            data: [32, 37, 190, 36, 291, 175, 92, 21],
+                            data: [38, 33, 172, 46, 275, 168, 93, 20],
                             fill: true,
                             backgroundColor: ['rgba(71, 123, 168, 0.2)',
                                 'rgba(105, 190, 190, 0.2)',
@@ -361,8 +346,8 @@ function animarAyuda() {
             return myChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
-
-                    labels: ['Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                    /* labels: ['Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'], */
+                    labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
                     datasets: [
                         {
                             label: 'Alquiler',
@@ -611,26 +596,26 @@ function animarGobierno() {
             return new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                    labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
                     datasets: [
 
                         {
                             label: 'Radar',
-                            data: [236, 236, 5, 0, 390, 0],
+                            data: [124, 62, 52, 124, 65, 110],
                             backgroundColor: 'rgba(71, 123, 168, 0.2)',
                             borderColor:'rgba(71, 123, 168, 1)',
                             borderWidth: 1
                         },
                         {
                             label: 'Domo',
-                            data: [0, 0, 0, 0, 196, 13],
+                            data: [5, 0, 31, 0, 0, 0],
                             backgroundColor: 'rgba(105, 190, 190, 0.2)',
                             borderColor:'rgba(105, 190, 190, 1)',
                             borderWidth: 1
                         },
                         {
                             label: 'Fotomultas',
-                            data: [289, 289, 98, 0, 270, 195],
+                            data: [349, 385, 312, 393, 231, 315],
                             backgroundColor: 'rgba(215, 90, 218, 0.2)',
                             borderColor: 'rgba(215, 90, 218, 1)',
                             borderWidth: 1
@@ -720,11 +705,11 @@ function animarIntendencia() {
             return new Chart(ctx, {
                 type: 'doughnut',
                 data: {
-                    labels: ['Resoluciones', 'Disposiciones', 'Proyectos de ordenanzas'],
+                    labels: ['Resoluciones', 'Disposiciones', 'Proyectos de ordenanzas', 'Ordenanzas Promulgadas'],
                     datasets: [
 
                         {
-                            data: [3375, 67, 54],
+                            data: [3035, 122, 52, 57],
                             backgroundColor: [
                                 'rgba(71, 123, 168, 0.2)',
                                 'rgba(105, 190, 190, 0.2)',
@@ -823,22 +808,22 @@ function animarcordones() {
                     labels: ['Corpico', 'Velonet', 'Telecom', 'Telefonica'],
                     datasets: [
                         {
-                            data: [235, 92, 87, 119],
+                            data: [259, 120, 128, 134],
                             borderColor: [
-
-                                'rgba(105, 190, 190, 0.2)',
-                                'rgba(71, 123, 168, 0.2)',
-                                'rgba(215, 90, 218, 0.2)',
-                                'rgba(240, 150, 145, 0.2)',
-                                'rgba(35, 145, 200, 0.2)',
-                            ],
-                            backgroundColor: [
 
                                 'rgba(105, 190, 190, 1)',
                                 'rgba(71, 123, 168, 1)',
                                 'rgba(215, 90, 218, 1)',
                                 'rgba(240, 150, 145, 1)',
                                 'rgba(35, 145, 200, 1)',
+                            ],
+                            backgroundColor: [
+
+                                'rgba(105, 190, 190, 0.2)',
+                                'rgba(71, 123, 168, 0.2',
+                                'rgba(215, 90, 218, 0.2)',
+                                'rgba(240, 150, 145, 0.2)',
+                                'rgba(35, 145, 200, 0.2)',
 
                             ],
                             borderWidth: 1
@@ -905,25 +890,25 @@ function animareconomiacreditos() {
                 type: 'bar',
                 data: {
 
-                    labels: ['Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                    labels: ['Linea Municipal', '2870'],
                     datasets: [
                         {
-                            data: [1200000, 650000, 1570000, 5550000, 7554553],
+                            data: [2988770, 1600000],
                             borderColor: [
-
-                                'rgba(105, 190, 190, 0.2)',
-                                'rgba(71, 123, 168, 0.2)',
-                                'rgba(215, 90, 218, 0.2)',
-                                'rgba(240, 150, 145, 0.2)',
-                                'rgba(35, 145, 200, 0.2)',
-                            ],
-                            backgroundColor: [
 
                                 'rgba(105, 190, 190, 1)',
                                 'rgba(71, 123, 168, 1)',
                                 'rgba(215, 90, 218, 1)',
                                 'rgba(240, 150, 145, 1)',
                                 'rgba(35, 145, 200, 1)',
+                            ],
+                            backgroundColor: [
+
+                                'rgba(105, 190, 190, 0.2)',
+                                'rgba(71, 123, 168, 0.2)',
+                                'rgba(215, 90, 218, 0.2)',
+                                'rgba(240, 150, 145, 0.2)',
+                                'rgba(35, 145, 200, 0.2)',
 
                             ],
                             borderWidth: 1
@@ -993,23 +978,33 @@ function animarCreditosSector() {
             inViewCreditosSector = true;
             return new Chart(ctx, {
                 plugins: [ChartDataLabels],
-                type: 'doughnut',
+                type: 'bar',
                 data: {
 
-                    labels: ['Comercio', 'Produccion', 'Servicios'],
+                    labels: ['Mujeres','Hombres','2870', 'Linea Municipal','Comercio', 'Produccion', 'Servicios'],
                     datasets: [
                         {
                             tension: 0.1,
                             fill: false,
-                            data: [27, 57, 16],
+                            data: [24, 19, 40, 3, 24, 7, 12],
                             fill: true,
-                            backgroundColor: ['rgba(71, 123, 168, 0.2)', 'rgba(105, 190, 190, 0.2)', 'rgba(215, 90, 218, 0.2)'
-                            ],
                             borderColor: [
 
-                                'rgba(71, 123, 168, 1)', 'rgba(105, 190, 190, 1)', 'rgba(215, 90, 218, 1)'
+                                'rgba(105, 190, 190, 1)',
+                                'rgba(71, 123, 168, 1)',
+                                'rgba(215, 90, 218, 1)',
+                                'rgba(240, 150, 145, 1)',
+                                'rgba(35, 145, 200, 1)',
                             ],
+                            backgroundColor: [
 
+                                'rgba(105, 190, 190, 0.2)',
+                                'rgba(71, 123, 168, 0.2)',
+                                'rgba(215, 90, 218, 0.2)',
+                                'rgba(240, 150, 145, 0.2)',
+                                'rgba(35, 145, 200, 0.2)',
+
+                            ],
                             borderWidth: 1
                         }
                     ]
@@ -1017,52 +1012,27 @@ function animarCreditosSector() {
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    scale: {
-                        max: 3000000,
-                        stepSize: 1000000,
-                        r: {
-                            ticks: {
-
-
-                                font: { family: 'Raleway' }
-                            },
-
-                        }
+                    scales: {
+                        y: { ticks: { font: { family: 'Raleway' } } },
+                        x: { ticks: { font: { family: 'Raleway' } } }
                     },
-
+                    legend: {
+                        display: false
+                    },
                     plugins: {
-                        datalabels: {
-                            display: 'auto',
-                            formatter: function (value) {
-                                return value + '%';
-                            },
-                            color: 'white',
-                            font: {
-
-
-                                family: 'Raleway'
-                            }
-                        },
-
                         title: {
                             display: true,
-                            text: 'Monto total créditos por actividad (%)',
+                            text: 'Monto total créditos por Sector',
                             align: 'start',
                             font: {
                                 family: 'Titillium Web',
                                 size: 20,
-                            }
+                            },
                         },
                         legend: {
-                            display: true,
-                            position: 'right',
-                            align: 'middle',
-                            labels: { font: { family: 'Raleway' } }
-                        }
-
+                            display: false
+                        },
                     }
-
-
                 }
             });
         } else {
@@ -1108,19 +1078,19 @@ function animarambientezoo() {
                             data: [1436, 3755, 62],
                             borderColor: [
 
-                                'rgba(105, 190, 190, 0.2)',
-                                'rgba(71, 123, 168, 0.2)',
-                                'rgba(215, 90, 218, 0.2)',
-                                'rgba(240, 150, 145, 0.2)',
-                                'rgba(35, 145, 200, 0.2)',
-                            ],
-                            backgroundColor: [
-
                                 'rgba(105, 190, 190, 1)',
                                 'rgba(71, 123, 168, 1)',
                                 'rgba(215, 90, 218, 1)',
                                 'rgba(240, 150, 145, 1)',
                                 'rgba(35, 145, 200, 1)',
+                            ],
+                            backgroundColor: [
+
+                                'rgba(105, 190, 190, 0.2)',
+                                'rgba(71, 123, 168, 0.2)',
+                                'rgba(215, 90, 218, 0.2)',
+                                'rgba(240, 150, 145, 0.2)',
+                                'rgba(35, 145, 200, 0.2)',
 
                             ],
                             borderWidth: 1
@@ -1192,14 +1162,14 @@ function animarplanifobras() {
                 type: 'bar',
                 data: {
 
-                    labels: ['Conexión de gas natural', 'Conexión de cloacas', 'Conexión de agua potable',],
+                    labels: ['Conexión de gas natural', 'Conexión de cloacas', 'Conexión de agua potable','Conexión  de fibra óptica Banco Macro'],
                     datasets: [
                         {
                             tension: 0.1,
                             fill: false,
-                            data: [86, 66, 36,],
+                            data: [135, 61, 41,1,],
                             fill: true,
-                            backgroundColor: ['rgba(71, 123, 168, 0.2)', 'rgba(105, 190, 190, 0.2)', 'rgba(215, 90, 218, 0.2)',
+                            backgroundColor: ['rgba(71, 123, 168, 0.2)', 'rgba(105, 190, 190, 0.2)', 'rgba(215, 90, 218, 0.2)', 'rgba(210, 80, 218, 0.2)',
 
 
 
@@ -1512,21 +1482,26 @@ function animaractcomercio() {
                         {
                             tension: 0.1,
                             fill: false,
-                            data: [243, 254, 354, 1018],
+                            data: [46, 29, 354, 1018],
                             fill: true,
-                            backgroundColor: ['rgba(71, 123, 168, 1)', 'rgba(105, 190, 190, 1)', 'rgba(215, 90, 218, 0.5)',
+                            backgroundColor: ['rgba(71, 123, 168, 0.2)', 'rgba(105, 190, 190, 0.2)', 'rgba(105, 170, 180, 0.2)', 'rgba(215, 90, 218, 0.2)',
 
 
 
-                                'rgba(240, 150, 145, 1)',
-                                'rgba(35, 145, 200, 1)',
+                                'rgba(240, 150, 145, 0.2)',
+                                'rgba(35, 145, 200, 0.2)',
                             ],
 
 
                             borderWidth: 1,
                             borderColor: [
 
-                                'rgba(234,238,226,0)'
+                                'rgba(71, 123, 168, 1)', 'rgba(105, 190, 190, 1)', 'rgba(105, 170, 180, 1)', 'rgba(215, 90, 218, 1',
+
+
+
+                                'rgba(240, 150, 145, 1)',
+                                'rgba(35, 145, 200, 1)',
                             ],
 
                         }

@@ -13,10 +13,12 @@
     background-color: #00A27F;
     color: white;
     cursor: pointer;
-    padding: 15px;
+    padding: 10px;
     border-radius: 4px;
   }
-  
+ .introImg{
+   width: 500%;
+ }
   #myBtn:hover {
     background-color: #68C0BD;
   }
@@ -28,34 +30,24 @@
     max-width: 500px;
     height: 100%;
   }
-@media (max-width: 360px) {
-    #myBtn {
-      visibility: hidden;
-    }
-  }
-  @media (max-width: 412px) {
-    #myBtn {
-      visibility: hidden;
-    }
-  }
-h6{
+  h6{
     font-weight: bold;
     color: #00A27F;
   }
   #tarjeta{    
     width: 400px;
   }
-  @media (max-width: 360px) {
+  /* @media (max-width: 360px) {
     #tarjeta {
       width: 300px;
     }
-  }
+  } */
   
-  @media (max-width: 412px) {
+/*   @media (max-width: 412px) {
     #tarjeta {
       width: 390px;
     }
-  }
+  } */
   .modal-title{
     font-weight: bold;
     text-transform: uppercase;
@@ -66,33 +58,624 @@ h6{
     padding-bottom: 10px;
     padding: 8px 10px;
     border-radius: 10px;
+    width: 80px;
    }
-   @media (max-width: 360px) {
+
+   #firma{
+    width:150px;
+    height: 120px;
+    float:right;
+   }
+/*    @media (max-width: 360px) {
     #listado {
       width: 80px;
       height: 40px;
     }
-  }
-  @media (max-width: 412px) {
+  } */
+ /*  @media (max-width: 412px) {
     #listado {
       width: 80px;
       height: 40px;
     }
-  }
+  } */
 
   #tablas{
     width: 550px;
   }
-  @media (max-width: 360px) {
+@media (min-width: 1920px){
+  .introImg{
+    width: 500%;
+    height: 140%;
+  }
+}
+ /*  @media (min-width: 412px) {
+    #idt {
+      font-size: 50px;
+    }
+    #tarjeta {
+      width: 390px;
+    }
+    #listado {
+      width: 80px;
+      height: 40px;
+    }
+    #tablas{
+      width: 370px;
+    }    
+  }  
+  @media  (max-width: 390px){
+    #myBtn {
+      visibility: hidden;
+    }
     #tablas{
       width: 340px;
     }
-  }
-  @media (max-width: 412px) {
-    #tablas{
-      width: 380px;
+    #tarjeta {
+      width: 340px;
+    }
+    #listado {
+      width: 80px;
+      height: 40px;
+    }
+    #firma{
+      width:50%;
+      float:right;
+     }
+     #mail {
+      position: absolute;
+      left: 50%;
+      bottom: 10%;
     }
   }
+  @media (max-width: 384px) {
+    #myBtn {
+      visibility: hidden;
+    }
+    #tablas{
+      width: 320px;
+    }
+    #tarjeta {
+      width: 320px;
+    }
+    #listado {
+      width: 80px;
+      height: 40px;
+    }
+    #firma{
+      width:50%;
+      float:right;
+     }
+     #idt {
+      font-size: 45px;
+    }
+    #mail {
+      position: absolute;
+      left: 50%;
+      bottom: 10%;
+    }
+  }
+  @media (max-width: 360px) {
+    #myBtn {
+      visibility: hidden;
+    }
+    #tablas{
+      width: 320px;
+    }
+    #tarjeta {
+      width: 320px;
+    }
+    #listado {
+      width: 80px;
+      height: 40px;
+    }
+    #firma{
+      width:50%;
+      float:right;
+     }
+     #idt{
+       font-size: 45px;
+     }
+     #mail {
+      position: absolute;
+      left: 60%;
+      bottom: 10%;
+    }
+  }
+  @media (max-width: 412px){
+    #mail {
+      position: absolute;
+      left: 50%;
+      bottom: 10%;
+    }
+  }
+  */
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    #idt {
+      font-size: 50px;
+    }
+    #tarjeta {
+      width: 390px;
+    }
+    #listado {
+      width: 80px;
+      height: 40px;
+    }
+    #tablas{
+      width: 370px;
+    }    
+    .foto_intendenta{
+      width: 110% !important;
+    }
+    #mail {
+      position: absolute;
+      left: 60%;
+      bottom: 10%;
+    }
+  }  
+ 
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    #idt {
+      font-size: 50px;
+    }
+    #tarjeta {
+      width: 330px;      
+    }
+    #listado {
+      width: 80px;
+      height: 40px;
+    }
+    #tablas{
+      width: 370px;
+    }    
+  }  
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    #idt {
+      font-size: 50px;
+    }
+    #tarjeta {
+      width: 390px;
+    }
+    #listado {
+      width: 80px;
+      height: 40px;
+    }
+    #tablas{
+      width: 370px;
+    }     
+    #mail {
+      position: absolute;
+      left: 60% !important;
+      bottom: 10%;
+    }
+}
+
+/* IPHONE */
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+/* FIN IPHONE */
+
+/* SAMSUNG */
+/* ----------- Galaxy S3 ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) {
+    #tablas{
+      width: 320px;
+    }
+    #tarjeta {
+      width: 320px;
+    }
+    #listado {
+      width: 80px;
+      height: 40px;
+    }
+    #firma{
+      width:50%;
+      float:right;
+     }
+     #idt{
+       font-size: 45px;
+     }
+     #mail {
+      position: absolute;
+      left: 60%;
+      bottom: 10%;
+    }
+}
+
+/* Portrait */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) 
+  and (orientation: portrait) {
+    #tablas{
+      width: 320px;
+    }
+    #tarjeta {
+      width: 320px;
+    }
+    #listado {
+      width: 80px;
+      height: 40px;
+    }
+    #firma{
+      width:50%;
+      float:right;
+     }
+     #idt{
+       font-size: 45px;
+     }
+     #mail {
+      position: absolute;
+      left: 60%;
+      bottom: 10%;
+    }
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) 
+  and (orientation: landscape) {
+    #tablas{
+      width: 320px;
+    }
+    #tarjeta {
+      width: 320px;
+    }
+    #listado {
+      width: 80px;
+      height: 40px;
+    }
+    #firma{
+      width:50%;
+      float:right;
+     }
+     #idt{
+       font-size: 45px;
+     }
+     #mail {
+      position: absolute;
+      left: 60%;
+      bottom: 10%;
+    }
+}
+
+/* ----------- Galaxy S4, S5 and Note 3 ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+    #tablas{
+      width: 320px;
+    }
+    #tarjeta {
+      width: 320px;
+    }
+    #listado {
+      width: 80px;
+      height: 40px;
+    }
+    #firma{
+      width:50%;
+      float:right;
+     }
+     #idt{
+       font-size: 45px;
+     }
+     #mail {
+      position: absolute;
+      left: 60%;
+      bottom: 10%;
+    }
+}
+
+/* Portrait */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+    #tablas{
+      width: 320px;
+    }
+    #tarjeta {
+      width: 320px;
+    }
+    #listado {
+      width: 80px;
+      height: 40px;
+    }
+    #firma{
+      width:50%;
+      float:right;
+     }
+     #idt{
+       font-size: 45px;
+     }
+     #mail {
+      position: absolute;
+      left: 60%;
+      bottom: 10%;
+    }
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+    #tablas{
+      width: 320px;
+    }
+    #tarjeta {
+      width: 320px;
+    }
+    #listado {
+      width: 80px;
+      height: 40px;
+    }
+    #firma{
+      width:50%;
+      float:right;
+     }
+     #idt{
+       font-size: 45px;
+     }
+     #mail {
+      position: absolute;
+      left: 60%;
+      bottom: 10%;
+    }
+}
+
+/* ----------- Galaxy S6 ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) {
+    #tablas{
+      width: 320px;
+    }
+    #tarjeta {
+      width: 320px;
+    }
+    #listado {
+      width: 80px;
+      height: 40px;
+    }
+    #firma{
+      width:50%;
+      float:right;
+     }
+     #idt{
+       font-size: 45px;
+     }
+     #mail {
+      position: absolute;
+      left: 60%;
+      bottom: 10%;
+    }
+}
+
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) 
+  and (orientation: portrait) {
+    #tablas{
+      width: 320px;
+    }
+    #tarjeta {
+      width: 320px;
+    }
+    #listado {
+      width: 80px;
+      height: 40px;
+    }
+    #firma{
+      width:50%;
+      float:right;
+     }
+     #idt{
+       font-size: 45px;
+     }
+     #mail {
+      position: absolute;
+      left: 60%;
+      bottom: 10%;
+    }
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) 
+  and (orientation: landscape) {
+    #tablas{
+      width: 320px;
+    }
+    #tarjeta {
+      width: 320px;
+    }
+    #listado {
+      width: 80px;
+      height: 40px;
+    }
+    #firma{
+      width:50%;
+      float:right;
+     }
+     #idt{
+       font-size: 45px;
+     }
+     #mail {
+      position: absolute;
+      left: 60%;
+      bottom: 10%;
+    }
+}
+
+
+/* FIN SAMSUNG */
+
+  .mail {
+    position: absolute;
+    left: 90%;
+    bottom: 10%;
+  }
+  .zoom {
+    padding: 50px;
+    transition: transform .2s;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+  }
+  .zoom:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+  }
+
   /*
    colores que se pueden usar: 
   verde:  #00A27F 
