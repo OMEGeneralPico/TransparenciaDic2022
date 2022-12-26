@@ -848,7 +848,14 @@ preloader
 Banner Style
 --------------------------------------------- 
 */
-
+video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: -1;
+  
+}
 .main-banner {
   background-repeat: no-repeat;
   background-position: center center;
@@ -917,12 +924,13 @@ Banner Style
   color: #2a2a2a;
   line-height: 72px;
   background: #84dfcb;
-  background: -webkit-linear-gradient(to right, #84dfcb 0%, #00A27F 100%);
-  background: -moz-linear-gradient(to right, #84dfcb 0%, #00A27F 100%);
-  background: linear-gradient(to right, #84dfcb 0%, #00A27F 100%);
+  background: -webkit-linear-gradient(to right, #fff 0%, #f0eeee 100%);
+  background: -moz-linear-gradient(to right, #fff 0%, #f0eeee 100%);
+  background: linear-gradient(to right, #fff 0%, #f0eeee 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 
 .main-banner .right-image {
   text-align: right;
@@ -933,7 +941,16 @@ Banner Style
 .main-banner .right-image img {
   max-width: 593px;
 }
-
+.main-banner::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgb(0, 162, 127);
+  opacity: 0.8;
+}
 
 
 /* 
@@ -1951,3 +1968,41 @@ responsive
     padding: 30px;
   }
 }
+
+
+/*  */
+
+ .counter-left h2 {
+  background: -moz-linear-gradient(0deg, #00A27F 0%, #68C0BD 100%);
+  background: -webkit-linear-gradient(0deg, #00A27F 0%, #68C0BD 100%);
+  background: -ms-linear-gradient(0deg, #00A27F 0%, #68C0BD 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.counter-left {
+  text-align: center;
+}
+
+.counter-left h2 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.counter-left p {
+  font-size: 14px;
+  font-weight: 300;
+  color: #222;
+}
+
+.counter-left .single-facts {
+  margin-bottom: 26px;
+}
+
+@media (max-width: 768px) {
+  .counter-left {
+    text-align: center;
+  }
+}
+
+/*  */
