@@ -125,7 +125,94 @@ $(window).load(function () {
 
 });
 
+function animarpresupuestosecre() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "mantenimientomensual";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartpresupuestosecre[idElement]) { continue }
+            chartpresupuestosecre[idElement] = true;
 
+            var ctx = document.getElementById(idElement);
+
+            if (inViewpresupuestosecre) { return; }
+            inViewpresupuestosecre = true;
+            return new Chart(ctx, {
+                type: 'line',
+                data: {
+
+                    labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre','Octubre','Noviembre','Diciembre'],
+                    datasets: [
+                        {
+                            label: 'Cuadras',
+                            tension: 0.1,
+                            fill: false,
+                            data: [383, 407, 560, 454, 352, 350, 450, 416, 458, 590, 450, 384],
+                            fill: true,
+                            backgroundColor: ['rgba(71, 123, 168, 0.2)'],
+
+
+                            borderWidth: 1,
+                            borderColor: ['rgba(71, 123, 168, 1)',
+                                
+                            ],
+
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        datalabels: {
+                            anchor: 'end', // remove this line to get label in middle of the bar
+
+                            formatter: (val) => (`${val}%`),
+                            labels: {
+                                value: {
+                                    color: 'blue'
+                                }
+                            }
+
+                        },
+
+                        title: {
+                            display: true,
+                            text: 'Servicio de mantenimiento de calles (cantidad de Cuadras)',
+                            align: 'center',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            }
+                        },
+                        legend: {
+                            display: true,
+                            position: 'right',
+                            align: 'middle',
+                            labels: { font: { family: 'Raleway' } }
+                        },
+                    },
+
+
+
+                }
+            });
+        } else {
+            inViewpresupuestosecre = false;
+        }
+    }
+}
+$(window).scroll(function () {
+
+    animarpresupuestosecre();
+
+});
+
+$(window).load(function () {
+
+
+    animarpresupuestosecre();
+
+});
 var chartrecursossecre = {}
 var inViewrecursossecre = false;
 
@@ -496,7 +583,7 @@ function animarAmbiente() {
                     labels: ['Carton y Papeles', 'Plastico', 'Vidrio', 'Metales', 'Chatarra'],
                     datasets: [
                         {
-                            data: [36240, 12626, 67498, 1382, 11620],
+                            data: [86577, 33506, 106486, 1612, 54253],
                             borderColor: [
 
                                 'rgba(105, 190, 190, 1)',
@@ -1072,10 +1159,10 @@ function animarambientezoo() {
                 type: 'bar',
                 data: {
 
-                    labels: ['Castraciones ', 'Vacunaciones ', 'Desinfecciónes '],
+                    labels: ['Castraciones ', 'Vacunaciones '],
                     datasets: [
                         {
-                            data: [1436, 3755, 62],
+                            data: [ 3772, 7510],
                             borderColor: [
 
                                 'rgba(105, 190, 190, 1)',
