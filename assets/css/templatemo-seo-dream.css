@@ -853,7 +853,14 @@ video {
   left: 0;
   top: 0;
   height: 100%;
-  z-index: -1;  
+  z-index: -1;
+  /*  */
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  /*  */
 }
 .main-banner {
   background-repeat: no-repeat;
