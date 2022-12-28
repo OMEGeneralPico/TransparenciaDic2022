@@ -1,153 +1,153 @@
 {
     "1": {
         "nombre": "Chacras de Gomila",
-        "porcentaje": "53%",
-        "cantFacturado":"897",
-        "cantPagado":"477"
+        "porcentaje": "50,10%",
+        "cantFacturado":"5252",
+        "cantPagado":"2631"
     },
 
     "2": {
         "nombre": "La Loma",
-        "porcentaje":"51%",
-        "cantFacturado":"299",
-        "cantPagado":"152"
+        "porcentaje":"41,61%",
+        "cantFacturado":"7917",
+        "cantPagado":"3294"
     },
 
     "3": {
         "nombre": "Energia y Progreso",
-        "porcentaje":"62%",
+        "porcentaje":"59,04%",
         "cantFacturado":"1214",
         "cantPagado":"747"
     },
     
     "4": {
         "nombre": "Los Horneros",
-        "porcentaje":"69%",
+        "porcentaje":"64,57%",
         "cantFacturado":"659",
         "cantPagado":"454"
     },
 
     "5": {
         "nombre": "Sur",
-        "porcentaje":"54%",
+        "porcentaje":"58,29%",
         "cantFacturado":"1183",
         "cantPagado":"642"
     },
 
     "6": {
         "nombre": "El Molino",
-        "porcentaje":"58%",
+        "porcentaje":"54,47%",
         "cantFacturado":"1935",
         "cantPagado":"1121"
     },
 
     "7": {
         "nombre": "Universitario",
-        "porcentaje":"65%",
+        "porcentaje":"63,74%",
         "cantFacturado":"764",
         "cantPagado":"497"
     },
 
     "8": {
         "nombre": "Rucci",
-        "porcentaje":"52%",
+        "porcentaje":"51%",
         "cantFacturado":"3212",
         "cantPagado":"1676"
     },
 
     "9": {
         "nombre": "Norte",
-        "porcentaje":"77%",
+        "porcentaje":"73,52%",
         "cantFacturado":"1931",
         "cantPagado":"1487"
     },
 
     "10": {
         "nombre": "Centro",
-        "porcentaje":"80%",
+        "porcentaje":"77,93%",
         "cantFacturado":"2626",
         "cantPagado":"2100"
     },
 
     "11": {
         "nombre": "Frank Allan",
-        "porcentaje":"67%",
+        "porcentaje":"65,87%",
         "cantFacturado":"1551",
         "cantPagado":"1036"
     },
 
     "12": {
         "nombre": "Don Bosco",
-        "porcentaje":"52%",
+        "porcentaje":"47,81%",
         "cantFacturado":"554",
         "cantPagado":"288"
     },
 
     "13": {
         "nombre": "Pacifico",
-        "porcentaje":"74%",
+        "porcentaje":"74,98%",
         "cantFacturado":"1024",
         "cantPagado":"762"
     },
 
     "14": {
         "nombre": "Talleres",
-        "porcentaje":"77%",
+        "porcentaje":"74,26%",
         "cantFacturado":"2052",
         "cantPagado":"1578"
     },
     
     "15": {
         "nombre": "San Etelvino",
-        "porcentaje":"69%",
+        "porcentaje":"68,03%",
         "cantFacturado":"954",
         "cantPagado":"656"
     },
     
     "16": {
         "nombre": "Malvinas Argentinas",
-        "porcentaje":"41%",
+        "porcentaje":"38,58%",
         "cantFacturado":"741",
         "cantPagado":"306"
     },
 
     "17": {
         "nombre": "Bicentenario",
-        "porcentaje":"28%",
+        "porcentaje":"26,05%",
         "cantFacturado":"1702",
         "cantPagado":"473"
     },
 
     "18": {
         "nombre": "Este",
-        "porcentaje":"71%",
+        "porcentaje":"68,89%",
         "cantFacturado":"1818",
         "cantPagado":"1284"
     },
     "19": {
         "nombre": "Parque Industrial y Zona Franca",
-        "porcentaje":"50%",
+        "porcentaje":"60,25%",
         "cantFacturado":"305",
         "cantPagado":"151"
     },
     
     "20": {
         "nombre":  "Carlos Berg",
-        "porcentaje":"48%",
+        "porcentaje":"47,30%",
         "cantFacturado":"1116",
         "cantPagado":"553"
     },
 
     "21": {
         "nombre": "Roca",
-        "porcentaje":"66%",
+        "porcentaje":"61,97%",
         "cantFacturado":"643",
         "cantPagado":"424"
     },
 
     "22": {
         "nombre": "Indios Ranqueles",
-        "porcentaje":"44%",
+        "porcentaje":"41,35%",
         "cantFacturado":"1887",
         "cantPagado":"837"
     }

@@ -124,8 +124,108 @@ $(window).load(function () {
     animarpresupuestosecre();
 
 });
+/* intimaciones */
+function animarintimaciones() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "intimaciones";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartpresupuestosecre[idElement]) { continue }
+            chartpresupuestosecre[idElement] = true;
 
-function animarpresupuestosecre() {
+            var ctx = document.getElementById(idElement);
+
+            if (inViewpresupuestosecre) { return; }
+            inViewpresupuestosecre = true;
+            return new Chart(ctx, {
+                type: 'pie',
+                data: {
+
+                    labels: ['Bajo puerta', 'Recibido', 'Falta procesar', 'Domicilio incorrecto', 'Casa deshabitada', 'Rechazada'],
+                    datasets: [
+                        {
+                            tension: 0.1,
+                            fill: false,
+                            data: [63.70, 19.03, 15.78, 0.65, 0.50, 0.34],
+                            fill: true,
+                            backgroundColor: [
+                                'rgba(71, 123, 168, 0.2)',
+                                'rgba(105, 190, 190, 0.2)',
+                                'rgba(215, 90, 218, 0.2)',
+                                'rgba(240, 150, 145, 0.2)',
+                                'rgba(35, 145, 200, 0.2)',
+                                'rgba(221, 227, 146, 0.2)'                                
+                            ],
+
+
+                            borderWidth: 1,
+                            borderColor: [
+
+                                'rgba(71, 123, 168, 1)',
+                                'rgba(105, 190, 190, 1)',
+                                'rgba(215, 90, 218, 1)',
+                                'rgba(240, 150, 145, 1)',
+                                'rgba(35, 145, 200, 1)',
+                                'rgba(221, 227, 146, 1)'
+                            ],
+
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        datalabels: {
+                            anchor: 'end', // remove this line to get label in middle of the bar
+
+                            formatter: (val) => (`${val}%`),
+                            labels: {
+                                value: {
+                                    color: 'blue'
+                                }
+                            }
+                        },
+
+                        title: {
+                            display: true,
+                            text: 'Clasificación de intimaciones enviadas (porcentaje)',
+                            align: 'center',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            }
+                        },
+                        legend: {
+                            display: true,
+                            position: 'right',
+                            align: 'middle',
+                            labels: { font: { family: 'Raleway' } }
+                        },
+                    },
+
+
+
+                }
+            });
+        } else {
+            inViewpresupuestosecre = false;
+        }
+    }
+}
+$(window).scroll(function () {
+
+    animarintimaciones();
+
+});
+
+$(window).load(function () {
+
+
+    animarintimaciones();
+
+});
+/* mantenimiento mensual */
+function animarmantenimientomensual() {
     for (var i = 0; i < 1; i++) {
         var idElement = "mantenimientomensual";
         if (isScrolledIntoView('#' + idElement)) {
@@ -203,16 +303,107 @@ function animarpresupuestosecre() {
 }
 $(window).scroll(function () {
 
-    animarpresupuestosecre();
+    animarmantenimientomensual();
 
 });
 
 $(window).load(function () {
 
 
-    animarpresupuestosecre();
+    animarmantenimientomensual();
 
 });
+/* ingreso juridico */
+function animaringresojuridico() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "ingresosjuridicos";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartpresupuestosecre[idElement]) { continue }
+            chartpresupuestosecre[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (inViewpresupuestosecre) { return; }
+            inViewpresupuestosecre = true;
+            return new Chart(ctx, {
+                type: 'line',
+                data: {
+
+                    labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre','Octubre','Noviembre','Diciembre'],
+                    datasets: [
+                        {
+                            label: 'Ingresos',
+                            tension: 0.1,
+                            fill: false,
+                            data: [1569072, 1527867, 2265739, 2883493, 2196578, 3737724, 2515143, 2367624, 3382104, 5081416, 3149286, 4454402],
+                            fill: true,
+                            backgroundColor: ['rgba(0, 162, 127, 0.2)'],
+
+
+                            borderWidth: 1,
+                            borderColor: ['rgba(0, 162, 127, 1)',
+                                
+                            ],
+
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        datalabels: {
+                            anchor: 'end', // remove this line to get label in middle of the bar
+
+                            formatter: (val) => (`${val}%`),
+                            labels: {
+                                value: {
+                                    color: 'blue'
+                                }
+                            }
+
+                        },
+
+                        title: {
+                            display: true,
+                            text: 'Ingresos de estudios juridicos  por mes',
+                            align: 'center',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            }
+                        },
+                        legend: {
+                            display: true,
+                            position: 'right',
+                            align: 'middle',
+                            labels: { font: { family: 'Raleway' } }
+                        },
+                    },
+
+
+
+                }
+            });
+        } else {
+            inViewpresupuestosecre = false;
+        }
+    }
+}
+$(window).scroll(function () {
+
+    animaringresojuridico();
+
+});
+
+$(window).load(function () {
+
+
+    animaringresojuridico();
+
+});
+
+
 var chartrecursossecre = {}
 var inViewrecursossecre = false;
 
