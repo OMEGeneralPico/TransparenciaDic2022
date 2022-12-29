@@ -1132,14 +1132,14 @@ function animarobrasnuevas() {
                             ticks: {
                                 font: { family: 'Raleway' }
                             },
-                            stacked: true
+                            stacked: false
                         },
                         y: {
                             ticks: {
                                 font: { family: 'Raleway' },
                                 maxTicksLimit: 5,
                             },
-                            stacked: true,
+                            stacked: false,
                             font: {
                                 family: 'Titillium Web'
                             },
@@ -1186,12 +1186,12 @@ function animarobrasampliacion() {
             return new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: ['Comercios', 'Edificios de Educación y Sanidad', 'Edificios Particularizados', 'Edificios de Educación y Sanidad', 'Industria', 'Oficinas','Taller Depósito Tinglados','Viviendas Multifamiliares','Viviendas Unifamiliares'],
+                    labels: ['Comercios', 'consultorios,ctro de salud', 'Edificios de Culto y Cultura', 'Edificios de Educacion y Sanidad', 'Edificios de Esparcimiento y Recreación', 'Industria','Taller Depósito Tinglados','Viviendas Multifamiliares','Viviendas Unifamiliares'],
                     datasets: [
 
                         {
                             label: 'M2 Cubiertos',
-                            data: [4394, 915, 145, 50, 1257, 207, 2733, 417, 12608],
+                            data: [4394,915,145,50,1257,207,2733,417,12608],
                             backgroundColor: 'rgba(71, 123, 168, 0.2)',
                             borderColor:'rgba(71, 123, 168, 1)',
                             borderWidth: 1
@@ -1230,14 +1230,14 @@ function animarobrasampliacion() {
                             ticks: {
                                 font: { family: 'Raleway' }
                             },
-                            stacked: true
+                            stacked: false
                         },
                         y: {
                             ticks: {
                                 font: { family: 'Raleway' },
                                 maxTicksLimit: 5,
                             },
-                            stacked: true,
+                            stacked: false,
                             font: {
                                 family: 'Titillium Web'
                             },
