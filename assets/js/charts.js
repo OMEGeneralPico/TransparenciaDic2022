@@ -351,6 +351,12 @@ function animaringresojuridico() {
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
+                    scales: {
+                        y: { ticks: { font: { family: 'Raleway' }, callback: function(value) {
+                            return `$ ${value}`;
+                        } } },
+                        x: { ticks: { font: { family: 'Raleway' } } }
+                    },
                     plugins: {
                         datalabels: {
                             anchor: 'end', // remove this line to get label in middle of the bar
@@ -363,7 +369,7 @@ function animaringresojuridico() {
                             }
 
                         },
-
+                        /* acad */
                         title: {
                             display: true,
                             text: 'Ingresos de estudios juridicos  por mes',
@@ -960,9 +966,304 @@ $(window).load(function () {
     animarGobierno();
 
 });
+/* clasificacion economia */
+var chartsclasificacion = {}
+var InViewclasificacion = false;
+
+function animarclasificacion() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "clasificacion";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartsclasificacion[idElement]) { continue }
+            chartsclasificacion[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (InViewclasificacion) { return; }
+            InViewclasificacion= true;
 
 
+            return new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Productivos', 'Servicios generales', 'Comercio'],
+                    datasets: [
 
+                        {
+                            data: [53, 18, 29],
+                            backgroundColor: [
+                                'rgba(71, 123, 168, 0.2)',
+                                'rgba(105, 190, 190, 0.2)',
+                                'rgba(215, 90, 218, 0.2)',
+                                'rgba(153, 070, 135,0.2)',
+                                'rgba(240, 150, 145,0.2)',
+                                'rgba(35, 145, 200,0.2)',],
+                                borderColor: [
+                                    'rgba(71, 123, 168, 1)',
+                                    'rgba(105, 190, 190, 1)',
+                                    'rgba(215, 90, 218, 1)',
+                                    'rgba(153, 070, 135,1)',
+                                    'rgba(240, 150, 145,1)',
+                                    'rgba(35, 145, 200,1)',],
+                            borderWidth: 1
+                        },
+
+
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Clasificación por sectores (Porcentaje)',
+                            align: 'start',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            },
+                            legend: {
+                                display: true,
+                                position: 'right',
+                                align: 'middle',
+                                labels: { font: { family: 'Raleway' } }
+                            }
+                        },
+
+                        legend: {
+                            display: true,
+                            position: 'right',
+                            align: 'middle',
+                            labels: { font: { family: 'Raleway' } },
+                        },
+
+                        scales: {
+                            xAxes: [{
+                                grid: {
+                                    display: false,
+                                },
+                            }]
+                        }
+                    }
+                }
+            });
+
+        } else {
+            InViewclasificacion = false;
+        }
+    }
+}
+
+$(window).scroll(function () {
+
+    animarclasificacion();
+
+});
+
+$(window).load(function () {
+
+
+    animarclasificacion();
+
+});
+
+/*  */
+/* obras nuevas */
+var chartsobrasnuevas = {}
+var InViewobrasnuevas = false;
+
+function animarobrasnuevas() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "obrasnuevas";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartsobrasnuevas[idElement]) { continue }
+            chartsobrasnuevas[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (InViewobrasnuevas) { return; }
+            InViewobrasnuevas = true;
+
+            return new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Comercios', 'Edificios de Educación y Sanidad', 'Edificios Particularizados', 'Edificios de Educación y Sanidad', 'Industria', 'Oficinas','Taller Depósito Tinglados','Viviendas Multifamiliares','Viviendas Unifamiliares'],
+                    datasets: [
+
+                        {
+                            label: 'M2 Cubiertos',
+                            data: [1864, 166, 6269, 166, 150, 1771, 1201, 2295, 28484],
+                            backgroundColor: 'rgba(71, 123, 168, 0.2)',
+                            borderColor:'rgba(71, 123, 168, 1)',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'M2 Semicubiertos',
+                            data: [90, 4, 2136, 4, 0, 172, 48, 721, 6832],
+                            backgroundColor: 'rgba(105, 190, 190, 0.2)',
+                            borderColor:'rgba(105, 190, 190, 1)',
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top',
+                            align: 'middle',
+                            labels: { font: { family: 'Raleway' } }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Obras nuevas aprobadas',
+                            align: 'start',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            }
+                        }
+                    },
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            ticks: {
+                                font: { family: 'Raleway' }
+                            },
+                            stacked: true
+                        },
+                        y: {
+                            ticks: {
+                                font: { family: 'Raleway' },
+                                maxTicksLimit: 5,
+                            },
+                            stacked: true,
+                            font: {
+                                family: 'Titillium Web'
+                            },
+                        }
+                    }
+                }
+            });
+        } else {
+            InViewobrasnuevas = false;
+        }
+    }
+}
+
+$(window).scroll(function () {
+
+    animarobrasnuevas();
+
+});
+
+$(window).load(function () {
+
+
+    animarobrasnuevas();
+
+});
+/* fin obras nuevas */
+
+/* obras ampliacion */
+var chartsobrasampliacion = {}
+var InViewobrasampliacion = false;
+
+function animarobrasampliacion() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "obrasampliacion";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartsobrasampliacion[idElement]) { continue }
+            chartsobrasampliacion[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (InViewobrasampliacion) { return; }
+            InViewobrasampliacion = true;
+
+            return new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Comercios', 'Edificios de Educación y Sanidad', 'Edificios Particularizados', 'Edificios de Educación y Sanidad', 'Industria', 'Oficinas','Taller Depósito Tinglados','Viviendas Multifamiliares','Viviendas Unifamiliares'],
+                    datasets: [
+
+                        {
+                            label: 'M2 Cubiertos',
+                            data: [4394, 915, 145, 50, 1257, 207, 2733, 417, 12608],
+                            backgroundColor: 'rgba(71, 123, 168, 0.2)',
+                            borderColor:'rgba(71, 123, 168, 1)',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'M2 Semicubiertos',
+                            data: [166, 3, 9, 0, 0, 0, 1421, 215, 3556],
+                            backgroundColor: 'rgba(105, 190, 190, 0.2)',
+                            borderColor:'rgba(105, 190, 190, 1)',
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top',
+                            align: 'middle',
+                            labels: { font: { family: 'Raleway' } }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Ampliación de obras aprobadas',
+                            align: 'start',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            }
+                        }
+                    },
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            ticks: {
+                                font: { family: 'Raleway' }
+                            },
+                            stacked: true
+                        },
+                        y: {
+                            ticks: {
+                                font: { family: 'Raleway' },
+                                maxTicksLimit: 5,
+                            },
+                            stacked: true,
+                            font: {
+                                family: 'Titillium Web'
+                            },
+                        }
+                    }
+                }
+            });
+        } else {
+            InViewobrasampliacion = false;
+        }
+    }
+}
+
+$(window).scroll(function () {
+
+    animarobrasampliacion();
+
+});
+
+$(window).load(function () {
+
+
+    animarobrasampliacion();
+
+});
+/* fin obras ampliacion */
 
 var chartsIntendencia = {}
 var InViewIntendencia = false;
@@ -1150,6 +1451,177 @@ $(window).load(function () {
 
 });
 
+/* suelos */
+var chartssuelos = {}
+var inViewsuelos = false;
+function animarsuelos() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "suelos";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartssuelos[idElement]) { continue }
+            chartssuelos[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (inViewsuelos) { return; }
+            inViewsuelos = true;
+            return new Chart(ctx, {
+                type: 'bar',
+                data: {
+
+                    labels: ['Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                    datasets: [
+                        {
+                            data: [44, 68, 50, 30],
+                            borderColor: [
+                                'rgba(71, 123, 168, 1)',
+                                'rgba(105, 190, 190, 1)',
+                                'rgba(35, 145, 200, 1)',
+                                'rgba(215, 90, 218, 1)',
+                                'rgba(240, 150, 145, 1)',
+                                
+                            ],
+                            backgroundColor: [
+                                'rgba(71, 123, 168, 0.2',
+                                'rgba(105, 190, 190, 0.2)',
+                                'rgba(35, 145, 200, 0.2)',
+                                'rgba(215, 90, 218, 0.2)',
+                                'rgba(240, 150, 145, 0.2)',
+                                
+
+                            ],
+                            borderWidth: 1
+                        },
+
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { ticks: { font: { family: 'Raleway' } } },
+                        x: { ticks: { font: { family: 'Raleway' } } }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Expedientes formulario: Uso de Suelo (cant. ingresada)',
+                            align: 'start',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            },
+                        },
+                        legend: {
+                            display: false
+                        },
+                    }
+                }
+            });
+        } else {
+            inViewayudas = false;
+        }
+    }
+}
+$(window).scroll(function () {
+
+    animarsuelos();
+
+});
+
+$(window).load(function () {
+
+
+    animarsuelos();
+
+});
+/* fin suelos */
+/* eventos */
+var chartseventos = {}
+var inVieweventos = false;
+function animareventos() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "eventos";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartseventos[idElement]) { continue }
+            chartseventos[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (inVieweventos) { return; }
+            inVieweventos = true;
+            return new Chart(ctx, {
+                type: 'bar',
+                data: {
+
+                    labels: ['Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                    datasets: [
+                        {
+                            data: [1, 12, 13, 10, 15, 13, 11, 8],
+                            borderColor: [
+                                'rgba(71, 123, 168, 1)',
+                                'rgba(105, 190, 190, 1)',
+                                'rgba(35, 145, 200, 1)',
+                                'rgba(215, 90, 218, 1)',
+                                'rgba(240, 150, 145, 1)',
+                                
+                            ],
+                            backgroundColor: [
+                                'rgba(71, 123, 168, 0.2',
+                                'rgba(105, 190, 190, 0.2)',
+                                'rgba(35, 145, 200, 0.2)',
+                                'rgba(215, 90, 218, 0.2)',
+                                'rgba(240, 150, 145, 0.2)',
+                                
+
+                            ],
+                            borderWidth: 1
+                        },
+
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { ticks: { font: { family: 'Raleway' } } },
+                        x: { ticks: { font: { family: 'Raleway' } } }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Eventos durante el año',
+                            align: 'start',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            },
+                        },
+                        legend: {
+                            display: false
+                        },
+                    }
+                }
+            });
+        } else {
+            inViewayudas = false;
+        }
+    }
+}
+$(window).scroll(function () {
+
+    animareventos();
+
+});
+
+$(window).load(function () {
+
+
+    animareventos();
+
+});
+/* fin suelos */
+/* monto total creditos */
 var chartseconomiacreditos = {}
 var inVieweconomiacreditos = false;
 
@@ -1168,10 +1640,10 @@ function animareconomiacreditos() {
                 type: 'bar',
                 data: {
 
-                    labels: ['Linea Municipal', '2870'],
+                    labels: ['Ley 2461','Línea Municipal', 'Línea 2870','Galpón PYM'],
                     datasets: [
                         {
-                            data: [2988770, 1600000],
+                            data: [18000000, 22200000,5600000,3200000],
                             borderColor: [
 
                                 'rgba(105, 190, 190, 1)',
@@ -1207,7 +1679,7 @@ function animareconomiacreditos() {
                     plugins: {
                         title: {
                             display: true,
-                            text: 'Monto total créditos por fecha ($)',
+                            text: 'Monto total créditos',
                             align: 'start',
                             font: {
                                 family: 'Titillium Web',
@@ -1237,8 +1709,99 @@ $(window).load(function () {
     animareconomiacreditos();
 
 });
+/* fin monto total creditos */
+
+/* cursos */
+var chartcursos  = {}
+var inViewcursos = false;
+
+function animarcursos() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "cursos";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartcursos[idElement]) { continue }
+            chartcursos[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (inViewcursos) { return; }
+            inViewcursos = true;
+            return new Chart(ctx, {
+                type: 'bar',
+                data: {
+
+                    labels: ['Circuito cerrado de TV','Marketing digital', 'Excel','Robótica inicial','Robótica avanzada','Diagnostico del emprendimiento'],
+                    datasets: [
+                        {
+                            data: [28, 186, 114, 47, 7, 44],
+                            borderColor: [
+
+                                'rgba(105, 190, 190, 1)',
+                                'rgba(71, 123, 168, 1)',
+                                'rgba(215, 90, 218, 1)',
+                                'rgba(240, 150, 145, 1)',
+                                'rgba(35, 145, 200, 1)',
+                                'rgba(35, 135, 200, 1)',
+                            ],
+                            backgroundColor: [
+
+                                'rgba(105, 190, 190, 0.2)',
+                                'rgba(71, 123, 168, 0.2)',
+                                'rgba(215, 90, 218, 0.2)',
+                                'rgba(240, 150, 145, 0.2)',
+                                'rgba(35, 145, 200, 0.2)',
+                                'rgba(35, 135, 200, 0.2)',
+
+                            ],
+                            borderWidth: 1
+                        },
+
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { ticks: { font: { family: 'Raleway' } } },
+                        x: { ticks: { font: { family: 'Raleway' } } }
+                    },
+                    legend: {
+                        display: false
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Cursos: Oficios tecnologicos',
+                            align: 'start',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            },
+                        },
+                        legend: {
+                            display: false
+                        },
+                    }
+                }
+            });
+        } else {
+            inViewcursos = false;
+        }
+    }
+}
+$(window).scroll(function () {
+
+    animarcursos();
+
+});
+
+$(window).load(function () {
 
 
+    animarcursos();
+
+});
+/* fin cursos */
 
 var chartsCreditosSector = {}
 var inViewCreditosSector = false;
@@ -1259,12 +1822,12 @@ function animarCreditosSector() {
                 type: 'bar',
                 data: {
 
-                    labels: ['Mujeres','Hombres','2870', 'Linea Municipal','Comercio', 'Produccion', 'Servicios'],
+                    labels: ['Ley 2461','Linea Municipal','Línea 2870', 'Galpón PYM'],
                     datasets: [
                         {
                             tension: 0.1,
                             fill: false,
-                            data: [24, 19, 40, 3, 24, 7, 12],
+                            data: [60, 76, 7, 2],
                             fill: true,
                             borderColor: [
 
