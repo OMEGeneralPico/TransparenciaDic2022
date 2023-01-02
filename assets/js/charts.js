@@ -995,16 +995,12 @@ function animarclasificacion() {
                                 'rgba(71, 123, 168, 0.2)',
                                 'rgba(105, 190, 190, 0.2)',
                                 'rgba(215, 90, 218, 0.2)',
-                                'rgba(153, 070, 135,0.2)',
-                                'rgba(240, 150, 145,0.2)',
-                                'rgba(35, 145, 200,0.2)',],
+                                ],
                                 borderColor: [
                                     'rgba(71, 123, 168, 1)',
                                     'rgba(105, 190, 190, 1)',
                                     'rgba(215, 90, 218, 1)',
-                                    'rgba(153, 070, 135,1)',
-                                    'rgba(240, 150, 145,1)',
-                                    'rgba(35, 145, 200,1)',],
+                                    ],
                             borderWidth: 1
                         },
 
@@ -1014,7 +1010,7 @@ function animarclasificacion() {
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    plugins: {
+                    plugins: {            
                         title: {
                             display: true,
                             text: 'Clasificación por sectores (Porcentaje)',
@@ -1670,7 +1666,9 @@ function animareconomiacreditos() {
                     responsive: true,
                     maintainAspectRatio: false,
                     scales: {
-                        y: { ticks: { font: { family: 'Raleway' } } },
+                        y: { ticks: { font: { family: 'Raleway' }, callback: function(value) {
+                            return `$ ${value}`;
+                        } } },
                         x: { ticks: { font: { family: 'Raleway' } } }
                     },
                     legend: {
@@ -1863,7 +1861,7 @@ function animarCreditosSector() {
                     plugins: {
                         title: {
                             display: true,
-                            text: 'Monto total créditos por Sector',
+                            text: 'Total créditos por Sector',
                             align: 'start',
                             font: {
                                 family: 'Titillium Web',
