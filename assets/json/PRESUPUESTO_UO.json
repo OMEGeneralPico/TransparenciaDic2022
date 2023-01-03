@@ -5,67 +5,66 @@
 
   },
   "INTEDENCIA": {
-   "Asuntos legales":  23030899,
-   "Comunicaciones": 18062379,
-   "Tecnol.de la inf.": 24966720,
-   "Articulación": 2758497,
-   "Intendencia": 18044479,
-   "Juzgado de faltas": 22076174,
-   "Protocolo y ceremonial": 8812382
-
-   
+   "Intendencia": 43256469,
+   "Juzgado de faltas": 51513886,
+   "Dir. Asuntos legales":  42870837,
+   "Dir. Comunicaciones": 37485754,
+   "Tecnol.de la inf.": 52366069,
+   "Protocolo y ceremonial": 20505493,
+   "Dir. Gestión y articulación": 12268896
   },
+
   "GOBIERNO": {
-   "Educac.y cultura": 48307612,
-   "Choferes": 22439759,
-   "Gobierno seg.educ.y cultura": 39251316,
-   "Prevención": 102029123,
-   "RRHH": 35139628,
-   "Rel. institucionales": 59762986,
-   "Turismo": 8668494
+   "Sec. de gob. Seg. Educ.y cultura": 62248637,
+   "Dir. Gral. de RRHH": 86014587,
+   "Dir. de Prevención y conv. Ciudadana": 284178922,
+   "Dir. de educ.y cultura": 196722737,   
+   "Coord. Rel. institucionales": 118813498,
+   "Turismo": 20557286,
+   "Gerencia de choferes": 62664572,
+   "Coord. Cabildo XXI": 11329721
+  },
 
-   
-  },
   "PLANIFICACION": {
-   "Diseño y planific.": 5190806,
-   "Infraestructura": 100906355,
-   "Obras particulares": 21574359,
-   "Planeam.y catastro": 6292061,
-   "Planif.y gestión urbana": 81397203,
-   "Planeam. y catastro" : 6292061
-   
-   
+   "Sec. Planif.y gestión urbana": 88664429,
+   "Ente reg. Serv. concesionados" : 11000044,
+   "Dir. de Infraestructura y obras munic.": 350643329,
+   "Dir. Obras particulares": 94500122,
+   "Dir. Planeam.y catastro": 16809094,
+   "Dir. Diseño y planific. Terr.": 12213638
   },
+
   "ESPACIOS PUBLICOS": {
-   "Ambiente y des.sustentable": 7482593,
-   "Espacios públicos": 80701000,
-   "Gestión ambiental": 20222947,
-   "R.R.U": 26756896,
-   "Sec.de amb. y serv.pub.": 142236591,
-   "Servicios públicos": 301552039,
-   "Zoonosis y vectores": 21875580
+   "Ambiente y des.sustentable": 20363037,
+   "Dir. de arbolado y parques urbanos": 169016176,
+   "Gestión ambiental": 45600364,
+   "R.R.U": 45723513,
+   "Sec.de amb. y serv.pub.": 247243044,
+   "Servicios públicos": 794288818,
+   "Zoonosis y vectores": 39440038
   },
-  "DESARROLLO SOCIAL": {
-   "Ctos. des. infantil": 50474870,
-   "Deportes": 28280406,
-   "Dir.de familia": 53253795,
-   "Dirección de juventud": 10177745,
-   "Nuevas economías": 18660094,
-   "Políticas de género": 7415311,
-   "Desarrollo social": 84281737,
-   "Servicio soc.de base": 55949677,
-   "Unidad de niñez":17328285
-   
+
+  "DESARROLLO SOCIAL": {  
+   "Sec. de desarrollo social": 187723774,
+   "Dir.de familia": 120531258,
+   "Ctos. des. infantil": 126310845,
+   "Dir. Gral de nuevas economías": 56901855,
+   "Coord. Servicio soc.de base": 118345284,
+   "Dir. Unidad local de niñez": 42035479,
+   "Dirección de juventud": 44052224,
+   "Dir. de deportes y Act. físicas": 93934125,
+   "Dir. Políticas de género": 8848943
   },
+
   "ECONOMIA": {
-   "Contaduría": 27927376,
-   "Des.Econom.": 34752758,
-   "Control comerc.": 35118314,
-   "Rentas": 36164761,
-   "Eeconomía": 9035542,
-   "Tesorería": 23871523
-   
+   "Sec. Eeconomía": 25914236,
+   "Contaduría gral.": 78777775,
+   "Dir. de rentas": 99792685,   
+   "Dir. de comercio": 91722867,   
+   "Dir. des.Economico": 84734109,
+   "Tesorería": 58738374   
   },
+
   "ORGANISMOS DESCENTRALIZADOS": {
    "Caminos vecinales": 6440364,
    "Planta de asfalto": 158384825
