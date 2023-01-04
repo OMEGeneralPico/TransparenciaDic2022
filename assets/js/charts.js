@@ -34,12 +34,12 @@ function animarpresupuestosecre() {
                 type: 'doughnut',
                 data: {
 
-                    labels: ['C.Deliberante', 'Intendencia', 'Gobierno', 'Planif. Urbana', 'Ambiente', 'Desarrollo Social', 'Economia', 'Org. Descentralizados', 'No programaticos'],
+                    labels: ['C.Deliberante', 'Intendencia', 'Gobierno', 'Planif. Urbana', 'Ambiente', 'Desarrollo Social', 'Economia', 'Org. Descentralizados', 'Part. No programaticas','Proy. Nac. y Prov.'],
                     datasets: [
                         {
                             tension: 0.1,
                             fill: false,
-                            data: [2.37, 2.59, 7.15, 4.85, 13.23, 7.17, 3.67, 3.63, 1.65],
+                            data: [4.36, 4.52, 14.65, 9.97, 23.58, 13.89, 7.64, 6.29, 13.45, 1.65],
                             fill: true,
                             backgroundColor: ['rgba(71, 123, 168, 0.2)',
                                 'rgba(105, 190, 190, 0.2)',
@@ -427,12 +427,12 @@ function animarrecursossecre() {
             return new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['Recursos propios', 'Coparticipación', 'Rec. de capital', 'Aportes no reint.'],
+                    labels: ['C.Deliberante', 'Intendencia', 'Gobierno', 'Planif. Urbana', 'Ambiente', 'Desarrollo Social', 'Economia', 'Org. Descentralizados', 'Part. No programaticas','Proy. Nac. y Prov.'],
                     datasets: [
                         {
                             tension: 0.1,
                             fill: false,
-                            data: [1001.13, 952.63, 10.45, 58.26],
+                            data: [246764767, 260267405, 842529961, 573830658, 1361674988, 798683788, 439680049, 770783926, 361765624, 93826588],
                             fill: true,
                             backgroundColor: [
                                 'rgba(71, 123, 168, 0.2)',
