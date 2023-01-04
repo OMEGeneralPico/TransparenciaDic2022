@@ -54,7 +54,7 @@ function generarchart(etiquetas, data2, ctx) {
         
         title: {
           display: true,
-          text: 'Gasto ejecutado por rubro (%)',
+          text: 'Presuesto por rubro (%)',
 
           align: 'start',
           font: {
