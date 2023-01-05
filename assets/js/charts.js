@@ -1709,6 +1709,96 @@ $(window).load(function () {
 });
 /* fin monto total creditos */
 
+/* direccion de comercio */
+var chartsdircomercio = {}
+var inViewdircomercio = false;
+
+function animardircomercio() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "dircomercio";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartsdircomercio[idElement]) { continue }
+            chartsdircomercio[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (inViewdircomercio) { return; }
+            inViewdircomercio = true;
+            return new Chart(ctx, {
+                type: 'bar',
+                data: {
+
+                    labels: ['Inspecciones','Altas comerciales','Bajas comerciales', 'Bajas de oficio'],
+                    datasets: [
+                        {
+                            data: [2100, 198, 180, 69],
+                            borderColor: [
+
+                                'rgba(105, 190, 190, 1)',
+                                'rgba(71, 123, 168, 1)',
+                                'rgba(215, 90, 218, 1)',
+                                'rgba(240, 150, 145, 1)',
+                                'rgba(35, 145, 200, 1)',
+                            ],
+                            backgroundColor: [
+
+                                'rgba(105, 190, 190, 0.2)',
+                                'rgba(71, 123, 168, 0.2)',
+                                'rgba(215, 90, 218, 0.2)',
+                                'rgba(240, 150, 145, 0.2)',
+                                'rgba(35, 145, 200, 0.2)',
+
+                            ],
+                            borderWidth: 1
+                        },
+
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { ticks: { font: { family: 'Raleway' } } },
+                        x: { ticks: { font: { family: 'Raleway' } } }
+                    },
+                    legend: {
+                        display: false
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Dirección de comercio',
+                            align: 'start',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            },
+                        },
+                        legend: {
+                            display: false
+                        },
+                    }
+                }
+            });
+        } else {
+            inViewdircomercio = false;
+        }
+    }
+}
+$(window).scroll(function () {
+
+    animardircomercio();
+
+});
+
+$(window).load(function () {
+
+
+    animardircomercio();
+
+});
+/* fin direccion de comercio */
+
 /* cursos */
 var chartcursos  = {}
 var inViewcursos = false;
