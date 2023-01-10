@@ -224,6 +224,7 @@ $(window).load(function () {
     animarintimaciones();
 
 });
+
 /* mantenimiento mensual */
 function animarmantenimientomensual() {
     for (var i = 0; i < 1; i++) {
@@ -313,6 +314,298 @@ $(window).load(function () {
     animarmantenimientomensual();
 
 });
+/* fin mantenimiento mensual */
+
+/* teoricos */
+var chartsteoricos = {}
+var inViewteoricos = false;
+
+function animarteoricos() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "teoricos";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartsteoricos[idElement]) { continue }
+            chartsteoricos[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (inViewteoricos) { return; }
+            inViewteoricos = true;
+            return new Chart(ctx, {
+                type: 'line',
+                data: {
+
+                    labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre','Octubre','Noviembre','Diciembre'],
+                    datasets: [
+                        {
+                            label: 'evaluaciones',
+                            tension: 0.1,
+                            fill: false,
+                            data: [243, 201, 286, 198, 206, 235, 281, 262, 301, 251, 231, 121],
+                            fill: true,
+                            backgroundColor: ['rgba(71, 123, 168, 0.2)'],
+
+
+                            borderWidth: 1,
+                            borderColor: ['rgba(71, 123, 168, 1)',
+                                
+                            ],
+
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        datalabels: {
+                            anchor: 'end', // remove this line to get label in middle of the bar
+
+                            formatter: (val) => (`${val}%`),
+                            labels: {
+                                value: {
+                                    color: 'blue'
+                                }
+                            }
+
+                        },
+
+                        title: {
+                            display: true,
+                            text: 'Departamento de educación para la prevención',
+                            align: 'center',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            }
+                        },
+                        legend: {
+                            display: true,
+                            position: 'right',
+                            align: 'middle',
+                            labels: { font: { family: 'Raleway' } }
+                        },
+                    },
+
+
+
+                }
+            });
+        } else {
+            inViewteoricos = false;
+        }
+    }
+}
+$(window).scroll(function () {
+
+    animarteoricos();
+
+});
+
+$(window).load(function () {
+
+
+    animarteoricos();
+
+});
+/* fin teoricos */
+
+/* licencias y turnos */
+var chartslicenciasyturnos = {}
+var inViewlicenciasyturnos = false;
+
+function animarlicenciasyturnos() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "licenciasyturnos";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartslicenciasyturnos[idElement]) { continue }
+            chartslicenciasyturnos[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (inViewlicenciasyturnos) { return; }
+            inViewlicenciasyturnos = true;
+            return new Chart(ctx, {
+                type: 'line',
+                data: {
+
+                    labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre','Octubre','Noviembre','Diciembre'],
+                    datasets: [
+                        {
+                            label: 'Licencias y Turnos',
+                            tension: 0.1,
+                            fill: false,
+                            data: [1003, 955, 981, 731, 671, 758, 871, 898, 916, 959, 999, 618],
+                            fill: true,
+                            backgroundColor: ['rgba(215, 90, 218, 0.2)'],
+
+                            
+                            borderWidth: 1,
+                            borderColor: ['rgba(215, 90, 218, 1)',
+                                
+                            ],
+
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        datalabels: {
+                            anchor: 'end', // remove this line to get label in middle of the bar
+
+                            formatter: (val) => (`${val}%`),
+                            labels: {
+                                value: {
+                                    color: 'blue'
+                                }
+                            }
+
+                        },
+
+                        title: {
+                            display: true,
+                            text: 'Licencias y turnos otorgados en el año 2022',
+                            align: 'center',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            }
+                        },
+                        legend: {
+                            display: true,
+                            position: 'right',
+                            align: 'middle',
+                            labels: { font: { family: 'Raleway' } }
+                        },
+                    },
+
+
+
+                }
+            });
+        } else {
+            inViewlicenciasyturnos = false;
+        }
+    }
+}
+$(window).scroll(function () {
+
+    animarlicenciasyturnos();
+
+});
+
+$(window).load(function () {
+
+
+    animarlicenciasyturnos();
+
+});
+/* fin licencias y turnos */
+
+/* localidades vecinas*/
+var chartsvecinas = {}
+var InViewvecinas = false;
+
+function animarvecinas() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "vecinas";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartsvecinas[idElement]) { continue }
+            chartsvecinas[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (InViewvecinas) { return; }
+            InViewvecinas = true;
+
+
+            return new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Agustoni', 'Metileo', 'Speluzzi','Vértiz', 'Dorila'],
+                    datasets: [
+
+                        {
+                            data: [12.26, 17.6, 23.2, 22.4, 24.53],
+                            backgroundColor: [
+                                'rgba(71, 123, 168, 0.2)',
+                                'rgba(105, 190, 190, 0.2)',
+                                'rgba(215, 90, 218, 0.2)',
+                                'rgba(124, 212, 188, 0.2)',
+                                ],
+                                borderColor: [
+                                    'rgba(71, 123, 168, 1)',
+                                    'rgba(105, 190, 190, 1)',
+                                    'rgba(215, 90, 218, 1)',
+                                    'rgba(124, 212, 188, 1)',
+                                    ],
+                            borderWidth: 1
+                        },
+
+
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {            
+                        title: {
+                            display: true,
+                            text: 'Licencias emitidas a localidades vecinas (Porcentaje)',
+                            align: 'start',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            },
+                            legend: {
+                                display: true,
+                                position: 'right',
+                                align: 'middle',
+                                labels: { font: { family: 'Raleway' } }
+                            }
+                        },
+
+                        legend: {
+                            display: true,
+                            position: 'right',
+                            align: 'middle',
+                            labels: { font: { family: 'Raleway' } },
+                        },
+
+                        scales: {
+                            xAxes: [{
+                                grid: {
+                                    display: false,
+                                },
+                            }]
+                        }
+                    }
+                }
+            });
+
+        } else {
+            InViewvecinas = false;
+        }
+    }
+}
+
+$(window).scroll(function () {
+
+    animarvecinas();
+
+});
+
+$(window).load(function () {
+
+
+    animarvecinas();
+
+});
+/* fin localidades vecinas  */
+
+
 /* ingreso juridico */
 function animaringresojuridico() {
     for (var i = 0; i < 1; i++) {
@@ -878,28 +1171,28 @@ function animarGobierno() {
             InViewGobierno = true;
 
             return new Chart(ctx, {
-                type: 'bar',
+                type: 'line',
                 data: {
-                    labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
+                    labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
                     datasets: [
 
                         {
                             label: 'Radar',
-                            data: [124, 62, 52, 124, 65, 110],
+                            data: [124, 62, 52, 124, 65, 110,124, 63, 1, 9, 0, 10],
                             backgroundColor: 'rgba(71, 123, 168, 0.2)',
                             borderColor:'rgba(71, 123, 168, 1)',
                             borderWidth: 1
                         },
                         {
                             label: 'Domo',
-                            data: [5, 0, 31, 0, 0, 0],
+                            data: [5, 0, 31, 0, 0, 0, 3, 20, 13, 22, 25, 3],
                             backgroundColor: 'rgba(105, 190, 190, 0.2)',
                             borderColor:'rgba(105, 190, 190, 1)',
                             borderWidth: 1
                         },
                         {
                             label: 'Fotomultas',
-                            data: [349, 385, 312, 393, 231, 315],
+                            data: [349, 385, 312, 393, 231, 315, 95, 99, 17, 51, 129, 51],
                             backgroundColor: 'rgba(215, 90, 218, 0.2)',
                             borderColor: 'rgba(215, 90, 218, 1)',
                             borderWidth: 1
@@ -940,7 +1233,7 @@ function animarGobierno() {
                                 font: { family: 'Raleway' },
                                 maxTicksLimit: 5,
                             },
-                            stacked: true,
+                            stacked: false,
                             font: {
                                 family: 'Titillium Web'
                             },
