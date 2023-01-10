@@ -966,6 +966,7 @@ $(window).load(function () {
     animarGobierno();
 
 });
+
 /* clasificacion economia */
 var chartsclasificacion = {}
 var InViewclasificacion = false;
@@ -1063,8 +1064,316 @@ $(window).load(function () {
     animarclasificacion();
 
 });
+/* fin clasificacion economia  */
 
-/*  */
+/* infraestructura tecnologica*/
+var chartsinfraestructura = {}
+var InViewinfraestructura = false;
+
+function animarinfraestructura() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "infraestructura";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartsinfraestructura[idElement]) { continue }
+            chartsinfraestructura[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (InViewinfraestructura) { return; }
+            InViewinfraestructura= true;
+
+
+            return new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Impresoras ', 'Terminales NTComputing', 'Servidores','PC`s '],
+                    datasets: [
+
+                        {
+                            data: [26, 7, 2, 65],
+                            backgroundColor: [
+                                'rgba(71, 123, 168, 0.2)',
+                                'rgba(105, 190, 190, 0.2)',
+                                'rgba(215, 90, 218, 0.2)',
+                                'rgba(124, 212, 188, 0.2)',
+                                ],
+                                borderColor: [
+                                    'rgba(71, 123, 168, 1)',
+                                    'rgba(105, 190, 190, 1)',
+                                    'rgba(215, 90, 218, 1)',
+                                    'rgba(124, 212, 188, 1)',
+                                    ],
+                            borderWidth: 1
+                        },
+
+
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {            
+                        title: {
+                            display: true,
+                            text: 'Infraestructura tecnológica (Porcentaje)',
+                            align: 'start',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            },
+                            legend: {
+                                display: true,
+                                position: 'right',
+                                align: 'middle',
+                                labels: { font: { family: 'Raleway' } }
+                            }
+                        },
+
+                        legend: {
+                            display: true,
+                            position: 'right',
+                            align: 'middle',
+                            labels: { font: { family: 'Raleway' } },
+                        },
+
+                        scales: {
+                            xAxes: [{
+                                grid: {
+                                    display: false,
+                                },
+                            }]
+                        }
+                    }
+                }
+            });
+
+        } else {
+            InViewinfraestructura = false;
+        }
+    }
+}
+
+$(window).scroll(function () {
+
+    animarinfraestructura();
+
+});
+
+$(window).load(function () {
+
+
+    animarinfraestructura();
+
+});
+/* fin infraestructrura tecnologica  */
+
+
+/* desarrollo e implementacion 1*/
+var chartsdesarrollo1 = {}
+var InViewdesarrollo1 = false;
+
+function animardesarrollo1() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "desarrollo1";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartsdesarrollo1[idElement]) { continue }
+            chartsdesarrollo1[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (InViewdesarrollo1) { return; }
+            InViewdesarrollo1= true;
+
+
+            return new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['De mantenimiento adaptativo, perfectivo y/o correctivo', 'Iniciados/continuados'],
+                    datasets: [
+
+                        {
+                            data: [33, 67],
+                            backgroundColor: [
+                                'rgba(220, 60, 117, 0.3)',
+                                'rgba(55, 96, 146, 0.3)',
+                                'rgba(105, 190, 190, 0.2)',
+                                'rgba(215, 90, 218, 0.2)',
+                                
+                                ],
+                                borderColor: [
+                                    'rgba(220, 60, 117, 1)',
+                                    'rgba(55, 96, 146, 1)',
+                                    'rgba(105, 190, 190, 1)',
+                                    'rgba(215, 90, 218, 1)',
+                                    
+                                    ],
+                            borderWidth: 1
+                        },
+
+
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {            
+                        title: {
+                            display: true,
+                            text: 'Tipos de proyectos (Porcentaje)',
+                            align: 'start',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            },
+                            legend: {
+                                display: true,
+                                position: 'right',
+                                align: 'middle',
+                                labels: { font: { family: 'Raleway' } }
+                            }
+                        },
+
+                        legend: {
+                            display: true,
+                            position: 'right',
+                            align: 'middle',
+                            labels: { font: { family: 'Raleway' } },
+                        },
+
+                        scales: {
+                            xAxes: [{
+                                grid: {
+                                    display: false,
+                                },
+                            }]
+                        }
+                    }
+                }
+            });
+
+        } else {
+            InViewdesarrollo1 = false;
+        }
+    }
+}
+
+$(window).scroll(function () {
+
+    animardesarrollo1();
+
+});
+
+$(window).load(function () {
+
+
+    animardesarrollo1();
+
+});
+/* fin desarrollo e implementacion 1  */
+
+/* desarrollo e implementacion 2*/
+var chartsdesarrollo2 = {}
+var InViewdesarrollo2 = false;
+
+function animardesarrollo2() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "desarrollo2";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartsdesarrollo1[idElement]) { continue }
+            chartsdesarrollo1[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (InViewdesarrollo2) { return; }
+            InViewdesarrollo2 = true;
+
+
+            return new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['Proyectos en proceso','Proyectos finalizados'],
+                    datasets: [
+
+                        {
+                            data: [40, 27],
+                            backgroundColor: [
+                                'rgba(77, 249, 156, 0.3)',
+                                'rgba(19, 84, 97, 0.3)',
+                                'rgba(105, 190, 190, 0.2)',
+                                'rgba(215, 90, 218, 0.2)',
+                                
+                                ],
+                                borderColor: [
+                                    'rgba(77, 249, 156, 1)',
+                                    'rgba(19, 84, 97, 1)',
+                                    'rgba(105, 190, 190, 1)',
+                                    'rgba(215, 90, 218, 1)',
+                                    
+                                    ],
+                            borderWidth: 1
+                        },
+
+
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {            
+                        title: {
+                            display: true,
+                            text: 'Estado del proyecto (Porcentaje)',
+                            align: 'start',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            },
+                            legend: {
+                                display: true,
+                                position: 'right',
+                                align: 'middle',
+                                labels: { font: { family: 'Raleway' } }
+                            }
+                        },
+
+                        legend: {
+                            display: true,
+                            position: 'right',
+                            align: 'middle',
+                            labels: { font: { family: 'Raleway' } },
+                        },
+
+                        scales: {
+                            xAxes: [{
+                                grid: {
+                                    display: false,
+                                },
+                            }]
+                        }
+                    }
+                }
+            });
+
+        } else {
+            InViewdesarrollo2 = false;
+        }
+    }
+}
+
+$(window).scroll(function () {
+
+    animardesarrollo2();
+
+});
+
+$(window).load(function () {
+
+
+    animardesarrollo2();
+
+});
+/* fin desarrollo e implementacion 2  */
+
 /* obras nuevas */
 var chartsobrasnuevas = {}
 var InViewobrasnuevas = false;
@@ -1261,6 +1570,7 @@ $(window).load(function () {
 });
 /* fin obras ampliacion */
 
+/* asesoria legal */
 var chartsIntendencia = {}
 var InViewIntendencia = false;
 
@@ -1284,7 +1594,7 @@ function animarIntendencia() {
                     datasets: [
 
                         {
-                            data: [3035, 122, 52, 57],
+                            data: [6623, 248, 112, 152],
                             backgroundColor: [
                                 'rgba(71, 123, 168, 0.2)',
                                 'rgba(105, 190, 190, 0.2)',
@@ -1361,7 +1671,7 @@ $(window).load(function () {
     animarIntendencia();
 
 });
-
+/* fin asesoria legal */
 var chartscordones = {}
 var inViewcordones = false;
 
@@ -1617,6 +1927,7 @@ $(window).load(function () {
 
 });
 /* fin suelos */
+
 /* monto total creditos */
 var chartseconomiacreditos = {}
 var inVieweconomiacreditos = false;
@@ -1708,6 +2019,98 @@ $(window).load(function () {
 
 });
 /* fin monto total creditos */
+
+/* Ceremonial */
+var chartsceremonial = {}
+var inViewceremonial = false;
+
+function animarceremonial() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "ceremonial";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartsceremonial[idElement]) { continue }
+            chartsceremonial[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (inViewceremonial) { return; }
+            inViewceremonial = true;
+            return new Chart(ctx, {
+                type: 'bar',
+                data: {
+
+                    labels: ['Actos y Actividades','Préstamos', 'Donaciones'],
+                    datasets: [
+                        {
+                            data: [171, 18,37],
+                            borderColor: [
+
+                                'rgba(105, 190, 190, 1)',
+                                'rgba(71, 123, 168, 1)',
+                                'rgba(215, 90, 218, 1)',
+                                'rgba(240, 150, 145, 1)',
+                                'rgba(35, 145, 200, 1)',
+                            ],
+                            backgroundColor: [
+
+                                'rgba(105, 190, 190, 0.2)',
+                                'rgba(71, 123, 168, 0.2)',
+                                'rgba(215, 90, 218, 0.2)',
+                                'rgba(240, 150, 145, 0.2)',
+                                'rgba(35, 145, 200, 0.2)',
+
+                            ],
+                            borderWidth: 1
+                        },
+
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { ticks: { font: { family: 'Raleway' }, callback: function(value) {
+                            return ` ${value}`;
+                        } } },
+                        x: { ticks: { font: { family: 'Raleway' } } }
+                    },
+                    legend: {
+                        display: false
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Ceremonial',
+                            align: 'start',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            },
+                        },
+                        legend: {
+                            display: false
+                        },
+                    }
+                }
+            });
+        } else {
+            inViewceremonial = false;
+        }
+    }
+}
+$(window).scroll(function () {
+
+    animarceremonial();
+
+});
+
+$(window).load(function () {
+
+
+    animarceremonial();
+
+});
+/* fin ceremonial */
 
 /* direccion de comercio */
 var chartsdircomercio = {}
@@ -1818,10 +2221,10 @@ function animarcursos() {
                 type: 'bar',
                 data: {
 
-                    labels: ['Circuito cerrado de TV','Marketing digital', 'Excel','Robótica inicial','Robótica avanzada','Diagnostico del emprendimiento'],
+                    labels: ['Circuito cerrado de TV','Marketing digital', 'Excel','Robótica inicial','Robótica avanzada','Diagnostico del emprendimiento','Programación web '],
                     datasets: [
                         {
-                            data: [28, 186, 114, 47, 7, 44],
+                            data: [28, 186, 114, 47, 7, 44,89],
                             borderColor: [
 
                                 'rgba(105, 190, 190, 1)',
