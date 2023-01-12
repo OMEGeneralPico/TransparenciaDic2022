@@ -1479,9 +1479,9 @@ function animardesarrollo1() {
 
 
             return new Chart(ctx, {
-                type: 'pie',
+                type: 'doughnut',
                 data: {
-                    labels: ['De mantenimiento adaptativo, perfectivo y/o correctivo', 'Iniciados/continuados'],
+                    labels: ['Mant. adaptativo, perfectivo y/o correctivo', 'Iniciados/continuados'],
                     datasets: [
 
                         {
@@ -1582,7 +1582,7 @@ function animardesarrollo2() {
 
 
             return new Chart(ctx, {
-                type: 'pie',
+                type: 'doughnut',
                 data: {
                     labels: ['Proyectos en proceso','Proyectos finalizados'],
                     datasets: [
