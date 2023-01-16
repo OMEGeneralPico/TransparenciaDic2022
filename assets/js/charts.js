@@ -750,7 +750,8 @@ function animarrecursossecre() {
                     responsive: true,
                     maintainAspectRatio: false,
                     scales: {
-                        y: { ticks: { font: { family: 'Raleway' } } },
+                        y: { ticks: { font: { family: 'Raleway' }, callback: function(value) {
+                            return `$ ${value}`; } } },
                         x: { ticks: { font: { family: 'Raleway' } } }
                     },
                     legend: {
@@ -1108,9 +1109,11 @@ function animarAmbiente() {
                         },
                         y: {
                             ticks: {
-                                font: { family: 'Raleway' },
+                                font: { family: 'Raleway' },                                
                                 maxTicksLimit: 5,
-                            },
+                                 callback: function(value) {
+                                    return ` ${value} kg.`;
+                            } } ,
                             stacked: true,
                             font: {
                                 family: 'Titillium Web'
@@ -1304,7 +1307,7 @@ function animarclasificacion() {
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    plugins: {            
+                    plugins: {   
                         title: {
                             display: true,
                             text: 'Clasificación por sectores (Porcentaje)',
@@ -1319,15 +1322,13 @@ function animarclasificacion() {
                                 align: 'middle',
                                 labels: { font: { family: 'Raleway' } }
                             }
-                        },
-
+                        },                        
                         legend: {
                             display: true,
                             position: 'right',
                             align: 'middle',
                             labels: { font: { family: 'Raleway' } },
                         },
-
                         scales: {
                             xAxes: [{
                                 grid: {

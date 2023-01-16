@@ -54,7 +54,7 @@ function generarchart(etiquetas, data2, ctx) {
         
         title: {
           display: true,
-          text: 'Presuesto por rubro (%)',
+          text: 'Presupuesto por rubro (%)',
 
           align: 'start',
           font: {

@@ -121,7 +121,8 @@ function animarpresupuestorubro() {
                     responsive: true,
                     maintainAspectRatio: false,
                     scales: {
-                        y: { ticks: { font: { family: 'Raleway' } } },
+                        y: { ticks: { font: { family: 'Raleway' }, callback: function(value) {
+                          return `$ ${value}`; } } },
                         x: { ticks: { font: { family: 'Raleway' } } }
                     },
                     legend: {
