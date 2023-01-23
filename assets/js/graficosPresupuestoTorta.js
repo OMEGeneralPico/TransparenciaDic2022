@@ -38,7 +38,7 @@ function generarchart(etiquetas, data2, ctx) {
       maintainAspectRatio: false,
       plugins: {
        
-       
+       /* ver martes porcentaje */
           datalabels: {
             display: 'auto',
             formatter: function (value) {

@@ -36,7 +36,8 @@ function generarchartbarra(etiquetas, data2, ctx) {
     },
     options: {
       scales: {y:{ticks:{font:{family:'Raleway'}}},
-      x:{ticks:{font:{family:'Raleway'}}}},
+      x:{ticks:{font:{family:'Raleway'}, callback: function(value) {
+        return `$ ${value}`; }}}},
 
       indexAxis: 'y',
       responsive: true,

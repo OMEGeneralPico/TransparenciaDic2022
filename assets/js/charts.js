@@ -75,6 +75,7 @@ function animarpresupuestosecre() {
                     maintainAspectRatio: false,
                     plugins: {
                         datalabels: {
+                            
                             anchor: 'end', // remove this line to get label in middle of the bar
 
                             formatter: (val) => (`${val}%`),
@@ -137,6 +138,7 @@ function animarintimaciones() {
             if (inViewpresupuestosecre) { return; }
             inViewpresupuestosecre = true;
             return new Chart(ctx, {
+                plugins: [ChartDataLabels],
                 type: 'pie',
                 data: {
 
@@ -175,16 +177,18 @@ function animarintimaciones() {
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
+                        /* porcentaje */
                         datalabels: {
-                            anchor: 'end', // remove this line to get label in middle of the bar
-
-                            formatter: (val) => (`${val}%`),
-                            labels: {
-                                value: {
-                                    color: 'blue'
-                                }
+                            display: 'auto',
+                            formatter: function (value) {
+                              return  Math.round((value*10))/10 + '%';
+                            },
+                            color: 'black',
+                            font: {
+                              family: 'Raleway'
                             }
-                        },
+                          },
+                          /* fin porcentaje */
 
                         title: {
                             display: true,
@@ -522,6 +526,7 @@ function animarvecinas() {
 
 
             return new Chart(ctx, {
+                plugins: [ChartDataLabels],
                 type: 'doughnut',
                 data: {
                     labels: ['Agustoni', 'Metileo', 'Speluzzi','Vértiz', 'Dorila'],
@@ -550,7 +555,19 @@ function animarvecinas() {
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    plugins: {            
+                    plugins: {    
+                        /* porcentaje */
+                        datalabels: {
+                            display: 'auto',
+                            formatter: function (value) {
+                              return  Math.round((value*10))/10 + '%';
+                            },
+                            color: 'black',
+                            font: {
+                              family: 'Raleway'
+                            }
+                          },
+                          /* fin porcentaje */        
                         title: {
                             display: true,
                             text: 'Licencias emitidas a localidades vecinas (Porcentaje)',
@@ -1123,7 +1140,7 @@ function animarAmbiente() {
                     legend: {
                         display: false
                     },
-                    plugins: {
+                    plugins: {                       
                         legend: false,
                         title: {
                             display: true,
@@ -1281,6 +1298,7 @@ function animarclasificacion() {
 
 
             return new Chart(ctx, {
+                plugins: [ChartDataLabels],/* porcentaje */
                 type: 'doughnut',
                 data: {
                     labels: ['Productivos', 'Servicios generales', 'Comercio'],
@@ -1308,6 +1326,18 @@ function animarclasificacion() {
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {   
+                        /* porcentaje */
+                        datalabels: {
+                            display: 'auto',
+                            formatter: function (value) {
+                              return  Math.round((value*10))/10 + '%';
+                            },
+                            color: 'black',
+                            font: {
+                              family: 'Raleway'
+                            }
+                          },
+                          /* fin porcentaje */
                         title: {
                             display: true,
                             text: 'Clasificación por sectores (Porcentaje)',
@@ -1378,6 +1408,7 @@ function animarinfraestructura() {
 
 
             return new Chart(ctx, {
+                plugins: [ChartDataLabels],
                 type: 'doughnut',
                 data: {
                     labels: ['Impresoras ', 'Terminales NTComputing', 'Servidores','PC`s '],
@@ -1406,7 +1437,19 @@ function animarinfraestructura() {
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    plugins: {            
+                    plugins: {          
+                        /* porcentaje */
+                        datalabels: {
+                            display: 'auto',
+                            formatter: function (value) {
+                              return  Math.round((value*10))/10 + '%';
+                            },
+                            color: 'black',
+                            font: {
+                              family: 'Raleway'
+                            }
+                          },
+                          /* fin porcentaje */  
                         title: {
                             display: true,
                             text: 'Infraestructura tecnológica (Porcentaje)',
@@ -1480,6 +1523,7 @@ function animardesarrollo1() {
 
 
             return new Chart(ctx, {
+                plugins: [ChartDataLabels],
                 type: 'doughnut',
                 data: {
                     labels: ['Mant. adaptativo, perfectivo y/o correctivo', 'Iniciados/continuados'],
@@ -1510,10 +1554,22 @@ function animardesarrollo1() {
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    plugins: {            
+                    plugins: {     
+                        /* porcentaje */
+                        datalabels: {
+                            display: 'auto',
+                            formatter: function (value) {
+                              return  Math.round((value*10))/10 + '%';
+                            },
+                            color: 'black',
+                            font: {
+                              family: 'Raleway'
+                            }
+                          },
+                          /* fin porcentaje */       
                         title: {
                             display: true,
-                            text: 'Tipos de proyectos (Porcentaje)',
+                            text: 'Tipos de proyectos',
                             align: 'start',
                             font: {
                                 family: 'Titillium Web',
@@ -1583,6 +1639,7 @@ function animardesarrollo2() {
 
 
             return new Chart(ctx, {
+                plugins: [ChartDataLabels],
                 type: 'doughnut',
                 data: {
                     labels: ['Proyectos en proceso','Proyectos finalizados'],
@@ -1613,10 +1670,22 @@ function animardesarrollo2() {
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    plugins: {            
+                    plugins: {      
+                        /* porcentaje */
+                        datalabels: {
+                            display: 'auto',
+                            formatter: function (value) {
+                              return  Math.round((value*10))/10 + '%';
+                            },
+                            color: 'black',
+                            font: {
+                              family: 'Raleway'
+                            }
+                          },
+                          /* fin porcentaje */      
                         title: {
                             display: true,
-                            text: 'Estado del proyecto (Porcentaje)',
+                            text: 'Estado del proyecto',
                             align: 'start',
                             font: {
                                 family: 'Titillium Web',
@@ -1882,6 +1951,7 @@ function animarIntendencia() {
 
 
             return new Chart(ctx, {
+                plugins: [ChartDataLabels],
                 type: 'doughnut',
                 data: {
                     labels: ['Resoluciones', 'Disposiciones', 'Proyectos de ordenanzas', 'Ordenanzas Promulgadas'],
@@ -2066,6 +2136,7 @@ function animarsuelos() {
             if (inViewsuelos) { return; }
             inViewsuelos = true;
             return new Chart(ctx, {
+                plugins: [ChartDataLabels],
                 type: 'bar',
                 data: {
 
@@ -2151,6 +2222,7 @@ function animareventos() {
             if (inVieweventos) { return; }
             inVieweventos = true;
             return new Chart(ctx, {
+                plugins: [ChartDataLabels],
                 type: 'bar',
                 data: {
 
@@ -2220,7 +2292,7 @@ $(window).load(function () {
     animareventos();
 
 });
-/* fin suelos */
+/* fin eventos */
 
 /* monto total creditos */
 var chartseconomiacreditos = {}
@@ -2330,6 +2402,7 @@ function animarceremonial() {
             if (inViewceremonial) { return; }
             inViewceremonial = true;
             return new Chart(ctx, {
+                plugins: [ChartDataLabels],
                 type: 'bar',
                 data: {
 
@@ -2422,6 +2495,7 @@ function animardircomercio() {
             if (inViewdircomercio) { return; }
             inViewdircomercio = true;
             return new Chart(ctx, {
+                plugins: [ChartDataLabels],
                 type: 'bar',
                 data: {
 
@@ -2512,6 +2586,7 @@ function animarcursos() {
             if (inViewcursos) { return; }
             inViewcursos = true;
             return new Chart(ctx, {
+                plugins: [ChartDataLabels],
                 type: 'bar',
                 data: {
 
@@ -2695,6 +2770,7 @@ function animarambientezoo() {
             if (inViewambientezoo) { return; }
             inViewambientezoo = true;
             return new Chart(ctx, {
+                plugins: [ChartDataLabels],
                 type: 'bar',
                 data: {
 
@@ -2785,6 +2861,7 @@ function animarplanifobras() {
             if (inViewplanifobras) { return; }
             inViewplanifobras = true;
             return new Chart(ctx, {
+                plugins: [ChartDataLabels],
                 type: 'bar',
                 data: {
 

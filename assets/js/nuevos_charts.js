@@ -1,6 +1,7 @@
 //Municipalidad chart porcentaje por sexo
 const ctx = document.getElementById('municipalidad_sexo').getContext('2d');
 const myChart = new Chart(ctx, {
+  plugins: [ChartDataLabels],
     type: 'doughnut',
     data: {
         labels: ['Femenino', 'Masculino',],
@@ -43,7 +44,7 @@ const myChart = new Chart(ctx, {
             formatter: function (value) {
               return Math.round(value) + '%';
             },
-            color: 'white',
+            color: 'black',
             font: {
                
              
@@ -166,6 +167,7 @@ $(window).load(function () {
 
 const ctx3 = document.getElementById('municipalidad_rango_etario').getContext('2d');
 const myChart3 = new Chart(ctx3, {
+  plugins: [ChartDataLabels],
     type: 'doughnut',
     data: {
         labels: ['menos de 36 años','36 a 55 años', 'más de 56 años',],
@@ -208,7 +210,7 @@ const myChart3 = new Chart(ctx3, {
             formatter: function (value) {
               return Math.round(value) + '%';
             },
-            color: 'white',
+            color: 'black',
             font: {
                
              
