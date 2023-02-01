@@ -54,7 +54,7 @@ const myChart = new Chart(ctx, {
           title: {
             align: 'start',
             display: true,
-            text: 'Empleados por género (%)',
+            text: 'Empleados por género',
             font: {
               family: 'Titillium Web',
               size: 20,
@@ -132,7 +132,7 @@ function animarpresupuestorubro() {
                     plugins: {
                         title: {
                             display: true,
-                            text: 'Presupuesto por Rubro ($)',
+                            text: 'Presupuesto por Rubro',
                             align: 'start',
                             font: {
                                 family: 'Titillium Web',
@@ -220,7 +220,7 @@ const myChart3 = new Chart(ctx3, {
           title: {
             align: 'start',
             display: true,
-            text: 'Empleados por rango etario (%)',
+            text: 'Empleados por rango etario',
             font: {
               family: 'Titillium Web',
               size: 20,

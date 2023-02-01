@@ -192,7 +192,7 @@ function animarintimaciones() {
 
                         title: {
                             display: true,
-                            text: 'Clasificación de intimaciones enviadas (porcentaje)',
+                            text: 'Clasificación de intimaciones enviadas',
                             align: 'center',
                             font: {
                                 family: 'Titillium Web',
@@ -570,7 +570,7 @@ function animarvecinas() {
                           /* fin porcentaje */        
                         title: {
                             display: true,
-                            text: 'Licencias emitidas a localidades vecinas (Porcentaje)',
+                            text: 'Licencias emitidas a localidades vecinas ',
                             align: 'start',
                             font: {
                                 family: 'Titillium Web',
@@ -778,7 +778,7 @@ function animarrecursossecre() {
                     plugins: {
                         title: {
                             display: true,
-                            text: 'Ingresos en 2022 (en millones $ )',
+                            text: 'Ingresos en 2022',
                             align: 'start',
                             font: {
                                 family: 'Titillium Web',
@@ -1681,7 +1681,7 @@ function animarclasificacion() {
                           /* fin porcentaje */
                         title: {
                             display: true,
-                            text: 'Clasificación por sectores (Porcentaje)',
+                            text: 'Clasificación por sectores ',
                             align: 'start',
                             font: {
                                 family: 'Titillium Web',
@@ -1793,7 +1793,7 @@ function animarinfraestructura() {
                           /* fin porcentaje */  
                         title: {
                             display: true,
-                            text: 'Infraestructura tecnológica (Porcentaje)',
+                            text: 'Infraestructura tecnológica',
                             align: 'start',
                             font: {
                                 family: 'Titillium Web',
