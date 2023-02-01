@@ -719,6 +719,7 @@ $(window).load(function () {
 
 });
 
+/* fin ingreso juridico */
 
 var chartrecursossecre = {}
 var inViewrecursossecre = false;
@@ -904,12 +905,351 @@ $(window).load(function () {
 
 });
 
+/* interese expresados*/
+var chartsinteresexpresado = {}
+var InViewinteresexpresado = false;
+
+function animarinteresexpresado() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "interesexpresado";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartsinteresexpresado[idElement]) { continue }
+            chartsinteresexpresado[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (InViewinteresexpresado) { return; }
+            InViewinteresexpresado = true;
+
+
+            return new Chart(ctx, {
+                plugins: [ChartDataLabels],
+                type: 'pie',
+                data: {
+                    labels: ['Otros', 'Cuidado infancias', 'Textiles y similares','Cuidado de pers. Mayores'],
+                    datasets: [
+
+                        {
+                            data: [12.1, 35, 27.9, 25],
+                            backgroundColor: [
+                                'rgba(71, 123, 168, 0.2)',
+                                'rgba(105, 190, 190, 0.2)',
+                                'rgba(215, 90, 218, 0.2)',
+                                'rgba(124, 212, 188, 0.2)',
+                                ],
+                                borderColor: [
+                                    'rgba(71, 123, 168, 1)',
+                                    'rgba(105, 190, 190, 1)',
+                                    'rgba(215, 90, 218, 1)',
+                                    'rgba(124, 212, 188, 1)',
+                                    ],
+                            borderWidth: 1
+                        },
+
+
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {    
+                        /* porcentaje */
+                        datalabels: {
+                            display: 'auto',
+                            formatter: function (value) {
+                              return  Math.round((value*10))/10 + '%';
+                            },
+                            color: 'black',
+                            font: {
+                              family: 'Raleway'
+                            }
+                          },
+                          /* fin porcentaje */        
+                        title: {
+                            display: true,
+                            text: 'Centro Municipal de Formación Laboral (intereses de capacitación)',
+                            align: 'start',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            },
+                            legend: {
+                                display: true,
+                                position: 'right',
+                                align: 'middle',
+                                labels: { font: { family: 'Raleway' } }
+                            }
+                        },
+
+                        legend: {
+                            display: true,
+                            position: 'right',
+                            align: 'middle',
+                            labels: { font: { family: 'Raleway' } },
+                        },
+
+                        scales: {
+                            xAxes: [{
+                                grid: {
+                                    display: false,
+                                },
+                            }]
+                        }
+                    }
+                }
+            });
+
+        } else {
+            InViewinteresexpresado = false;
+        }
+    }
+}
+
+$(window).scroll(function () {
+
+    animarinteresexpresado();
+
+});
+
+$(window).load(function () {
+
+
+    animarinteresexpresado();
+
+});
+/* fin interese expresados */
 
 
 
+/* oficina de empleo*/
+var chartsoficinadeempleo = {}
+var InViewoficinadeempleo = false;
+
+function animaroficinadeempleo() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "oficinadeempleo";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartsoficinadeempleo[idElement]) { continue }
+            chartsoficinadeempleo[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (InViewoficinadeempleo) { return; }
+            InViewoficinadeempleo = true;
+
+
+            return new Chart(ctx, {
+                plugins: [ChartDataLabels],
+                type: 'pie',
+                data: {
+                    labels: [ 'Hombres', 'Mujeres'],
+                    datasets: [
+
+                        {
+                            data: [42, 58],
+                            backgroundColor: [
+                                'rgba(0, 69, 97, 0.3)',
+                                'rgba(88, 145, 173, 0.3)',
+                                'rgba(215, 90, 218, 0.2)',
+                                'rgba(124, 212, 188, 0.2)',
+                                ],
+                                borderColor: [
+                                    'rgba(0, 69, 97, 1)',
+                                    'rgba(88, 145, 173, 1)',
+                                    'rgba(215, 90, 218, 1)',
+                                    'rgba(124, 212, 188, 1)',
+                                    ],
+                            borderWidth: 1
+                        },
+
+
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {    
+                        /* porcentaje */
+                        datalabels: {
+                            display: 'auto',
+                            formatter: function (value) {
+                              return  Math.round((value*10))/10 + '%';
+                            },
+                            color: 'black',
+                            font: {
+                              family: 'Raleway'
+                            }
+                          },
+                          /* fin porcentaje */        
+                        title: {
+                            display: true,
+                            text: 'Personas que solicitaron los servicios de la Oficina de Empleo',
+                            align: 'start',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            },
+                            legend: {
+                                display: true,
+                                position: 'right',
+                                align: 'middle',
+                                labels: { font: { family: 'Raleway' } }
+                            }
+                        },
+
+                        legend: {
+                            display: true,
+                            position: 'right',
+                            align: 'middle',
+                            labels: { font: { family: 'Raleway' } },
+                        },
+
+                        scales: {
+                            xAxes: [{
+                                grid: {
+                                    display: false,
+                                },
+                            }]
+                        }
+                    }
+                }
+            });
+
+        } else {
+            InViewoficinadeempleo = false;
+        }
+    }
+}
+
+$(window).scroll(function () {
+
+    animaroficinadeempleo();
+
+});
+
+$(window).load(function () {
+
+
+    animaroficinadeempleo();
+
+});
+/* fin oficina de empleo */
 
 
 
+/* pedidos */
+var chartspedidos = {}
+var InViewpedidos = false;
+
+function animarpedidos() {
+    for (var i = 0; i < 1; i++) {
+        var idElement = "pedidos";
+        if (isScrolledIntoView('#' + idElement)) {
+            if (chartspedidos[idElement]) { continue }
+            chartspedidos[idElement] = true;
+
+            var ctx = document.getElementById(idElement);
+
+            if (InViewpedidos) { return; }
+            InViewpedidos = true;
+
+
+            return new Chart(ctx, {
+                plugins: [ChartDataLabels],
+                type: 'doughnut',
+                data: {
+                    labels: [ 'Búsqueda', 'Pedidos', 'Postulados', 'Incersiones'],
+                    datasets: [
+
+                        {
+                            data: [56.6, 14.8,25.6,3.1],
+                            backgroundColor: [
+                                'rgba(88, 145, 173, 0.3)',
+                                'rgba(0, 69, 97, 0.3)',                                
+                                'rgba(255, 111, 49, 0.3)',
+                                'rgba(28, 118, 133, 0.3)',
+                                ],
+                                borderColor: [
+                                    'rgba(88, 145, 173, 1)',
+                                    'rgba(0, 69, 97, 1)',                                    
+                                    'rgba(255, 111, 49, 1)',
+                                    'rgba(28, 118, 133, 1)',
+                                    ],
+                            borderWidth: 1
+                        },
+
+
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {    
+                        /* porcentaje */
+                        datalabels: {
+                            display: 'auto',
+                            formatter: function (value) {
+                              return  Math.round((value*10))/10 + '%';
+                            },
+                            color: 'black',
+                            font: {
+                              family: 'Raleway'
+                            }
+                          },
+                          /* fin porcentaje */        
+                        title: {
+                            display: true,
+                            text: 'Pedidos presentados a la oficina de empleo (públicos y privados)',
+                            align: 'start',
+                            font: {
+                                family: 'Titillium Web',
+                                size: 20,
+                            },
+                            legend: {
+                                display: true,
+                                position: 'right',
+                                align: 'middle',
+                                labels: { font: { family: 'Raleway' } }
+                            }
+                        },
+
+                        legend: {
+                            display: true,
+                            position: 'right',
+                            align: 'middle',
+                            labels: { font: { family: 'Raleway' } },
+                        },
+
+                        scales: {
+                            xAxes: [{
+                                grid: {
+                                    display: false,
+                                },
+                            }]
+                        }
+                    }
+                }
+            });
+
+        } else {
+            InViewpedidos = false;
+        }
+    }
+}
+
+$(window).scroll(function () {
+
+    animarpedidos();
+
+});
+
+$(window).load(function () {
+
+
+    animarpedidos();
+
+});
+/* fin pedidos */
 
 
 
@@ -939,17 +1279,17 @@ function animarAyuda() {
             if (inViewayudas) { return; }
             inViewayudas = true;
             return myChart = new Chart(ctx, {
-                type: 'bar',
+                type: 'line',
                 data: {
                     /* labels: ['Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'], */
-                    labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
+                    labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio','Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre'],
                     datasets: [
                         {
                             label: 'Alquiler',
                             tension: 0.2,
                             fill: false,
 
-                            data: [475000, 374500, 454000, 710500, 702000, 816000],
+                            data: [208000, 758500, 916500, 859000, 841500, 1037000, 1135000, 888500, 1175500, 989000, 905500],
                             borderColor: [
 
                                 'rgba(105, 190, 190, 1)'
@@ -965,7 +1305,7 @@ function animarAyuda() {
                             tension: 0.2,
                             fill: false,
 
-                            data: [76000, 64500, 85000, 112000, 201500, 164500],
+                            data: [57000, 106000, 238500, 149000, 192000, 222000, 227000, 204000, 269000, 270500, 291000],
                             borderColor: [
 
                                 'rgba(71, 123, 168, 1)'
@@ -981,7 +1321,7 @@ function animarAyuda() {
                             tension: 0.2,
                             fill: false,
                             borderWidth: 1,
-                            data: [655600, 562200, 557300, 1881890, 1897600, 2017000],
+                            data: [1017000, 789500, 1328500, 1052600, 1054000, 1419000, 1458000, 875200, 1190000, 921000, 961500],
                             borderColor: [
 
                                 'rgba(215, 90, 218, 1)'
@@ -1001,14 +1341,15 @@ function animarAyuda() {
                             ticks: {
                                 font: { family: 'Raleway' }
                             },
-                            stacked: true
+                            stacked: false
                         },
                         y: {
                             ticks: {
-                                font: { family: 'Raleway' },
+                                font: { family: 'Raleway' }, callback: function(value) {
+                                    return `$ ${value}`; },
                                 maxTicksLimit: 5,
                             },
-                            stacked: true,
+                            stacked: false,
                             font: {
                                 family: 'Titillium Web'
                             },
@@ -1030,7 +1371,7 @@ function animarAyuda() {
                         },
                         title: {
                             display: true,
-                            text: 'Subsidios a personas por concepto ($)',
+                            text: 'Subsidios a personas por concepto',
                             align: 'start',
                             font: {
                                 family: 'Titillium Web',
